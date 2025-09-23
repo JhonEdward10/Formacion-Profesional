@@ -1,0 +1,10 @@
+un editor de código, un intérprete (es decir, un entorno de arranque) y un depurador, es lo que se necesita al inicio
+
+Gestores de paquetes: permiten la gestión de bibliotecas (que contienen soluciones listas para usar que podemos usar en nuestros programas) o componentes del entorno de desarrollo (por ejemplo, npm o yarn).
+
+Ejecutores de tareas y paquetes de módulos: se utilizan, en términos simples, para automatizar el proceso de desarrollo de software y fusionar el código resultante de muchos archivos y bibliotecas (por ejemplo, Grunt o Webpack)
+
+marco de prueba: permite la prueba automática de la corrección de nuestro programa en busca de posibles errores (por ejemplo, Mocha, Jasmine o Jest)
+
+analizadores de seguridad: como puede adivinar, se utilizan para controlar la seguridad de nuestra solución (por ejemplo, Snyk, RetireJS u OWASP Dependency Check)
+
