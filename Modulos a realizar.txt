@@ -1,0 +1,62 @@
+Modulos a realizar en tiempos
+
+🔒 4. Seguridad en Endpoints
+- [ ]  Módulo 6 - Infraestructura de seguridad de redes
+- [ ]  Módulo 7 - Sistema operativo Windows
+- [ ]  Módulo 8 - Descripción general de Linux
+- [ ]  Módulo 9 - Protección de terminales
+- [ ]  Módulo 10 - Principios, prácticas y procesos de ciberseguridad
+
+### 📊 **5. Defensa de la Red**
+
+- [ ]  Módulo 1 - Entendiendo la defensa
+- [ ]  Módulo 2 - Defensa de sistemas y redes
+- [ ]  Módulo 3 -  Control de acceso
+- [ ]  Módulo 4 - Lista de control de acceso
+- [ ]  Módulo 5 - Tecnología de cortafuegos
+- [ ]  Módulo 6 - Firewalls de política basadas en zonas
+- [ ]  Módulo 7 -  Seguridad en la Nube
+- [ ]  Módulo 8 - Criptografía
+- [ ]  Módulo 9 -  Tecnología y protocolos
+- [ ]  Módulo 10 - Datos de seguridad de red
+- [ ]  Modulo 11 - Evaluación de alertas
+
+### 🎓 6**. Gestión de amenazas cibernéticas**
+
+- [ ]  Módulo 1 - Gobernanza y cumplimiento
+- [ ]  Módulo 2 - Pruebas de seguridad de red
+- [ ]  Módulo 3 -  Inteligencia de amenazas
+- [ ]  Módulo 4 - Evaluación de vulnerabilidades de Endpoints
+- [ ]  Módulo 5 - Gestión de riesgos y controles de seguridad
+- [ ]  Módulo 6 - Análisis forense digital y análisis y respuesta a incidentes
+
+javascript badge 1 
+JSE: Module 1: Introduction to JavaScript and Computer Programming expand badge 
+JSE: Module 2: Variables, Data Types, Type Casting, and Comments expand badge 
+JSE: Module 3: Operators and User Interaction expand badge 
+JSE: Module 4: Control Flow – Conditional Execution and Loops expand badge 
+JSE: Module 5: Functions expand badge 
+JSE: Module 6: Errors, exceptions, debugging, and troubleshooting expand badge 
+JSE: FINAL TEST expand badge JSE – Certified Entry-Level JavaScript Programmer Exam
+
+javascript badge 2 
+JSE2: Module 1: Classless Objects expand badge 
+JSE2: Module 2: Classes and Class-Based Approach expand badge 
+JSE2: Module 3: Built-In Objects expand badge 
+JSE2: Module 4: Advanced Function Usage expand badge 
+JSE2: FINAL TEST expand badge JSA – Certified Associate JavaScript Programmer Certification Exam
+
+python badge 1
+PE1: Module 1. Introduction to Python and Computer Programming expand badge 
+PE1: Module 2. Python Data Types, Variables, Operators, and Basic I/O Operations expand badge 
+PE1: Module 3. Boolean Values, Conditional Execution, Loops, Lists and List Processing, Logical and Bitwise Operations expand badge 
+PE1: Module 4. Functions, Tuples, Dictionaries, Exceptions, and Data Processing expand badge 
+Python Essentials 1 (PE1) Course Final Exam expand badge 
+PCEP – Certified Entry-Level Python Programmer Certification Exam
+
+python badge 2 
+PE2: Module 1. Modules, Packages, and PIP expand badge 
+PE2: Module 2. Strings, String and List Methods, Exceptions expand badge 
+PE2: Module 3. Object-Oriented Programming expand badge 
+PE2: Module 4. Miscellaneous expand badge 
+Python Essentials 2 (PE2) Course Final Exam expand badge PCAP – Certified Associate in Python Programming Certification Exam 
