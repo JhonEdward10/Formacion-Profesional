@@ -1,0 +1,43 @@
+Http y Https
+
+Aquí hoy dia todos almenos ingresan una vez encienden la pc en alguna pagina web.
+Todas la empresas deben tener un IDS O sistema de detención de intrusiones para analizar los archivos descargados en busca de malware. Si detectan que los archivos podrían contener malware, los IDS emiten alertas y registran el evento en archivos de registro para su posterior análisis.
+
+Tipos de registros en el estado de conexión en el servidor cliente 
+Informativo 1xx: consiste solamente en la línea de estado y los encabezados opcionales. Finaliza con una línea vacía.
+
+Correcto 2xx: La solicitud del cliente fue satisfactoriamente recibida, comprendida, y aceptada.
+
+Redirección 3xx: Un cliente DEBE detectar bucles de redireccionamiento infinito, ya que generan trafico en cada direccionamiento.
+
+Error de cliente 4xx: en caso de que el cliente cometa un error, el servidor DEBE incluir una entidad que contenga una explicación de la situación, y si es temporal.
+
+Error del servidor: aquí es donde el servidor detecta que se equivoco o no puede solucionar una respuesta.  Excepto al responder a una petición de ENCABEZADO, el servidor DEBE incluir una entidad que contenga una explicación de la situación de error, y si es temporal.
+
+.Actualizar siempre el sistema operativo y los navegadores con versiones y parches actuales.
+.Utilizar un proxy web como Cisco Cloud Web Security o Cisco Web Security Appliance para bloquear sitios maliciosos.
+.Utilizar las mejores prácticas de seguridad del proyecto Open Web Application Security Project (OWASP) en el desarrollo de aplicaciones web.
+.Educar a los usuarios finales demostrándoles cómo evitar ataques basados en la web.
+
+Ataques que pueden ocurrir en HTTP y HTTPS
+..Ataque iFrames maliciosos: es donde se incrusta un sitio web malicioso dentro de otra pagina, es muy común hoy dia, ya que muchos anuncios se implantan en la pagina. En ocasiones no se puede determinar fácilmente porque apenas ocupan unos pixeles y como el iFrame se puede ejecutar en la pagina, se utiliza para lanzar exploits maliciosos, como publicidad, spam, kits de ataques y otros tipos de malware.
+Estas son algunas manera de bloquear estas paginas:
+
+.Utilizar un proxy web para bloquear sitios maliciosos.
+.Utilizar paginas en las que los desarrolladores no utilicen iFrames, para no caer en ello, utilizar un servicio como Cisco Umbrella
+
+..Ataque redireccionamiento HTTP 302: Aquí es donde los atacantes llevan y redireccionan a los usuarios, para llevar a cabo sus ataques, esto funciona en que cuando una web tiene una URL o nombre de dominio y se cambian, los anteriores siguen funcionando, por tanto, los analistas de seguridad deben comprender cómo funciona una característica como el redireccionamiento HTTP y cómo se usa durante los ataques.
+
+Ademas hay que añadir, que estos ataque cuando se redirige tanto, en cualquier momento puede llegar a una pagina web maliciosa
+
+..Ataque de concurrencia de dominios: aquí es donde el atacante comprende como son los dominios y este a su vez crea subdominios comprometiendo un dominio legitimo y con el redireccionamiento, hace que esto se dirija a los nombres de dominios maliciosos, asi que se hace en esta secuencia, normalmente.
+Un sitio web es comprometido.
+El redireccionamiento HTTP 302 es utilizado para enviar el navegador a sitios web maliciosos.
+Se utiliza Domain shadowing para dirigir el navegador a un servidor comprometido.
+Se accede a una página que contiene un kit de ataque (exploit kit)
+Se descarga el malware de la página que contiene el exploit kit.
+
+Estas son algunas maneras de evitar o reducir los ataques Domain shadowing:
+
+Proteja todas las cuentas de propietario de dominio. Utilice contraseñas fuertes y la autenticación de dos factores para garantizar estas cuentas tan importantes.
+

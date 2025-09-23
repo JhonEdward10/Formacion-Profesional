@@ -1,0 +1,14 @@
+Netflow: recopilar información de los datos que van y vienen en la red, analiza comportamientos.
+
+Pasos para hacer una prueba de penetracion.
+1.Planificacion: analizar mayor cantidad de datos
+2.Escaneo: sondear el sistema mediante los puertos, análisis de vulnerabilidades.
+3.Obtener acceso: traspasar el sistema y llegar al usuario, ingeniería social, violar controles de acceso, descifrar wifi.
+4.Mantener el acceso: mediante caballos de troya, puertas traseras, rootkits.
+5.Analisis y reportes: proporcionar comentarios y capacidad para mejorar la seguridad de la información.
+
+
+SIEM: Sistema de gestión de eventos y seguridad de información recopila y analiza alertas de seguridad
+DLP: Sistema de prevención de perdida de datos
+
+ISE y TrustSec Automatización de seguridad.

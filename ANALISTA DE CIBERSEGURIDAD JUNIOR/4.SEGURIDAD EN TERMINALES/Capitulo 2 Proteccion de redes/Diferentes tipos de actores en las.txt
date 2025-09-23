@@ -1,0 +1,23 @@
+Diferentes tipos de actores en las redes:
+
+.Script kiddies
+.Vulnerability Brokers 
+.Hacktivistas
+.Ciberdelincuentes
+.Patrocinados por el estado
+
+IOC: Indicadores de peligro o indicadores de compromiso, pero las siglas están en ingles.
+Los indicadores de ataque (IOA, por sus siglas en inglés)
+
+¿Qué afirmación describe las características de los indicadores de ataque (IOA)?
+Se centran en la motivación detrás de un ataque y en los medios potenciales por los que los actores de amenazas comprometen o comprometen las vulnerabilidades para acceder a los activos.
+
+Los IOC ayudan al personal de ciberseguridad a identificar lo que ha ocurrido en un ataque y a desarrollar defensas contra el ataque.
+
+Por lo tanto, defenderse contra una estrategia puede evitar futuros ataques que utilicen la misma estrategia o estrategia similar.
+
+Muchos de los ataques pueden ser prevenidos si se planea una buena estrategia y mitigación de riesgos.
+
+
+
+

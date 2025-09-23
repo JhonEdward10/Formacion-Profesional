@@ -1,0 +1,9 @@
+Tipos de ataques inalámbricos
+
+.Se pueden dar tipos de ataques como El ataque DoS, que puede algún administrador dejar sin servicio el AP o incluso alguien malintencionado, puede hacerlo de forma inalámbrica deshabilitar la red para que nadie pueda ingresar o incluso la interferencia radio eléctrica como celulares u hornos microondas pueden afectar a la propagación.
+
+.Puntos de accesos no autorizados, es donde alguien malintencionado o no redirecciona el trafico y convierte su dispositivo en AP, para que quien se conecte pueda ser husmeado, analizar los paquete y sobre todo que pueda hacer el hombre en el medio. Se puede hacer con un celular o incluso con un PC, que tenga datos.
+
+.Ataque de intermediario, Es donde un atacante se coloca en medio de una red y un cliente y se hace pasar por la red legitima, además también hace que el cliente envie toda la información  y el atacante puede revisar contraseñas, el sistema y todo tipo de archivos
+
+https://mkto.cisco.com/ccna-cert-guide.html?utm_campaign=prospectcampaign&utm_source=mediabuy&utm_medium=pfacebook&dclid=CIGYw7yku44DFXUI0AQdd1IGmg&gad_source=7

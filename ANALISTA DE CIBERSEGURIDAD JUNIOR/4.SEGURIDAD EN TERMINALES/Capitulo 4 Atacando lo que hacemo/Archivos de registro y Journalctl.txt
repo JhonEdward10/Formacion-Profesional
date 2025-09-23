@@ -1,0 +1,98 @@
+Archivos de registro y Journalctl
+Otro sistema de administración de registros muy utilizado se conocecomo journal. Administrado por el diaro registro de la Daemon journald, el sistema está diseñado para centralizar la administración de archivos de registro independientemente de dónde se estén originando los mensajes. En el contexto de esta práctica de laboratorio, la características más evidente del daemon del sistema journal es el uso de archivos binarios "append-only" (solo anexar) que actúancomo sus archivos de registro.
+
+Paso 1: Ejecutar journalctl sin opciones.
+a. Para     ver los archivos de registro de journald utilice el comando journalctl. La herramienta journalctl interpreta y muestra las entradas de registro almacenadas anteriormente en los archivos de registro binario de journal.
+
+analyst@secOps ~$ journalctl
+
+-- Logs begin at Fri 2014-09-26 14:13:12 EDT, end at Tue 2017-02-07 13:23:29 ES
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Starting Paths.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Reached target Paths.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Starting Timers.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Reached target Timers.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Starting Sockets.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Reached target Sockets.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Starting Basic System.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Reached target Basic System.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Starting Default.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Reached target Default.
+
+Sep 26 14:13:12 dataAnalyzer systemd[1087]: Startup finished in 18ms.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopping Default.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopped target Default.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopping Basic System.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopped target Basic System.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopping Paths.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopped target Paths.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopping Timers.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopped target Timers.
+
+Sep 26 14:14:24 dataAnalyzer systemd[1087]: Stopping Sockets.
+
+<output omitted>
+
+Nota: Si se ejecuta journalctl como usuario root se mostrará información más detallada.
+
+b.Presione     CTRL+C para salir de la pantalla.
+
+Paso 2: Journalctl y algunas opciones
+Parte de las ventajas de utilizar journalctl radica en sus opciones. Para los siguientes comandos, utilice CRTL+C para salir de la pantalla.
+
+a.Utilice     journalctl --utc para mostrar todas las marcas de hora UTC:
+
+analyst@secOps ~$ sudo journalctl -–utc
+
+b. Utilice     journalctl -b para mostrar las entradas de registro del último arranque:
+
+analyst@secOps ~$ sudo journalctl –b
+
+Feb 07 08:23:13 secOps systemd-journald[172]: Time spent on flushing to /var is
+
+Feb 07 08:23:13 secOps kernel: Linux version 4.8.12-2-ARCH (builduser@andyrtr)
+
+Feb 07 08:23:13 secOps kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 fl
+
+Feb 07 08:23:13 secOps kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE re
+
+Feb 07 08:23:13 secOps kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX re
+
+Feb 07 08:23:13 secOps kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]
+
+Feb 07 08:23:13 secOps kernel: x86/fpu: Enabled xstate features 0x7, context si
+
+Feb 07 08:23:13 secOps kernel: x86/fpu: Using 'eager' FPU context switches.
+
+Feb 07 08:23:13 secOps kernel: e820: BIOS-provided physical RAM map:
+
+<output omitted>
+
+c.Utilice     journalctl para especificar el servicio y el período para las entradas de registro. El siguiente comando muestra todos los archivos de registro de nginx que se registraron hoy:
+
+analyst@secOps ~$ sudo journalctl -u nginx.service --since today
+
+d. Utilice el     switch -k para mostrar solo mensajes generados por el kernel:
+
+analyst@secOps ~$ sudo journalctl –k
+
+e.  En forma similar a lo que sucede     con tail -f antes descrito, utilice el switch -f parea seguir los archivos de registro en forma activa a medida que se los escribe:
+
+analyst@secOps ~$ sudo journalctl –f

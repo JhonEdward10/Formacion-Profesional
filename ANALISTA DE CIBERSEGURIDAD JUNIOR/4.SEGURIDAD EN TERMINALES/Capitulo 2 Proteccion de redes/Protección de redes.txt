@@ -1,0 +1,19 @@
+Protección de redes
+Los ataques de redes tienen vectores y estos se pueden generar adentro o fuera de la red.
+
+Los administradores de red siempre deben mitigar potenciales amenazas en las empresas y deben dividir siempre todas las áreas respectivas para que no haya fuga de datos de un área a otra.
+
+Los vectores de donde normalmente provienen los ataques son:
+.Redes sociales: es el vector mas común de la perdida de datos, en donde incluye software de mensajería instantánea y los sitios de mensajería instantánea. Como ejemplo el correo electrónico.
+
+.Dispositivos no encriptados: Una computadora portátil robada puede tener mucha información de suma importancia para una empresa. Si estos datos no se cifran pueden ser muy delicados a la hora si alguien la toma en un robo.
+
+.Dispositivos de almacenamiento en la Nube: Muchos datos en la nube pueden ser muy buenos, sin embargo muchos datos en caso de que la nube tenga seguridad débil se pueden ver comprometidos.
+
+.Medios extraíbles: un riesgo es que un empleado utilice la transferencia de datos por medio de USB.
+
+.Respaldo Físico: Los datos si ya no se ocupan mas, se deben triturar no dejar por hay ya que se puede hurgar en la basura y crear un tipo de ataque.
+
+.Control de acceso incorrecto: Las contraseñas débiles son un riesgo para la seguridad, así que se debe siempre colocar una contraseña con buena seguridad de carácter alto.
+
+

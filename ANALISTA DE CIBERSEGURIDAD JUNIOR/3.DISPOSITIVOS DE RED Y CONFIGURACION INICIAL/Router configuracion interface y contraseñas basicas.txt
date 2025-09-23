@@ -1,0 +1,74 @@
+Router>enable
+
+Router#configure terminal 
+
+Enter configuration commands, one per line.  End with CNTL/Z.
+
+Router(config)#hostname R1
+
+R1(config)#enable secret class
+
+R1(config)#line console 0
+R1(config-line)#password cisco
+R1(config-line)#login
+R1(config-line)#exit
+
+
+R1(config)#service password-encryption 	
+
+R1(config)#banner motd $Authorized Access Only!$
+  
+R1(config)#interface  gigabitEthernet 0/0/0
+R1(config-if)#ip address 192.168.0.1 255.255.255.0
+R1(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0, changed state to up
+
+R1(config-if)#exit
+
+R1(config)#interface gigabitEthernet 0/0/1
+R1(config-if)#ip address 192.168.1.1 255.255.255.0
+R1(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/1, changed state to up
+
+R1(config-if)#exit
+R1(config)#
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R1#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+############################################################## AQUI INICIA CONFIGURACION REMOTA
+
+R1#configure terminal 
+
+R1(config)#ip domain-name academy.net
+
+R1(config)#crypto key generate rsa 
+The name for the keys will be: R1.academy.net
+Choose the size of the key modulus in the range of 360 to 4096 for your
+  General Purpose Keys. Choosing a key modulus greater than 512 may take
+  a few minutes.
+
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+
+R1(config)#username SSHuser secret cisco
+*Mar 1 2:49:52.591: %SSH-5-ENABLED: SSH 1.99 has been enabled
+
+R1(config)#line vty 0 4
+R1(config-line)#login local
+R1(config-line)#transport input ssh
+
+
+C:>ssh -l SSHuser 192.168.1.1
+
+Contraseña: cisco

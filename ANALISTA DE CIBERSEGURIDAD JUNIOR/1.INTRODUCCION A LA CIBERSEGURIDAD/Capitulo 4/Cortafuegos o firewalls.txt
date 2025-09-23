@@ -1,0 +1,45 @@
+Cortafuegos o firewalls
+
+.Cortafuegos de red: filtra comunicaciones según la red o dirección ip
+.Cortafuegos capa de transporte: filtra entrada o salida de datos dependiendo de los puertos.
+.Cortafuegos capa de aplicación: filtra comunicaciones en función de aplicación.
+.Cortafuegos de capa sensible al contexto: filtra comunicaciones dependiendo del usuario, aplicación, dispositivo y perfil de amenaza.
+.Servidor Proxy: filtra solicitudes de sitios web, como URL, nombres de dominio.
+.Servidor Proxy inverso: protegen, ocultan, descargan y distribuyen el acceso a los servidores web.
+.Cortafuegos de traducción de direcciones (NAT): Ocultan o enmascaran direcciones privadas de los hosts.
+.Firewall basado en host: Filtra puertos y llamadas de servicio del sistema en un solo sistema operativo de computadora.
+
+
+.Un firewall NAT filtra las comunicaciones en función de las direcciones IP de origen y destino.
+.Un servidor proxy  filtra las solicitudes de contenido web, como las URL, los nombres de dominio y los tipos de medios.
+.El firewall basado en host filtra los puertos y las llamadas de servicio del sistema en un solo sistema operativo de computadora.
+
+IDS en red registra y avisa que haya un acceso sospechoso de trafico malicioso.
+
+Detección de ataques en tiempo real, se da mediante el IPS O el IDS, ellos registran trafico malicioso
+
+Para defenderse de un ataque malicioso es necesario usar la red empresarial de cisco de protección contra malware avanzada, que se puede implementar en dispositivios host finales
+
+APT(amenaza persistente avanzada)
+
+Beneficios de tener Threat Grid de cisco:
+
+.Equipo de centro de operaciones seguras: recopila datos mas precisos.
+.Equipo de respuestas a incidencias: tiene información forense y comprende comportamientos maliciosos.
+.Equipo de inteligencia de amenazas: con este análisis el equipo de inteligencia mejora de manera proactiva la seguridad de la organización.
+.Equipo de ingeniería de infraestructura de seguridad: actúa de forma mas automatizada para las amenazas.
+
+Medidas de seguridad de buenas practicas
+.realizar evaluación de riesgos.
+.crear política de seguridad.
+.medidas de seguridad física.
+.medida de seguridad de RR HH.
+.realizar copias de seguridad.
+.mantenga actualizaciones y parches de seguridad.
+.emplear controles de acceso.
+.pruebe constantemente la respuesta a incidentes.
+.implementar herramientas de administración análisis y monitoreo.
+.implementar dispositivos de seguridad de red.
+.implementar seguridad en endpoints.
+.eduque a los usuarios.
+.cifre los datos.

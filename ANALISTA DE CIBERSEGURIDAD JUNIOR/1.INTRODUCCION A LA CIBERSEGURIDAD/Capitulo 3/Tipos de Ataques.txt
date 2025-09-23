@@ -1,0 +1,17 @@
+.Ingeniería social
+
+.Ataque DDoS - Denegación de servicios - Una sola fuente
+
+.Ataque DDoS Distribuido - Ataque coordinado de dos computadoras zombies, ejemplo.
+
+.Botnet 
+
+.Ataques en el camino- Hombre en el medio o Hombre en el móvil.
+
+.Envenenamiento - Hacen que las paginas o algún anuncio tenga mas relevancia para llegar a mas publico y hacer inenieria social.
+
+.Descifrando contraseñas WIFI
+
+.Tiempos de Craqueo
+
+.Amenazas persistentes

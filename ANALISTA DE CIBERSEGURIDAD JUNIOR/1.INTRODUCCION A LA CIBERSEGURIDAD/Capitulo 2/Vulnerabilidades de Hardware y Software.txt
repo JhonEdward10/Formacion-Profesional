@@ -1,0 +1,23 @@
+Vulnerabilidades de Hardware
+
+.Es una falla física del sistema que permite que el dispositivo sea hackeado, entre ellos se encuentra:
+
+.Meltdown y spectre Vulnerabilidades de hardware afecta a casi todas las CPU
+
+
+Vulnerabilidades de software
+
+.Es una falla lógica o del sistema operativo el cual es error del código o se inyecta en el.
+
+entre esas vulnerabilidades se encuentran
+
+.Desbordamiento del buffer: Es cuando la información traspasa el área delimitada de la memoria entregada al buffer y por ahí pueden existir vulnerabilidades.
+
+.Entrada no valida: programas que pueden ser visto de una forma de que el programa no siga su funcionamiento habitual
+
+.Condiciones de carrera: cuando un software no funciona según lo previsto este tiende a ser una gran vulnerabilidad para todo el sistema pues no esta coordinado.
+
+.Debilidad en las practicas de seguridad mediante autenticación probada, autorizada y cifrada, porque si se introduce una sin haberse probado se puede infiltrar.
+
+.Problemas de control de acceso: Se debe controlar el acceso de quien accede a los datos o sino puede existir fugas de información y ser muy cuidadosos 
+

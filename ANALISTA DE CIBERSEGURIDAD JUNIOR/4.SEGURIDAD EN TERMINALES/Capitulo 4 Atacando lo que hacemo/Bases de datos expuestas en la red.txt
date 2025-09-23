@@ -1,0 +1,10 @@
+Bases de datos expuestas en la red
+
+Las aplicaciones web suelen conectarse a una base de datos relaciónal para obtener acceso a sus datos. como las bases de datos contienen datos sensibles, son fuentes recurrentes de ataques.
+
+Inyección de código:: Los atacantes son capaces de ejecutar código malicioso en una aplicación web vulnerable, en donde los comandos del atacante sonejecutados mediante la aplicación web y tienen los mismos permisos que dicha aplicación.   Un ejemplo es cuando un atacante "inyecta" código PHP en un campo de entrada inseguro en la página del servidor.
+
+Inyección SQL:  sql es el lenguaje que se utiliza para consultar bases de datos relacionales, los atacantes la utilizan para infringir la seguridad en la base de datos relacional, creando consultas maliciosas y obtener datos confidenciales.
+
+Este ataque consiste en introducir una consulta SQL usando los datos de entrada desde el cliente hacia la aplicación. Un ataque exitoso de inyección SQL, puede leer los datos confidenciales de la base de datos, modificarlos, ejecutar operaciones de administración de la base de datos y, a veces, emitir comandos al Sistema Operativo.
+A menos que una aplicación utilice validación estricta para los datos de entrada, será vulnerable al ataque de inyección SQL. Si una aplicación acepta y procesa los datos suministrados por el usuario sin ninguna validación de datos de entrada, un agente de amenaza podría presentar una cadena de entrada maliciosa para desencadenar el ataque de inyección SQL.
