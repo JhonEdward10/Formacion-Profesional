@@ -1,0 +1,40 @@
+	Hay tres tipos básicos de computación en la nube:
+
+SaaS - Software como servicio
+PaaS - Plataforma como servicio
+IaaS - Infraestructura como servicio
+
+SaaS: Se centra en el servicio al cliente, en donde puede interactuar con la pagina y puede exportar lo que se edita desde la pagina web 
+Otras aplicaciones SaaS incluyen:
+Hojas de cálculo de Google (Google Sheets)
+Google Calendar
+Google Maps
+Office 365
+Salesforce
+
+PaaS: Se centra en desarrolladores, que a su vez se centran en el código, aquí se aloja servicios para la aplicación del consumidor, en donde puede escribir código y las operaciones son manejadas por el proveedor del PaaS.
+Algunos ejemplos de servicios PaaS incluyen:
+Microsoft Azure
+Saleforce Lightning
+AWS Lambda
+AWS Elastic Beanstalk
+Google App Engine
+
+IaaS: proporciona recursos informáticos mediante servicios en la nube. Esto lo proporciona mediante maquinas virtuales.
+Algunos ejemplos de servicios PaaS incluyen:
+Cisco Metacloud
+Microsoft Azure
+DigitalOcean
+Google Compute Engine
+Rackspace
+
+XaaS: también existe esta que une las tres anteriores y lo muestra como uno solo 
+Otros ejemplos de XaaS incluyen:
+Recuperación ante desastres como servicio (DRaaS)
+Comunicaciones como servicio (CaaS)
+Monitoreo como servicio (MaaS)
+Escritorio como servicio (DaaS)
+
+
+Existen acceso remotos como Telnet, SSH y RDP(Remote Desktop protocol)para Windows o VNC(virtual network computation) para macOS
+

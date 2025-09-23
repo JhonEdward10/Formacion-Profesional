@@ -1,0 +1,33 @@
+Las maneras en las que hacen ingeniería social, es:
+
+A autoridades de empresas, mediante intimidación, también
+aprovechan mediante redes sociales con empleos o propuestas falsas
+
+Piggybacking o tailgating ocurren cuando un delincuente sigue a una persona autorizada para ingresar a un lugar seguro o un área restringida.
+
+Las facturas falsas se envían con el objetivo de recibir dinero de una víctima solicitándoles que pongan sus credenciales en una pantalla de inicio de sesión falsa. La factura falsa también puede incluir lenguaje urgente o amenazante.
+
+Tipos de malwares: un malware es un código que puede dañar, robar o incluso retener y esto es programado por ciberdelincuentes. Entre estos se encuentra:
+
+Virus: se debe utilizar una aplicación que infecta el programa y puede manipularlo
+gusano: se replica por la red infectado todo a su paso y no necesita ningún programa.
+Troyano:
+Bombas lógicas:
+Ransomware: código que infecta un programa y lo cautiva, el cual para liberarlo se necesita realizar un pago oportuno.
+Ataques de denegación de servicio (DDoS): Provocan interrupción del sistema y hacen que se pierda tiempo y dinero. Se puede dar por una cantidad abrumadora de trafico o paquetes formateados maliciosamente.
+
+Sistema de nombres de dominios: 
+ .Reputación de dominio: clasifica los sistemas de DNS entre los que son confiables y los que no lo son.
+ .Falsificación de DNS: aquí se hace que los servidores DNS redirijan el trafico de servidores de dominio legitimo dirección IP de un servidor malicioso o ilegitimo.
+ .Secuestro de dominio: aquí el atacante obtiene la dirección DNS del servidor ya que la puede cambiar a la que el utiliza y todo el trafico se redirecciona y eso se puede lograr mediante ingeniería social.
+ .Redireccion del localizador uniforme de recursos (URL): aquí en lugar de que uno ingrese a un sitio web legitimo se puede aprovechar para que con una pagina igual a la que se espera cambien la URL para que este se pueda extraer información en un lugar malicioso. 
+
+En la Capa 2
+Falsificación de identidad (spoofing).
+Saturación de direcciones MAC.
+
+Ataque de hombre en el medio (MitM) este se da en la red
+Ataque de hombre en el Móvil (MitMo) este se da en una aplicación para tomar el control del móvil. Ejemplo ZeUS es un malware que permite tomar los msm de autenticación que llegan a un dispositivo para realizar verificación en dos pasos
+
+Ataques del dia cero.
+Registro del teclado: El software keylogger (registro de teclas) Muchas aplicaciones antispyware pueden detectar y eliminar registros de clave no autorizados.

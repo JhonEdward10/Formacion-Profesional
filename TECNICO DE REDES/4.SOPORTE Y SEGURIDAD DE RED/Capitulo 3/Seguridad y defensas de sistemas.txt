@@ -1,0 +1,37 @@
+Aquí para que el sistema operativo este seguro se necesitan tres pilares fundamentales y estos son:
+.Un Buen administrador
+.Enfoque sistematizado: 
+.Linea de base: establezca una línea de base para comparar el rendimiento de un sistema con las expectativas de la línea de base.
+Fileless: El malware sin archivos utiliza programas legítimos para infectar una computadora. Al ir directamente a la memoria, este tipo de malware no depende de los archivos, por lo que no deja huella.
+
+Tipos de antimalware:
+.Hay que tener cuidado en donde se da clic, porque hay sitios dudosos, que con el solo clic nos puede hacer ingresar un malware al sistema.
+.Un malware sin archivos a lo que se ingresa no muestra nada, entonces es difícil de detectar.
+.Hay scripts que también pueden llegar a ser malware.
+.No deje que se instale un software que no sea aprobado por el sistema, que aunque no afecte al sistema esta violando las políticas de los dispositivos.
+
+Hay diferentes tipos de firewall, para proteger el sistema, entre ellos:
+.Firewall de Host: El host inspecciona mediante el firewall todo los datos entrantes y salientes, lo cual la inspección detecta y no permite el ingreso al dispositivo.
+Se ejecuta en un dispositivo para restringir la actividad de red entrante y saliente para ese dispositivo. Puede permitir o denegar el tráfico entre el dispositivo y la red.
+
+.Sistema de detención de intrusos en el host(HIDS): Controla y analiza actividades sospechosas, además de que no permite y alerta cuando hay una solicitud sospechosa.
+El HIDS puede monitorear todo lo referente a los datos internos del dispositivo, el no tiene acceso a la red.
+
+.Sistema de prevención de intrusiones en el host(HIPS): Monitorea los datos que se envían y reciben en busca de ataques conocidos y anomalías.
+
+.Detención y respuesta de punto final (EDR): el EDR, encuentra y bloquea las amenazas al dispositivo.
+
+.Herramientas DLP: Brinda de forma centralizada la garantía de que los datos importantes no se pierda, que alguien pueda acceder a ellos o no se utilicen de forma indebida.
+
+.Firewall de siguiente generación (NGFW): Además de ser un firewall convencional también brinda y realiza inspección profunda de los datos entrantes, asegurando un sistema contra intrusiones.
+ 
+BitLocker: cifrado host de Windows, usando el tpm, que garantiza certificados y cifrado, se puede utilizar cuando el tpm esta habilitado en la BIOS
+
+En macOs el tpm es reemplazado por el chip llamado Secure Enclave.
+Motor de cifrado AES. Ademas el Arranque seguro La ROM de arranque protege el hardware de bajo nivel y solo permite que se ejecute el software Apple OS original e inalterado. que en macOS solo se permite el arranque seguro. Los datos que se ingresan se encuentran aparte del sistema operativo lo que conlleva a un malware a tener mas trabajo de ingresar a ello.
+
+Find My Mac aplicación que ayuda a localizar dispositivos Apple
+Xprotect: permite alertar a los usuarios a saber cuando hay malware y saber si los pueden eliminar.
+Herramienta de eliminación de malware: elimina automáticamente cualquier malware al actualizar el sistema.
+Gatekeeper: solo permite instalar aplicaciones que tengan firma de mac o Apple.
+

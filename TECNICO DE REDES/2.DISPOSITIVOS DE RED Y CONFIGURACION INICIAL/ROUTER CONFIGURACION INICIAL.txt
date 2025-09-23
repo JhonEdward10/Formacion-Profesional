@@ -1,0 +1,26 @@
+Nombre
+Router(config)# hostname hostname
+
+Proteja el modo EXEC con privilegios.
+Router(config)# enable secret password
+
+Proteger el modo EXEC de usuario.
+Router(config)# line console 0
+Router(config-line)# password password
+Router(config-line)# login
+
+Proteger el acceso remoto por Telnet y SSH.
+Router(config-line)# line vty 0 4
+Router(config-line)# password password
+Router(config-line)# login
+Router(config-line)# transport input {ssh | telnet | none | all}
+Router(config-line)# exit
+
+Proteja todas las contraseñas del archivo de configuración.
+Router(config)# service password-encryption
+
+Proporcione una notificación legal.
+Router(config)# banner motd delimiter message delimiter
+
+Guarde la configuración.
+Router(config)# copy running-config startup-config

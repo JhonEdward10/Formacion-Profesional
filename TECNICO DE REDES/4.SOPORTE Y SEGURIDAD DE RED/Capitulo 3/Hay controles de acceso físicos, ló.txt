@@ -1,0 +1,16 @@
+Hay controles de acceso físicos, lógicos y controles de acceso administrativo.
+
+Ademas existe la autenticación, la autorización y contabilidad (AAA)
+
+Gestion de identidad Federada (FIM): permite a un usuario con un ID o contraseña ingresar a varias partes del sistema de una empresa, lo cual significa un riesgo potencial para cualquier organización.
+
+Como se explica el usuario debe realizar y conocer su usuario y ID para ingresar sus crendenciales; entre ellas hay ciertos
+métodos que se deben conocer como:
+
+Lo que el usuario debe saber: que son las contraseñas o PIN de acceso.
+Lo que el usuario debe tener: Tarjetas inteligentes y llaveros de seguridad es lo que el usuario debe tener.
+Quien es usted: aquí son la características físicas que tiene una persona para distinguirla, como huella dactilar, biométrica, prueba de retina o incluso de la voz.
+
+Hay que utilizar un administrador de contraseñas y autenticación multifactor.
+
+La contabilidad es muy importante, ya que es el procedimiento que hace seguimiento a todo lo que se hace en una red, aplicación o empresa.

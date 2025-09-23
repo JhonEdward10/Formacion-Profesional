@@ -1,0 +1,22 @@
+Ataques de software: virus informático o denegación de servicio exitosa (DoS).
+Errores de software: una aplicación que se desconecta o un archivo compartido de forma ilegal o error de software.
+Sabotaje: un usuario penetra las bases de datos y la compromete la organización para su beneficio el sitio
+Error Humano: errores de seguridad o por imprudencia de datos involuntario o cambios por error de firewall.
+Robo: Robo de pc o cualquier dispositivo electrónico.
+Falla de hardware: disco duro falla.
+Interrupción de servicios: cortes de energía, o daños por aguas en la falla del rociador.
+Desastres naturales
+
+Dominio de usuario: cualquier persona que tiene acceso a la base de datos de una respectiva organización.
+
+nube publica que las organizaciones pueden usar: Software como servicio -> Software que esta en un navegador web y se accede a el desde la nube  (SaaS); Plataforma como servicio -> plataforma que permite que la organización ejecute, diseñe, desarrolle y administre sus servicios(PaaS) y Infraestructura como servicio -> una organización compra el acceso a la infraestructura a través de internet (IaaS).
+
+Dominio de aplicaciones: cada vez mas las organizaciones migran los servicios informáticos de aplicaciones a la nube, como correos, supervisión de seguridad y gestión de bases de datos
+
+Programas para hacer espionaje o ciberataques: Netbus y back Orificio
+RootKits: son programas que se implantan como malware para tener una puerta trasera e ingresar siempre al dispositivo.
+
+Indicador de compromiso(IOC): firmas de malware
+
+Quid pro quo → Un ataque en el que se ofrece algo a cambio de información confidencial.
+Fraude de identidad → Implica el uso de datos robados para hacerse pasar por otra persona. 

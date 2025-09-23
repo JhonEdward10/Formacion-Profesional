@@ -1,0 +1,27 @@
+Topologias de red
+
+Comunicación duplex y semidúplex son el sentido en el que la información viaja por la red.
+
+Semidúplex: permite que lo que envia un dispositivo sea recibido o enviado una sola vez	no se puede hacer de forma simultanea.
+
+duplex: solo el dispositivo puede enviar o recibir y solo lo puede hacer una vez al tiempo.
+
+Full duplex: quiere decir que puede enviar y recibir información de forma simultanea.
+
+Diferentes tipos de acceso
+
+Acceso basado en contención: todos los nodos operan en semidúplex, compitiendo por el uso del medio. Sin embargo, solo un dispositivo puede enviar a la vez.
+
+Tipos de acceso basado en contencion
+.Acceso múltiple con detección de colisiones (CSMA/CD) utilizado en LAN Ethernet de topología de bus heredada
+.El operador detecta el acceso múltiple con prevención de colisiones (CSMA/CA) utilizado en LAN inalámbricas
+
+Acceso controlado: En una red de acceso múltiple basada en control, cada nodo tiene su propio tiempo para usar el medio.
+acceso múltiple/detección de colisión de detección de portadora (CSMA/CA).
+Estos tipos deterministas de redes no son eficientes porque un dispositivo debe aguardar su turno para acceder al medio. Algunos ejemplos de redes multiacceso que utilizan acceso controlado son los siguientes:
+Anillo de Token heredado (Token Ring)
+ARCNET heredado
+
+Hoy en día, las redes Ethernet funcionan en dúplex completo y no requieren un método de acceso.
+
+No determinista significa que el acceso al medio de red no es predecible o garantizado en un momento específico. En ambos métodos, no hay un control centralizado que determine cuándo un dispositivo puede transmitir datos. Esto puede llevar a colisiones en el caso de CSMA/CD o intentos de evitar colisiones en CSMA/CA.
