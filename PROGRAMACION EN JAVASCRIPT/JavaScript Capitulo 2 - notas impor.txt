@@ -1,0 +1,13 @@
+JavaScript Capitulo 2 -> notas importantes
+
+Una de las diferencias básicas en el uso de var y let es que let nos impide declarar otra variable con el mismo nombre (se genera un error). El uso de var le permite volver a declarar una variable, lo que puede provocar errores en la ejecución del programa.
+
+"use strict";. Esta afirmación ha cambiado radicalmente el comportamiento del intérprete. ¿Por qué? Lo usamos cuando queremos obligar al intérprete a comportarse de acuerdo con los estándares modernos de JavaScript. Por lo tanto, siempre que no esté ejecutando un código realmente antiguo, siempre debe usarlo. 
+
+
+La variable var
+Después de esta breve introducción a las funciones (obviamente esta no es nuestra última reunión con ellas) volvamos a la palabra clave var y los ámbitos de las variables.
+
+Si declaramos una variable usando la palabra clave var dentro de una función, su alcance se limitará solo al interior de esa función (es un alcance local). Esto significa que el nombre de la variable se reconocerá correctamente solo dentro de esta función.
+
+En la mayoría de los casos, esto no es deseable, así que trate de evitar dar los mismos nombres de variable a varias variables, independientemente de dónde las declare.
