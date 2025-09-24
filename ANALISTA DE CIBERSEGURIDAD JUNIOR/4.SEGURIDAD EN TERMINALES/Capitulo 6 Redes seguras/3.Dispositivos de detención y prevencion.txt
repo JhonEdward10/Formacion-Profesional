@@ -1,0 +1,31 @@
+Dispositivos de detención y prevención de intrusiones
+
+IPS (Intrusión Prevention System) e IDS (Intrusion Detection System), es lo que se hace para prevenir las intrusiones, las empresas lo están implementando. 
+
+Hay que conocer los tipos de sistemas disponibles: asi opera un IPS y un IDS 
+.Características comunes de IDS e IPS
+Ambas tecnologías se implementan como sensores.
+Ambas tecnologías utilizan firmas para detectar patrones de uso indebido en el tráfico de red.
+Ambas pueden detectar patrones atómicos (un solo paquete) o patrones compuestos (varios paquetes).
+
+las tecnologías de IPS e IDS son reglas que detectan trafico malicioso al ingresar a una red, son conocidas como firmas, pues pueden detectar infracciones de seguridad. Estas tecnologías detectan patrones de firmas atomicas (un solo paquete) o firmas compuestas (varios paquetes).
+
+
+	.Ventajas del IDS:  
+					.Se implementa en modo sin conexión, en donde no afecta ni sobrecarga la red, asi falle su sensor, no afecta a la red, solo afecta a la capacidad del IDS el cual este analiza los datos.
+
+	.Desventajas del IDS: 
+					.No se puede detener el paquete de activación y son menos útiles para detener virus de correo electrónico y ataques automatizados o gusanos.
+					.Una implementación de IDS es más vulnerable a las técnicas de evasión de seguridad de red porque no está en línea.
+
+
+	.Ventajas de IPS:  
+					.Un sensor IPS puede omitir paquetes, si quiera antes de abrirse, dependiendo de su asociación a la conexión o depende si proviene de cierta IP.
+					.Porque los sensores IPS son en línea, pueden utilizar la normalización de transmisión. La normalización de transmisión es una técnica usada para reconstruir el flujo de datos cuando el ataque se produce en varios segmentos de datos.
+
+	.Desventajas de IPS: 
+					.Al implementarse en linea, puede tener sobrecalentamiento del sensor IPS, con mucho trafico puede tener un efecto negativo en la red, introduciendo latencia y fluctuación.
+
+
+
+
