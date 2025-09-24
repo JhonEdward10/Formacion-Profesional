@@ -1,0 +1,237 @@
+En ipv6 al igual que ipv4 se encuentra diferentes tipos de direcciones
+
+difusión - Una dirección de difusión IPv6 identifican de forma exclusiva una interfaz en un dispositivo con IPv6 habilitado.
+
+Multidifusión - Una dirección de multidifusión IPv6 se utiliza para enviar un único paquete IPv6 a varios destinos.
+
+Anycast - Una dirección IPv6 anycast es cualquier dirección IPv6 de difusión que se puede asignar a varios dispositivos. Los paquetes enviados a una dirección de difusión por proximidad se enrutan al dispositivo más cercano que tenga esa dirección. Las direcciones de difusión por proximidad exceden el ámbito de este curso.
+
+en IPv6 no se llama porción de red, sino prefijo y esta compuesto de 64 bits y el resto de dirección en ipv4 se llama numero de host en ipv6 se llama ID de interfaz
+_______________________________________________________________________________________________________________________________________________________________________
+
+SLAAC autoconfiguración de direcciones sin estado
+
+Dirección de difusión global (GUA): similares a direcciones IPv4 publicas, son exclusivas para internet globalmente y se pueden configurar de forma estatica y dinámica
+
+Dirección local de enlace (LLA): se requiere para cada dispositivo habilitado con IPv6 y se necesita para poder que el dispositivo se comunique con otro dispositivo en la misma red o enlace local, enlace hace el termino a subred, los enrutadores no reenvían paquetes a direcciones de origen o destino con LLA
+
+se pueden usar direcciones locales únicas para dirigir dispositivos a los que no se debe acceder desde el exterior, como servidores internos e impresoras.
+
+Las direcciones locales únicas de IPv6 tienen cierta similitud con las direcciones privadas RFC 1918 para IPv4
+
+Las direcciones locales únicas se utilizan para el direccionamiento local dentro de un sitio o entre una cantidad limitada de sitios.
+Se pueden utilizar direcciones locales únicas para dispositivos que nunca necesitarán acceder a otra red.
+Las direcciones locales únicas no se enrutan o traducen globalmente a una dirección IPv6 global.
+_______________________________________________________________________________________________________________________________________________________________________
+Las GUA son direcciones similares a lo que en IPv4 son publicas
+
+La siguiente figura muestra la estructura y el rango de GUA
+
+Prefijo de enrutamiento de /48 + ID de subred de 16 bits = prefijo de /64 
+ID de interfaz de 64 bits
+
+La gua tiene tres partes 
+.Prefijo de enrutamiento Global
+.ID de subred
+.ID de interfaz - Host
+
+Prefijo de enrutamiento global GUA = Porción de red en IPv4
+
+Id subred es el área entre el prefijo de enrutamiento global y la ID de interfaz, cuanto mayor es el numero de ID de subred, mayor es la cantidad de subredes que pueden existir
+_______________________________________________________________________________________________________________________________________________________________________
+Las LLA permite que un dispositivo se comunique en un cierto enlace de red y solo en ese enlace (subred), estos paquetes no se pueden enrutar mas alla del origen del que fueron asignados.
+ Cada interfaz de red IPv6 debe tener habilitado LLA.
+
+La GUA no es un requisito. Sin embargo, cada interfaz de red habilitada para IPv6 debe tener una LLA.
+
+Las direcciones LLA IPv6 están en el rango fe80::/10. /10 indica que los primeros 10bit s son 1111 1110 10xx xxxx. El primer sexteto tiene un rango de 1111 1110 1000 0000 (fe80) a 1111 1110 1011 1111 (febf).
+
+Los enrutadores usan el LLA de los enrutadores vecinos para enviar actualizaciones de enrutamiento.
+Los hosts usan el LLA de un enrutador local como puerta de enlace predeterminada.
+
+ Por lo general, es el LLA del enrutador, y no la GUA, que se usa como la puerta de enlace predeterminada para otros dispositivos en el enlace.
+
+_______________________________________________________________________________________________________________________________________________________________________
+Configuración estática GUA y LLA
+
+Configuración de GUA estática de un enrutador
+
+R1(config)# interface gigabitethernet 0/0/0
+R1(config-if)# ipv6 address 2001:db8:acad:1::1/64
+R1(config-if)# no shutdown
+R1(config-if)# exit
+R1(config)# interface gigabitethernet 0/0/1
+R1(config-if)# ipv6 address 2001:db8:acad:2::1/64
+R1(config-if)# no shutdown
+R1(config-if)# exit
+R1(config)# interface serial 0/1/0
+R1(config-if)# ipv6 address 2001:db8:acad:3::1/64
+R1(config-if)# no shutdown
+
+Hay dos formas de que un dispositivo obtenga una dirección IPv6 Dinamica
+
+Configuración automática de direcciones sin estado (SLAAC)
+DHCPv6 con estado
+
+LLA en telecomunicaciones ipv6 = dirección de enlace local o Link Local Adress
+
+GUA en telecomunicaciones ipv6 = (Global Unicast Address)
+
+Configuración de LLA en un enrutador 
+
+R1(config)# interface gigabitethernet 0/0/0
+R1(config-if)# ipv6 address fe80::1:1 de enlace local
+R1(config-if)# exit
+R1(config)# interface gigabitethernet 0/0/1
+R1(config-if)# ipv6 address fe80::2:1 de enlace local
+R1(config-if)# exit
+R1(config)# interface serial 0/1/0
+R1(config-if)# ipv6 address fe80::3:1 de enlace local
+R1(config-if)# exit
+
+FF02::2.
+_______________________________________________________________________________________________________________________________________________________________________
+
+SLAAC autoconfiguración de direcciones sin estado OJO importante, no se necesita dirección de estado, puede tener cualquiera
+
+Mensajes RS Y RA
+
+RA - Mensajes de anuncio de enrutador
+RS - Solicitud de enrutador
+
+un dispositivo obtiene la dirección dinámicamente a través de mensajes del Protocolo de mensajes de control de Internet versión 6 (ICMPv6)
+Los enrutadores IPv6 envían mensajes RA de ICMPv6 periódicamente, cada 200 segundos, a todos los dispositivos con IPv6 habilitado en la red. También se enviará un mensaje RA en respuesta a un host que envía un mensaje ICMPv6 RS, que es una solicitud de un mensaje RA
+
+ El mensaje ICMPv6 RA incluye lo siguiente:
+
+Prefijo de red y longitud del prefijo - Esto le dice al dispositivo a qué red pertenece.
+Dirección de puerta de enlace predeterminada - Es un IPv6 LLA, la dirección IPv6 de origen del mensaje RA.
+Direcciones DNS y de nombre de dominio - Estas son las direcciones de los servidores DNS y nombre de dominio. 
+
+Método SLAAC 
+No requiere un servidor dhcp y con el solo router hace el trabajo de dar la dirección Ip, el prefijo de red y la puerta de enlace y el host crea un ID de 64 bits.
+
+Método SLAAC y DHCP sin estado
+SLAAC para crear su propio IPv6 GUA
+La dirección de enlace local del enrutador, la dirección IPv6 de origen del RA para la dirección de la puerta de enlace predeterminada
+Un servidor DHCPv6 sin estado, que obtendrá otra información como la dirección del servidor DNS y el nombre de dominio
+Aquí se obtiene dirección del SLAAC y el DNS se obtiene del DHCP sin estado
+
+Método DHCP con estado
+La dirección LLA del enrutador, que es la dirección IPv6 de origen del RA, para la dirección de la puerta de enlace predeterminada.
+Un servidor DHCPv6 con estado, para obtener una GUA DIRECCION IPv6, otra información como la dirección del servidor DNS y el nombre de dominio.
+Solo del router obtiene la dirección de puerta de enlace y el resto la GUA, DNS y dominio lo obtiene del servidor DHCP.
+
+Proceso EUI-64 o generado aleatoriamente
+El enrutador envía un mensaje RA.
+El PC utiliza el prefijo del mensaje RA y utiliza EUI-64 o un número aleatorio de 64 bits para generar un ID de interfaz.
+Ejemplo
+El ID de interfaz generado según el proceso EUI-64 para la dirección MAC 1C-6F-65-C2-BD-F8 es:
+
+1E6F:65FF:FEC2:BDF8
+
+Este proceso divide la dirección MAC en dos partes, inserta el valor FFFE en el medio y realiza un complemento en el bit más significativo.
+_______________________________________________________________________________________________________________________________________________________________________
+
+La figura muestra que el LLA se crea dinámicamente usando el prefijo fe80::/10 y la ID de interfaz usando el proceso EUI-64, o un número de 64 bits generado aleatoriamente.
+
+El comando 
+/*
+show ipv6 interface brief
+*/
+muestra todas las direcciones IPv6 configuradas en una interfaz.
+
+Comando 
+/*
+show ipv6 route 
+*/
+Verifica direcciones ipv6
+
+C red conectada direactamente
+L red local
+_______________________________________________________________________________________________________________________________________________________________________
+Las direcciones de multidifusión IPv6 tienen el prefijo ff00::/8.
+ff00::db7:4322:a231:67c
+
+1. Solicitud de vecino (Neighbor Solicitation)
+Un nodo IPv6 envía un mensaje ICMPv6 Neighbor Solicitation cuando necesita conocer la dirección MAC de otro nodo en la misma red. Este mensaje se envía a una dirección FF02::1 (multicast link-local) con la dirección de destino como parte del mensaje.
+
+2. Anuncio de vecino (Neighbor Advertisement)
+El nodo receptor de la solicitud responde con un Neighbor Advertisement. Este mensaje incluye la dirección MAC del nodo receptor. El anuncio de vecino se envía al nodo específico que hizo la solicitud (unicast).
+
+3. Solicitud de router (Router Solicitation)
+Un nodo envía un mensaje Router Solicitation para identificar la presencia de enrutadores en la misma red. Este mensaje se envía a una dirección FF02::2 (multicast link-local).
+
+4. Anuncio de router (Router Advertisement)
+Los enrutadores en la red responden a la solicitud con un Router Advertisement. Este mensaje contiene información sobre el enrutador, como la presencia de direcciones y prefijos. También se envía periódicamente sin solicitud previa para anunciarse.
+
+____________________________________________________________________________________________________________________________________________________________________
+El proceso Neighbor Discovery en ICMPv6 incluye los mensajes en el siguiente orden, según las necesidades:
+
+Solicitud de vecino (Neighbor Solicitation) 🡪 Anuncio de vecino (Neighbor Advertisement): para encontrar la dirección MAC de un nodo en la misma red.
+
+Solicitud de router (Router Solicitation) 🡪 Anuncio de router (Router Advertisement): para identificar la presencia y características de enrutadores.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

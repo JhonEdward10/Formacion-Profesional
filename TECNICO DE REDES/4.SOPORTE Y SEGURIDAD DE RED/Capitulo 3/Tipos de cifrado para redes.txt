@@ -1,0 +1,10 @@
+Tipos de cifrado para redes
+
+WPA (TKIP - Temporal Key Integrity Protocol): Utiliza WEP pero con la diferencia que en la Capa2 verifica que los datos enviados no hayan sido alterados  
+
+WPA2: Utiliza AES que es el método de encripcion estándar avanzada, ya que utiliza el código de autenticación de mensajes de bloqueo de cadena (CCMP), que permite a los dispositivos reconocer si han sido alterados los bits o no.
+
+RADIUS: Protocolo de red que permite y autentica que los usuarios puedan ingresar o no a una red remota.
+
+¿Qué método de autenticación en WPA3 mejora el proceso de incorporación para que los dispositivos IoT se unan a la red inalámbrica?
+DPP

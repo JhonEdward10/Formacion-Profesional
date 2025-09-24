@@ -1,0 +1,16 @@
+Ataques a aplicaciones
+
+Secuencias de comandos entre sitios
+Permite que el actor malvado ejecute comandos en el ordenador de la victima. la victima ingresa a la web y los atacantes al navegador de la victima
+
+Ataques de inyección XML
+Ataques de inyección SQL
+Ataques de inyección DLL: Archivo de biblioteca de enlaces dinámicos, llama a un archivo en Windows y se hace pasar por el para que se ejecute en el ordenador
+Ataques de inyección LDAP: Observa y da acceso a los usuarios en diferentes directorios o carpetas lo que le permite traer información del directorio.
+
+Buferes: áreas de memoria asignadas a una aplicación. Al bufer o a las memorias asignadas cuando se pasa la información y el espacio asignado puede llegar a otras áreas y los atacantes intervienen allí, comprometiendo la seguridad. 
+
+Ejecución remota de código: un atacante aprovecha vulnerabilidades y sobre todo ejecuta y puede llegar hasta administrar el programa en su beneficio.
+
+Metasploit: es un proyecto con el que se puede analizar y explotar de forma remota el código, además de utilizarse también para auditoria, calcular vulnerabilidades de seguridad y ayuda en las pruebas de penetracion.
+ meterpreter, tiene un sistema para controlar la cámara web de un dispositivo

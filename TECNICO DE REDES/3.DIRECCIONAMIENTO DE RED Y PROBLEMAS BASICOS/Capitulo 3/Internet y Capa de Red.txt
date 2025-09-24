@@ -1,0 +1,27 @@
+Internet y Capa de Red
+
+Los dispositivos de la cada de red o host ellos mismos pueden hacer conexión entre ellos hacia otro host en la misma red u a otro host que se encuentre en una red remota.
+
+Punto de acceso inalambrico WAP.
+ Puerta de enlace predeterminada
+
+Comando
+
+route print o netstat -r -> muestra tabla de enrutamiento
+
+Los protocolos de enrutamiento dinámico incluyen Open Shortest Path First (OSPF)  y  Enhanced Interior puerta de enlace predeterminada Routing Protocol (EIGRP)
+
+protocolo de enrutamiento dinámico OSPF = Open Shortest Path First (OSPF)
+
+El comando show ip route de modo EXEC privilegiado
+
+L - Dirección IP de la interfaz local conectada directamente
+C - Red directamente conectada
+S - La ruta estática fue configurada manualmente por un administrador
+O - Open Shortest Path First (OSPF)
+D - Enhanced Interior puerta de enlace predeterminada Routing Protocol (EIGRP)
+
+
+
+
+

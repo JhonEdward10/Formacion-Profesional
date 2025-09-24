@@ -1,0 +1,37 @@
+SSID: HQ-INT
+user1 / PASSuser1!
+user2 / PASSuser2!
+
+DOMINIO: mail.cyberhq.com
+
+User Setup: 
+o    HQuser1 / Cisco123!  Suk-Yi
+o    HQuser2 / Cisco123~  Cisco
+o    BRuser1 / Cisco123-  Ajulo
+o    BRuser2 / Cisco123+  Malia
+
+HQuser1@mail.cyberhq.com
+BRuser1@mail.cyberhq.com
+BRuser2@mail.cyberhq.com
+HQuser2@mail.cyberhq.com
+
+cisco
+cisco
+RWDNL (Write, Read, Delete, Rename, List)
+
+sukyi
+cisco123
+RWDNL (Write, Read, Delete, Rename, List)
+
+ajulo
+cisco321
+RWDNL (Write, Read, Delete, Rename, List)
+
+malia
+cisco123
+RWNL (Write, Read, Rename, List)
+
+Ingresar: ftp + 192.168.75.2
+Usuario: sukyi
+Contraseña: cisco123
+Comando: dir, get aMessage.txt, quit, put, delete  	

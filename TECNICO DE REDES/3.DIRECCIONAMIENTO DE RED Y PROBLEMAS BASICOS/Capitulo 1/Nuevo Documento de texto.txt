@@ -1,0 +1,53 @@
+.Codificacion
+
+Representar la información digital en 0 y 1, algo similar al código morse
+
+.Señalización
+
+aquí se deben generar señales inalámbricas, ópticas o eléctricas en 1 o 0, que tipo de señal representa 0 o 1.
+
+.Ancho de banda
+
+aquí se permite el tipo de transferencia en un cierto tiempo en diferentes velocidades, capacidad de un medio que puede transferir algo en un cierto tiempo, Esto se mide en Bytes/s.
+
+en el ancho de banda para poder hablar de ello se definen tres factores latencia, rendimiento y capacidad de transferir útil.
+
+.Latencia: cantidad de tiempo que se tarda en transferir datos.
+.Rendimiento: medida de transferencia de bits atraves del tiempo en un periodo de tiempo.  generalmente es menor que el ancho de banda
+...Cantidad de trafico, el tipo de trafico, latencia creada por la cantidad de dispositivos de red entre origen y destino.
+.Capacidad de trasferir útil: medida utilizable de los datos transferidos, la capacidad de transferencia útil siempre es menor al rendimiento que también es menor al ancho de banda.
+
+Crosstalk: quiere decir que se puede interferir otra comunicación de otro lugar.
+
+El cableado UTP en categorías
+
+La figura muestra tres categorías de cable UTP:
+
+La categoría 3 se utilizó originalmente para la comunicación de voz a través de líneas de voz, pero más tarde para la transmisión de datos.
+Las categorías 5 y 5e se utilizan para la transmisión de datos. La categoría 5 soporta 100Mbps y la categoría 5e soporta 1000 Mbps.
+La categoría 6 tiene un separador añadido entre cada par de cables para soportar velocidades más altas. Categoría 6 soporta hasta 10Gbps.
+Categoría 7 también soporta 10 Gbps.
+Categoría 8 soporta 40 Gbps.
+
+El Cableado Fibra Optica
+
+.Monomodo y Multimodo
+
+Algunos conmutadores y enrutadores tienen puertos que permiten conectores de fibra óptica a través de un transceptor conectable de factor de forma pequeño (SFP).
+
+Tipos de conectores de fibra:
+
+.Conector de punta directa (ST): El conector se bloquea de forma segura con un mecanismo tipo bayoneta de 'giro y desenganche'.
+
+.Conector de suscriptor (SC): Es un conector LAN y WAN ampliamente adoptado que utiliza un mecanismo de inserción/extracción para asegurar la inserción correcta. Este tipo de conector se utiliza con la fibra óptica multimodo y monomodo.
+
+.Conectores lucent (LC) simplex: version mas pequeña del sc, por ello se denominan conectores locales ya que conectan usuarios finales normalmente y esta siendo muy implementado por su tamaño.
+
+.conectores lucent LC multimodo duplex: Un conector dúplex LC multimodo es similar a un conector LC simplex, pero utiliza un conector dúplex.
+
+Los cables multimodo suelen ser de color naranja o agua, y los monomodos suelen ser amarillos y se dividen en:
+
+.Multimodo SC-SC
+.Monomodo LC-LC
+.Multimodo ST-LC
+.Monomodo SC-ST

@@ -1,0 +1,14 @@
+Grayware y SMiShing
+
+Grayware es una aplicación que no se desea y se puede llegar a instalar, que aunque no sea mala directamente puede otorgar permisos que en un futuro puede llegar a ser perjudicial para el usuario, pues la letra pequeña contiene información indeseable.
+
+SMiShing: es cuando envían mensajes de texto o llamadas mediante las cuales se pueden implantar malware o robar información o que el usuario visite cualquier sitio web o de información.
+
+Bluejacking: envia documentos, imágenes, mensajes no autorizados via bluetooth.
+Bluesnarf: se produce cuando un atacante copia documentos, archivos, imágenes u otro documento mediante bluetooth.
+
+
+Privacidad por cable equivalente (WEP): Era el método que se utilizo en un principio para poder proteger las redes inalámbricas, lo cual hizo que fuera considerable, pero a medida que crecían las redes este se convirtió en una manera fácil de burlar los accesos a las redes inalámbricas. ya que a medida que se enviaban datos por la red, estos a su vez compartían las clave.
+Acceso protegido a WI-FI (WPA y WPA2): aquí ya pueden enviar datos y no se va a compartir la clave de acceso sin embargo se pueden espiar el trafico de red que se observa.
+
+OJO Los empleados de una organización deben usar una VPN de acceso remoto para acceder a WLAN cuando se encuentran en redes Wi-Fi públicas.

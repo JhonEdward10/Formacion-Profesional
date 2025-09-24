@@ -1,0 +1,32 @@
+CDP: Cisco Discovery Protocol, es el que analiza a los demás dispositivos vecinos en cisco, el cual ayuda a determinar que dispositivos están conectados,
+se da en la capa 2 de acceso.
+
+Comando
+R1# show cdp neighbors
+
+R1# show cdp neighbors detail
+
+Para activar CDP
+
+Branch-Edge# configure terminal
+Branch-Edge(config)# cdp run
+Branch-Edge(config)# interface s0/0/1
+Branch-Edge(config-if)# no cdp enable
+Branch-Edge(config-if)# exit
+
+Red local
+Nombre de usuario: admin01
+Contraseña: S3cre7P@55
+
+Red de la sucursal
+Nombre de usuario: branchadmin
+Contraseña: S3cre7P@55
+
+Para Linux hay algunos comandos que muestran velocidad y ancho de banda 
+speedtest: esta es una herramienta que prueba el ancho de banda de su conectividad con su proveedor de Internet.
+
+ncat: Ncat es una utilidad de red que forma parte del conjunto de herramientas de red nmap. Ncat o nc tiene muchos usos, incluida la verificación de la conectividad a un dispositivo mediante un puerto específico. El siguiente es un ejemplo de ncat probando la conectividad HTTPS (puerto 443) a dos dispositivos diferentes.
+
+Los comandos show de IOS, como show ip interface brief, show ip route y show protocols.
+
+Comando: show tech-support -> muestra diagnostica problemas complejos de redes en enrutadores

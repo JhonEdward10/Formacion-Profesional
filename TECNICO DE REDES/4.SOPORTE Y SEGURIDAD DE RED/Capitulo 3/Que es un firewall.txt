@@ -1,0 +1,30 @@
+Que es un firewall?
+
+Un firewall es un conjunto de sistemas que interponen una reglas de acceso a redes.
+
+Los firewalls resisten ataques de red y son lo que se interponen entre las redes externas e internas.
+
+Tipos de firewall
+
+Firewall para filtrado de paquetes (Sin estado): Forma parte de un enrutador entre la capa 3 y 4 que permiten o deniegan el paso de datos dependiendo de las reglas interpuestas y dependiendo a las reglas enrutadas así mismo permite el acceso o no a la red.
+
+Firewall Activo: Son los firewall mas versátiles y comúnmente usados, ya que se encuentran en la capa 3, 4 y 5. Filtran todo el trafico de paquetes que se mantiene en una tabla de estados.
+
+Firewall Gateway de aplicaciones (proxy): se encuentran en las capa 3, 4, 5 y 7. la mayor parte funciona en el software y cuando necesita conectarse a un servidor remoto se conecta a un servidor proxy, el servidor proxy se conecta al servidor remoto con el nombre del cliente. 
+
+Firewall de próxima generación (NGFW): bloquea aplicaciones riesgosas y va mas alla de los firewall sin estados, tiene ruta de actualización, por tanto puede afrontar intrusiones futuras, ya que esta a la vanguardia.
+
+Otros métodos son: 
+.Firewall de host: Computadora
+.firewall transparente: Filtra el trafico IP entre un par de interfaces conectadas con puente. 	
+.Firewall hibrido: se juntan mas de dos firewall, ejemplo de aplicación, con uno sin estado y otro de Gateway (proxy).
+
+
+Firewall de host: Windows defender, iptables (Linux), nftables(Linux vitualizacion), TCP wrappers(sistema de registro y control basado en linux) basado en direcciones IP y servicios de red.
+
+Antimalwares: protección antivirus de próxima generación, protección contra programas publicitarios, protección contra phishing (suplantación de identidad), protección contra spyware y fuentes no confiables o sitios no confiables.
+
+AES: Advanced encryption standart.
+
+
+   

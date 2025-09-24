@@ -1,0 +1,15 @@
+Comandos para verificar funcionamiento en la red
+.ping x.x.x.x -> muestra conexión de lado a lado
+.ping x.x.x.x -t
+
+.tracert x.x.x.x -> traza rutas en las que muestran en donde puede estar el error
+.tracert x.x.x.x -h
+
+.netstat -> Muestra los puertos habilitados para enviar y recibir
+.netstat /?
+
+.nslookup -> Muestra la direccion ip de los diferentes servidores IP o servicios. Servidor DNS predeterminado
+
+OSPF construiría un "mapa" completo de todas las rutas y elegiría la más corta de acuerdo con el costo de cada enlace.
+
+EIGRP tomaría en cuenta múltiples factores como el ancho de banda y el retardo para determinar la mejor ruta, además de tener un sistema que permite reaccionar rápidamente a cambios sin necesidad de recalcular todo el "mapa".

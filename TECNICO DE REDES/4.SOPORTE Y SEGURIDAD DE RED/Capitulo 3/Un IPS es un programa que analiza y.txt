@@ -1,0 +1,29 @@
+Un IPS es un programa que analiza y previene las intrusiones.
+
+Hoy en días es muy común ataques como el ransorware, el trabajo remoto y la visibilidad limitada.
+
+Diferentes características de los antivirus:
+
+Basado en firma: Este enfoque reconoce varias características de los archivos de malware conocidos.
+Basado en heurística: Este enfoque reconoce características generales que comparten diversos tipos de malware.
+Basado en comportamiento: Este enfoque emplea análisis de comportamiento sospechoso.
+
+Hay tres tipos de seguridad en el host, como lo es:
+.El software antivirus/antimalware: 
+.Basado en Firma: varias características de archivos malware conocidos.
+.Basado en Heuristica: características que comparten diversos tipos de malware.
+.Basado en Comportamiento: Emplea análisis de comportamiento sospechoso.
+
+.Firewall basado en host: Las tablas ip de Linux y las herramientas de envoltorios TCP.
+
+.Conjuntos de seguridad con base en el host: AV-TEST..
+
+ESA/WSA: son aplicaciones de cisco que ayudan a proteger al usuario final o en este caso host, entre correo, phishing, software espia, rootkits, caballo de troya.
+
+Acontinuacion voy a exponer algunas aplicaciones que protegen al host en la red, estos son:
+
+Cisco secure Endpoint
+Cisco Secure Email
+Cisco Umbrella
+Network Admission Control NAC
+

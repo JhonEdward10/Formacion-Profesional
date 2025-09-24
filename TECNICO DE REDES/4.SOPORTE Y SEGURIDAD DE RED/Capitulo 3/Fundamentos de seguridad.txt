@@ -1,0 +1,38 @@
+1. Son tres dimensiones en la seguridad
+.Disponibilidad: Tener los Datos siempre cuando se requiera
+.Integridad: que los datos siempre esten igual como se guarden y no se cambien
+.Confidencialidad: permite la no divulgación de los datos, ya que pueden ser o no sensibles.
+Acrónimo CID
+
+2.Estado de datos
+Aquí el dominio del ciberespacio tiene un sin fin de datos alojados en el, pero en que calidad?
+pues son tres estados:
+.Transito
+.Reposo
+.En proceso
+
+3.Medidas de seguridad
+la tercera dimensión expone los pilares sobre los que nos debemos basar para la defensa de seguridad
+y sobre guardar los datos, estos son:
+.Tecnología
+.Políticas
+.Practicas
+
+Esta es la triada del ciberespacio en seguridad de la información.
+
+Algoritmo de cifrado criptográfico (AES) -> Confindecialidad
+Algoritmo de hashing criptografico (SHA) -> Integridad
+Servicio redundantes, puertas de enlace y enlaces -> Disponibilidad
+
+Token prioriza seguridad sin encriptar datos.
+
+La disponibilidad es muy importante ya que permite que la información este entregada cuando se requiera.
+Garantia de disponibilidad:
+.Hay que hacer mantenimiento del equipo.
+.Actualización y parches de los sistemas operativos.
+.Realizar copias de respaldo.
+.Planificación de desastres.
+.Implementación de nuevas tecnologías.
+.Monitoreo activo.
+.Realizar pruebas de disponibilidad.
+

@@ -1,0 +1,35 @@
+Otros ataques de aplicaciones.
+
+Secuencias de comandos entre sitios o CSRF(Cross-Site Request Forgery): se envían comandos maliciosos desde un sitio web a un navegador y luego a ordenador para obtener información.
+
+Condición de carrera: se intenta cambiar o ingresar mas hilos al proceso ya establecido.
+
+Ataque de manejo de entrada incorrecto: Los datos que no son verificados pueden causar desbordamiento de bufer o inyección de SQL.
+
+Gestión de errores: Los atacantes pueden utilizar mensajes de errores para extraer información de usuario, de directorios, de servidores web, asi como tablas de bases de datos, nombres y campos que puedan utilizarse para ataques de inyección de SQL.
+
+Interfaz de programación de aplicaciones(API): una api envía solicitudes y respuestas a un usuario y aquí es donde el atacante puede abusar de las peticiones y respuestas que hace.
+
+Ataques de repetición: aquí es donde un atacante repite o retrasa una cierta transmisión, cambiándola a gusto y con esto hace que el usuario haga lo que el le pida.
+
+Atauque transversal al directorio: esto ocurre cuando un atacante puede leer la información del directorio web fuera de este, siendo un riesgo porque hace que este sujeto pueda cambiar información o hasta adueñarse del servidor web.
+
+Agotamiento de recursos: aquí es donde un atacante abruma o interfiere en la aplicación y a diferencia de un ataque DOS que es a la red, este ataque ocurre directamente al hardware de la aplicación haciendo que se caliente y pueda dañarse o hasta incluso explotarse.
+
+Suplantación de identidad (phishing): aquí es donde un atacante se comunica con un usuario haciéndose pasar por una empresa o compañía legitima y aquí es donde envía un malware, el cual pide al usuario cambiar su información o actualizarla. 
+
+Suplantación de identidad focalizada: aquí es donde el atacante envía información a un individuo dependiendo de los intereses de este para que caiga en la trampa y mediante correo pueda instalar un malware. 
+
+Vishing: aquí esta el atacante que intenta obtener su información mediante voz, engañándolo y accediendo a sus datos.
+
+pharming: este ataque redirige a un usuario a un sitio web fraudulento creyendo que esta en el sitio web oficial, haciendo que de sus credenciales personales.
+
+whaling: es un ataque de phishing que se dirige a personas de alto perfil.
+
+Ataques físico: carga de malware mediante una USB.
+Ataques de inteligencia artificial adversarios: aquí siempre se utiliza el aprendizaje de los dispositivos mediante algoritmos, pero el atacante hace que el algoritmo aprenda de forma contraria a lo esperado y este puede causar estragos.
+Ataques de cadenas de abastecimiento: aquí los atacantes cambian la información de los proveedores de cualquier empresa para así, ellos cobrar recompensa mediante lugares web ilegítimos.
+Ataques basados en la nube: Los atacantes aprovechan constantemente las formas de aprovechar los datos confidenciales almacenados en la nube, así como las aplicaciones, las plataformas y la infraestructura basadas en la nube, como hemos visto con SaaS, PaaS e IaaS.
+
+Una práctica de programación específica que ayudará a mitigar los ataques de aplicaciones es tratar y validar todas las entradas desde fuera de una función como si fuera hostil.
+
