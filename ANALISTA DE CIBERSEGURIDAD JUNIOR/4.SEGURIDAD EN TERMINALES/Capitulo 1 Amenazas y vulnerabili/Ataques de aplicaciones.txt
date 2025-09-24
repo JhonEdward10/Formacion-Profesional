@@ -1,0 +1,51 @@
+ATAQUES A APLICACIONES 
+
+Secuencia de comandos entre sitios.
+
+Los ciberdelincuentes aprovechan vulnerabilidades mediante scripts maliciosos que se inyectan en una pagina web.
+La victima ingresa a la pagina web y los scripts pasan sin saberlo a su navegador.
+aquí los scripts pueden acceder a cookies, tokens de sesión o información confidencial sobre el usuario, con esta información el ciberdelincuente puede hacerse pasar por el usuario.
+
+Ataques de inyección de código
+
+.Ataque de inyección XML: un ataque de estos puede dañar bases de datos XML y poner en riesgo la seguridad de la pagina web, aquí el ciberdelincuente ingresa a la base de datos y le permite realizar cualquier cambio en el sitio web.
+
+.Ataque de inyección SQL: aquí pueden llevar a cabo una iyeccion sql insertando declaración sql, en un campo de entrada.
+
+.Ataque de inyección DLL: es una biblioteca que contiene un conjunto de código y datos para llevar a cabo una actividad particular en Windows.
+
+.Ataque de inyección de LDAP: es un protocolo abierto para autenticar el acceso de los usuarios a los servicios de directorio.
+
+Desbordamiento de bufer: los búferes son memoria asignadas a una aplicación y un desboradamiento de bufer se produces cuando los datos van mas alla de los limites del bufer, lo que lleva a un bloqueo del sistema y compromete los datos, y ocasiona escalamiento de privilegios
+
+Proyecto metasploit, muy poderoso y usado para ingresar de forma remota a un sistema.
+
+CSRF describe el ataque malicioso de un sitio web donde se envían comandos no autorizados desde el navegador de un usuario a una aplicación web confiable.
+
+Condición de carrera: También conocido como ataque de tiempo de verificación (TOC) o tiempo de uso (TOU), es cuando un programa sigue pasos especifico y se le dice ataque cuando simultáneamente a el se esta realizando otros procesos.
+
+Ataque de manejo de entrada incorrecto, es cuando los datos de usuarios no se validan correctamente, proporcionando desbordamiento de bufer o ataques de inyección SQL.
+
+Gestion de errores: los atacantes pueden mostrar mensajes de errores para así extraer la información especifica como los nombres de host, bases de datos, tablas.
+
+Interfaz de programación de aplicaciones: (API) son ataque cuando el ciberdelincuente abusa de la terminal de la API y como esta responde solicitudes, aquí lo que hace es que el ciberdelincuente responde y puede tener acceso.
+
+Ataque de repetición: aquí un atacante retrasa o repite una accion de datos, de forma maliciosa y aquí el ciberdelincuente hace que el destino haga lo que el quiera.
+
+Ataque transversal del directorio: aquí ocurre cuando un atacante puede leer los archivos del servidor fuera del sitio web. aquí un atacante puede descargar información, divulgarla o incluso tomar el control del servidor.
+
+Agotamiento de recursos: aquí interfieren o bloquean el programa en especifico. A diferencia de un ataque DoS, aquí los ataque de agotamiento ocurren al hardware donde esta alojado los servicios, para ser mas especifico al servidor.
+
+Suplantación de identidad (phishing):aquí es donde un correo electrónico se envia a un destinatario en donde el remitente se hace pasar por una organización legitima y aquí le dice al destinatario que instale el malware o comparta información personal o financiera.
+
+Suplantación de identidad focalizada: es un ataque en donde los atacantes conocen a la victima y sabe cosas de ello acerca de su interés, preferencia, actividades y proyecto de trabajos.
+
+Vishing: suplantación de identidad de voz, donde los ciberdelincuentes puedan falsificar llamadas telefónicas mediante VoIP o dejar grabaciones haciéndose pasar por personas legitimas.
+
+Pharming: este ataque redirige al usuario a un sitio web fraudulento, en donde le hace ingresar sus credenciales.
+
+Whaling: Aquí apunta a personas de alto valor en una empresa o de alto nivel corporativo, como ejecutivos seniors.
+
+
+
+

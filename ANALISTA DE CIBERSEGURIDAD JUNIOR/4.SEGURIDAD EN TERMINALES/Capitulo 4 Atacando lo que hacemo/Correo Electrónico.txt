@@ -1,0 +1,16 @@
+Correo Electrónico
+El correo electrónico es un método de mensajeria el cual en sus principios solo era utilizado por grandes corporaciones, ahora todas la empresas y corporaciones lo implementan, mas de 100.000 millones de mensajes en el dia, lo permiten.
+
+Amenazas por correo electrónico
+
+Ataques basados en archivos adjuntos: aquí en donde se envían archivos incrustados y piden que por favor lo abran que es en urgencia y asi implementan el malware.
+
+Suplantación de identidad por correo electrónico: aquí es donde muchos atacantes se hacen pasar por empresas legitimas suplantando información para que los usuarios ingresen sus datos, dinero etc.
+
+Correo electrónico no deseado: Los atacantes envían correo electrónico no solicitado que contiene publicidad o archivos maliciosos. Normalmente, este tipo de correo electrónico se envía para generar una respuesta que le indica al agente de amenaza que el mensaje se validó y que un usuario abrió el correo electrónico no deseado.
+
+Abrir servidor de relay de correo: aquí es donde el atacante se aprovecha de servidores mal configurados y sobre todo permite que cualquiera en internet pueda enviar correo Debido a que cualquier persona puede utilizar el servidor, este es vulnerable al envío de correo electrónico no deseado y gusanos. Es importante que los servidores de correo nunca se configuren como servidores de retransmisión abierta.
+
+Homoglifos: Los atacantes pueden utilizar caracteres de texto que son muy similares o incluso idénticos a los caracteres de texto legítimo. Por ejemplo, puede ser difícil distinguir entre una O (“O” mayúscula) y el 0 (número cero) o una l (“L” minúscula) y un 1 (número uno).
+
+Siempre mantenga al día el software de SMTP con parches y actualizaciones de software y seguridad.

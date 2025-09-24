@@ -1,0 +1,21 @@
+Otros tipos de ataques son:
+
+..Ataques físicos: Los ataques físicos son acciones intencionales y ofensivas que se utilizan para destruir, exponer, alterar, deshabilitar, robar u obtener acceso no autorizado a la infraestructura o el hardware de una organización.
+
+Entre los ejemplos de ataques físicos se incluyen:
+
+.Carga de malware en una unidad flash USB que infecta un dispositivo cuando está enchufado.
+.Instalar cables y enchufes, como cables USB genéricos, cables de carga de dispositivos móviles y adaptadores de pared o de alimentación con tecnologías avanzadas, como un chip inalámbrico, para permitir que un atacante controle o proporcione instrucciones a un dispositivo.
+.Copiar o eliminar datos de una tarjeta de crédito o débito mediante un terminal especializado para crear una tarjeta clonada, que puede utilizarse para obtener acceso no autorizado a las cuentas de la víctima. 
+
+..Ataques de inteligencia artificial adversarios: El aprendizaje automático es un método de automatización que permite que los dispositivos realicen análisis y realicen tareas sin estar específicamente programados para ello. Funciona con muchas de las aplicaciones que usamos hoy en día, como la búsqueda web, el etiquetado de fotografías, la detección de correo electrónico no deseado, la videovigilancia, la detección de fraudes y la automatización de la seguridad.
+
+El aprendizaje automático utiliza modelos matemáticos para predecir resultados. Sin embargo, estos modelos dependen de los datos que se ingresan. Si los datos están contaminados, pueden tener un impacto negativo en el resultado previsto. Los atacantes pueden aprovechar esto para perpetrar ataques contra algoritmos de aprendizaje automático. Por ejemplo, el uso de datos contaminados para engañar a un vehículo autónomo y malinterpretar las señales de tráfico.  
+
+..Ataques a la cadena de abastecimiento: Muchas organizaciones interactúan con un tercero para la administración de sus sistemas o para comprar componentes y software. Las organizaciones pueden incluso depender de piezas o componentes de fuentes externas.
+
+Los atacantes a menudo encuentran formas de interceptar estas cadenas de abastecimiento. Por ejemplo, el software puede basarse en acuerdos de soporte específicos y estar sujeto a una fecha de fin de vida útil (EOL). Cambiar esta fecha podría significar que una organización ya no es elegible para el servicio y el soporte de mantenimiento.  
+
+..Ataques basados en la nube: En lugar de desarrollar sistemas en sus propias instalaciones, cada vez más organizaciones están avanzando hacia la computación basada en la nube, como mencionamos anteriormente en este módulo.
+
+La ventaja es que el proveedor de la nube mantendrá el equipo, pero esto también abre una organización a una gran cantidad de posibles amenazas. Los atacantes aprovechan constantemente las formas de aprovechar los datos confidenciales almacenados en la nube, así como las aplicaciones, las plataformas y la infraestructura basadas en la nube, como hemos visto con SaaS, PaaS e IaaS.

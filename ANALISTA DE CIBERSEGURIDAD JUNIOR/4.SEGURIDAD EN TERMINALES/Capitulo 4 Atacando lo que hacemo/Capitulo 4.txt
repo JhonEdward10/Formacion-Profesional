@@ -1,0 +1,69 @@
+Capitulo 4
+
+Vulnerabilidad ARP
+Aquí en este capitulo se aborda acerca de los ataques que puede ocurrir en ip y mediante mac pueden falsificar y hacer un ataque de hombre en el medio.
+
+En donde en ARP cuando alguien no conoce la dirección MAC, envía el mensaje a toda la red y por tanto cualquiera puede falsificar la dirección ip o mac para falsificar la forma.
+
+Además también se da cuando hay comunicación en el router, el cual el host no conoce la dirección mac del router, el host envia a la dirección ip y de respuesta recibe la dirección mac, pero no contaban que un atacante estaba escuchando y al router y al host les envia la dirección y la mac de el, lo cual quiere decir que toda información que se envíen los dos, tienen que pasar por el atacante, formando un ataque de hombre del medio.
+
+Nota: Hay muchas herramientas disponibles en Internet para crear ataques de MITM de ARP, como dsniff, Cain & Abel, ettercap y Yersinia.
+
+Ataques DNS
+GoogleDNS es un DNS abierto, el cual es vulnerable, porque responde a las solicitudes fuera del dominio administrativo en la que se encuentra.
+
+.Ataque de envenamiento de cache DNS
+Los atacantes envían registros falsificados a un DNS sin resolver para redirigir usuarios legitimos a sitios maliciosos
+
+.Ataque de amplificación y reflexión de DNS
+Los atacantes usan ataque DoS o DDoS para aumentar el volumen de ataques y para ocultar la verdadera fuente de un ataque. Los atacantes envían mensajes de DNS a las resoluciones abiertas utilizando la dirección IP de un host de destino. Estos ataques son posibles porque la resolución abierta responde las consultas de cualquiera que pregunte.
+
+.Ataque de utilización de recursos DNS
+Este ataque hace que DoS consuma los recursos de los servidores, afectando operaciones de resolución de DNS abierta.  El impacto de este ataque de DoS puede requerir el reinicio de la resolución de DNS abierta o la interrupción y el reinicio de los servicios.
+
+Hay unos ataques sigilosos de DNS.
+
+.Flujo rápido: aquí es donde los atacantes ocultan sus webs, ya que estas desaparecen, pero durante un determinado tiempo ellos pueden hacer ingresar a usuarios legitimos, y por tanto los botnets emplean técnicas de flujo rápido para ocultar con eficacia servidores maliciosos y evitar su detección.
+
+.Doublé IP Flux: aquí los atacantes cambian el nombre del hostname para las asignaciones de IP y también cambian el servidor de nombres autorizados, aumentando la dificultad para encontrar de donde vino el ataque.
+
+. Algoritmos de generación de dominio: Los atacantes utilizan esta técnica en malware para generar aleatoriamente nombres de dominio que puedan utilizarse como puntos de encuentro de sus servidores de Mando y control (C&C, siglas en inglés).
+
+.Ataques DNS Domain shadowing: aquí un atacante recopila información de un dominio, lo que son credenciales y todo tipo de acceso para crear subdominios y utilizarlos en los ataques, lo que hace que el dominio sea involucrado, estos subdominios apuntan a servidores maliciosos sin alertar la propiedad real del dominios principal.
+
+Tunel DNS:
+
+Los botnets se han convertido en un ataque para los agentes de amenazas, ya que se propagan muy rápido tanto el malware en los ataques DDoS y phishing.
+Es necesario que el analista de ciberseguridad sea capaz de detectar cuándo un intruso utiliza la tunelización DNS para robar los datos.
+Para lograr esto, el analista de seguridad debe implementar una solución que puede bloquear las comunicaciones salientes de los hosts infectados.
+
+Entonces aquí es donde la tunelización es una técnica utilizada para pasar información por el trafico DNS que no es DNS, lo que hace que las redes acepten todos los DNS y sobre todo no se vean como una amenaza, pero esto lo que permite es que los firewalls y antivirus lo pasen por alto, actúa de esta manera.
+
+¿Cómo funciona el ataque?
+1. El atacante divide la información que quiere enviar (como comandos para un virus) en pedazos pequeños.
+2. Cada pedazo lo esconde dentro del nombre de un dominio falso, por ejemplo algo como:
+comando1.ejemplo.com
+3. Como ese dominio no existe realmente, el DNS del equipo infectado pregunta al servidor DNS del proveedor de internet (ISP) si conoce ese dominio.
+4. Como el ISP no lo conoce, pasa la pregunta a otro servidor, que en este caso es del atacante.
+5. El servidor del atacante recibe estas consultas y responde con más comandos ocultos en las respuestas DNS.
+6. El malware (virus) que está en el computador infectado interpreta esos comandos y los ejecuta.
+
+aquí la única manera para proteger de este tipo de ataque es analizando todos los DNS y sobre todo tener un filtro para que nada pase por alto
+
+como Cisco Umbrella (Antes conocido como Cisco OpenDNS), bloquean gran parte del tráfico de la tunelización de DNS identificando dominios sospechosos.
+Los dominios asociados con servicios de DNS Dinámico deben considerarse altamente sospechosos.
+
+DHCP
+Los pasos en los que DHCP se realizan son los siguiente: el cliente pide el servicio mediante un DCHP Discover, recibe respuesta del servidor mediante DHCP Offer unicast, luego el acepta la respuesta del servidor mediante DHCPRequest y por ultimo el servidor concluye con un DHCPACK.
+
+Tipos de ataque DCHP
+
+Entre los ataques esta uno en donde el atacante abre un servidor DCHP malicioso y este quiere ofertar los servicios de DHCP, que entre los ataques que este puede causar es en el Gateway que se coloca en medio de la red para hacer un ataque de hombre del medio, también esta en donde puede colocar un DNS malicioso que puede direccionar a una pagina maliciosa o puede crear una dirección falsa tanto en el Gateway como en el host,  ya que con eso puede hacer un ataque DoS.
+
+
+
+
+
+
+
+

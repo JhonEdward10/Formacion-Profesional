@@ -1,0 +1,35 @@
+Capitulo 5
+
+Para uno conectarse por medio de red inalámbrica, se necesita CSMA/CA, ya que esto evita colisiones en el momento de ingresar a la red, porque todos los dispositivos quieren conectarse, pero cuando el servicio ya esta ocupado, el CSMA/CA, hace que el dispositivo espere un tiempo aleatorio y luego si se conecta
+
+En todas la frames de capa 2 se requiere que para conectar tenga 3 puntos importantes, el encabezado, la carga útil o payload y le sección de secuencias de verificación FCS.
+
+El encabezado del formato 802.11 es similar al de ethernet, solo que este tiene mas campos. Estos son:
+
+Control de trama ─ Identifica el tipo de trama inalámbrica y contiene subcampos para la versión del protocolo, el tipo de trama, el tipo de dirección, la administración de energía y la configuración de seguridad.
+Duración - En general, se usa para indicar el tiempo restante necesario para recibir la siguiente transmisión de tramas.
+Dirección 1 - Normalmente, contiene la dirección MAC del dispositivo o AP receptor inalámbrico.
+Dirección 2 - Normalmente, contiene la dirección MAC del dispositivo o AP transmisor inalámbrico.
+Dirección 3 - En ocasiones, contiene la dirección MAC del destino, como la interfaz del router (puerta de enlace predeterminada) a la que se conecta el AP.
+Control de Secuencia - Contiene información para controlar la secuencia y las tramas fragmentadas
+Dirección 4 - Suele estar vacío, ya que se usa solo en el modo ad hoc.
+Payload ─ Contiene los datos para la transmisión.
+FCS ─ Esto se utiliza para el control de errores de la capa 2.
+
+CSMA/CA
+Para resolver este problema las WLAN utilizan el acceso múltiple con detección de operador con evitación de colisiones (CSMA / CA) para determinar cómo y cuándo enviar datos.
+
+Para hacer la comunicación entre un AP o Router inalambrico con un host, se deben tener encuenta los siguientes parámetros o protocolos: 1.Escucha el canal para ver si está inactivo, es decir, no hay otro tráfico actualmente en el canal. El canal es tambien llamado el portador.
+2.Envía un mensaje listo para enviar (Ready to Send)(RTS) al AP para solicitar acceso dedicado a la red.
+3.Recibe un mensaje de permiso para enviar (clear to send) (CTS) desde el AP garantizando el acceso para enviar.
+4.Si el cliente inalámbrico no recibe el mensaje CTS este espera una cantidad de tiempo aleatoria antes de reiniciar el proceso.
+5.Después de recibir el CTS, transmite la información.
+6.Todas las transmisiones son reconocidas. Si un cliente no recibe el reconocimiento, asume que ocurrió una colisión y reinicia el proceso.
+
+Para lograr una asociación exitosa, un cliente inalámbrico y un AP deben acordar parámetros específicos: Para permitir la negociación de estos procesos, se deben configurar los parámetros en el AP y posteriormente en el cliente.
+
+Existen dos modos de APs, pasivos, que son cuando estos propagan su SSID y envían tramas para que los host los puedan localizar a diferencia si son activos, no envían nada y el host debe conocer la red para poderse conectar a esta.
+
+Todas las funciones de control y gestión de los AP en una red pueden centralizarse en una controladora de LAN inalámbrica (WLC, Wireless LAN Controller)
+
+actúan como AP ligeros (LWAP, Lightweight AP) 

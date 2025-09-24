@@ -1,0 +1,74 @@
+Mitigando ataques
+
+Defensa de la red
+
+Estas son algunas de las políticas que se deben permitir para proteger las redes.
+.Desarrolle una política de seguridad escrita para la organización.
+.Capacite a los empleados sobre los ataques de ingeniería social y desarrolle políticas para validar identidades por teléfono, mediante correo electrónico y personalmente.
+.Controle el acceso físico a los dispositivos.
+.Utilice contraseñas seguras y cámbielas con frecuencia.
+.Cifre los datos confidenciales y protéjalos con una contraseña segura.
+.Implemente hardware y software de seguridad, como firewalls, sistemas de prevención de intrusiones (IPS), dispositivos de red privada virtual (VPN), software antivirus y filtrado de contenido.
+.Realice copias de respaldo y pruébelas periódicamente.
+.Desactive los servicios y puertos que no se utilicen.
+.Mantenga los parches actualizados instalándolos semanalmente o diariamente, si es posible, para evitar el desbordamiento del búfer y los ataques de escalamiento de privilegios.
+.Realice auditorías de seguridad para probar la red.
+
+Malwares mitigantes
+aquí para que ningún tipo de malware sea virus, gusano, troyano etc, ataque nuestro dispositivo es recomendable instalarle un antivirus y con la red perimetral de esta, es mas probable que no tengamos ningún ataque y todo sea mas factible a la hora de la seguridad.
+
+Gusanos atenuantes
+Los gusanos se centran mas en infectar la red que incluso en el mismo malware o virus, por eso el profesional de la red debe ser muy cauteloso.
+
+la respuesta del ataque debe ser coordinada diviendose en cuatro fases: 1. Contención, 2. Inoculación, 3. Cuarentena, 4. Tratamiento
+
+DHCP dudoso: la contención del gusano es prevenir que se propague mas alla de las áreas que ya están afectadas, lo que quiere decir que este se debe parar o ralentizar para detenerlo, antes de que infecten otros host en la red, además la contención requiere ACL salientes y entrantes en routers y firewalls en puntos de control dentro de la red.
+
+Inoculación: en la inoculación todos los sistemas no infectados con el virus, reciben parches del proovedor correspondiente para protegerse, esto hace que el virus se prive y funcione mas que cualquier herramienta.
+
+Cuarentena: esto significa encontrar los dispositivos infectados, tratarlos, bloquearlos de la red, desconectarlos y borrarlos, esto aisla estos dispositivos para su respectivo tratamiento.
+
+Tratamiento:  implica la desinfección activa de los dispositivos finalizando procesos, eliminando archivos infectados del sistema y la correlación de donde provino el gusano para ingresar al sistema. En el mejor de los casos se recomienda borrar y reinstalar los sistemas infectados para que no quede rastro de este 
+
+Mitigando los ataques de reconocimiento
+Los ataques de reconocimiento suelen ser el precursor de los ataques que tienen intención de obtener acceso en un perímetro de red, entre estos casos puede ser el ataque exagerado de solicitudes ICMP.
+
+Los ataques de reconocimiento se pueden mitigar de varias maneras, incluidas las siguientes:
+
+Implementación de autenticación para garantizar el acceso adecuado.
+Uso del cifrado para inutilizar los ataques de sniffer de paquetes.
+Uso de herramientas anti-sniffer para detectar ataques de sniffer de paquetes.
+Implementación y administración de la infraestructura
+Firewall e IPS
+
+Las herramientas de hardware y software antisifme detectan cambios en el tiempo de respuesta de los hosts para determinar si los hosts están procesando más tráfico del que indicarían sus propias cargas de tráfico.
+
+si también los datos están cifrados usar un sniffer de paquetes seria algo inútil porque el contenido se encuentra encriptado, ya que los datos capturados están cifrados
+
+Ademas es imposible no permitir escaneo de puertos, pero un IPS y un firewall puede quitar mucha información que pueda ofrecer estos puertos. 
+
+Mitigando Ataques de acceso
+Aquí se deben crear contraseñas solidad, para que la criptografía les se difícil y ojala imposible de acceder a sus datos; además también es aconsejable utilizar desabilitacion de intentos de cuenta cuando se hicieron cierto tipos de intentos.
+
+Ademas la red debe crearse con la ideología de confianza mínima, ya que si un servidor de confianza que utilizan dispositivos que no son de confianza, como servidores web, el servidor de confianza no debe confiar en los dispositivos no confiables sin condiciones.
+
+Cuanto más cifrado esté el tráfico, menos oportunidades tendrán los hackers para interceptar datos con ataques de intermediarios.
+
+En general, los ataques de acceso pueden detectarse mediante la revisión de los registros, el uso del ancho de banda y las cargas de procesos. La política de seguridad de la red debe especificar que los registros se mantengan formalmente para todos los dispositivos y servidores de red. Al revisar los registros, el personal de seguridad de la red puede determinar si se ha producido un número inusual de intentos fallidos de inicio de sesión.
+
+Mitigando Ataques DoS
+Uno de los primeros signos de un ataque DoS es una gran cantidad de quejas de los usuarios sobre los recursos no disponibles o el rendimiento inusualmente lento de la red.
+
+Históricamente, muchos ataques de DoS se originaban en direcciones falsificadas. Los routers y switches de Cisco admiten una serie de tecnologías antifalsificación, como seguridad de puertos, detección del protocolo de configuración dinámica de host (DHCP), protección de origen IP, inspección del protocolo de resolución de direcciones dinámicas (DAI) y listas de control de acceso (ACL).
+
+ listas de control de acceso (ACL)
+
+https://www.iniseg.es/blog/ciberseguridad/8-medidas-necesarias-para-protegerte-de-ataques-ciberneticos/
+https://www.deltaprotect.com/blog/estrategias-para-mitigar-riesgos-ciberseguridad
+https://rolecatcher.com/es/skills/knowledge/services/security-services/cyber-attack-counter-measures/
+https://mineryreport.com/blog/contramedidas-ciberseguridad-protegiendo-futuro-digital/
+https://innovaciontech.com/guia-completa-sobre-contramedidas-de-seguridad-esenciales/
+https://selinc.com/es/solutions/cybersecurity/cyber-attack-mitigation/
+
+
+https : //securityboulevard.com/2020/12/top-10-ciberseguridad-amenazas-en-2021-y-cómo-proteger-su-negocio /

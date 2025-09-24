@@ -1,0 +1,24 @@
+Vulnerabilidades de TCP y UDP
+
+A continuación, voy a colocar los 6 bits importantes en TCP.
+URG - campo indicador urgente importante
+ACK - campo de reconocimiento significativo
+PSH - función de empuje
+RST - restablecer la conexión
+SYN - sincronizar números de secuencia
+FIN -no hay más datos del emisor
+
+Comunicación antes de enviar mensajes en TCP.
+1. SYN (SEQ=100 CTL=SYN) -> SYN Recibido -> El cliente de origen solicita una sesión de comunicación con el servidor.
+2. SYN, ACK <- SYN, ACK (SEQ=300 ACK=101 CTL=SYN, ACK) -> El servidor reconoce la sesión de comunicación de cliente a servidor y solicita una sesión de comunicación de servidor a cliente.
+3. Establecido (SEQ=101 ACK=301 CTL= ACK) -> El cliente que inicia reconoce la sesión de comunicación de servidor a cliente.
+
+El atacante envía constantemente a un objetivo paquetes de solicitud de sesión TCP SYN con una dirección IP de origen falsificada de manera aleatoria. El dispositivo de destino responde con un paquete SYN-ACK de TCP a la dirección IP falsificada y espera un paquete ACK de TCP. Las respuestas nunca llegan. Finalmente, el host objetivo se ve sobrecargado por las conexiones TCP medio abiertas, y los servicios TCP se deniegan a los usuarios legítimos.
+
+Los atacantes pueden llevar a cabo una variedad de ataques relacionados con TCP:
+Escaneo de puertos TCP
+Ataque de saturación TCP SYN
+Ataque de restablecimiento de TCP
+Ataque de secuestro de sesión TCP
+
+

@@ -1,0 +1,38 @@
+Dispositivos con los cuales puede proteger su información.
+
+.Firewalls - Proteger de acceso no autorizados.
+.Antivirus y antiespia. 
+.Establecer la configuración de seguridad necesaria en la computadora o navegador, además de descargar parches y actualizaciones de esta para evitar fugas.
+.Configurar todo con contraseñas para evitar acceso no autorizado
+
+
+https://www.shodan.io/ - plataforma que ayuda a detecta vulnerabilidades en IoT.
+
+
+Seguridad inalámbrica - https://www.krackattacks.com/
+VPN brinda un acceso seguro a internet de forma inalámbrica
+https://www.fcc.gov/consumers/guides/datos-para-resguardar-su-bluetooth-y-otras-conexiones-inalambricas 
+
+Para contraseñas seguras
+.No usar palabras de diccionario en ningún momento
+.No usar errores ortográficos  
+.Usar caracteres especiales como @!#$|@#~€¬/ 
+.No use nombres de equipos o cuentas
+.Utilice contraseñas con mas de diez caracteres.
+
+
+Ojo encripcion muy importante, también realizar respaldos de seguridad.
+Se puede lograr guardar los datos localmente, en un disco duro o la nube.
+
+Para eliminar definitivamente un archivo en:
+.Microsoft SDelete
+.MacOs Secure Empty Trash 
+.Linux Shred
+
+Antes de suscribirse a cualquier plataforma analizar
+.términos
+.derechos de los datos
+.solicitar una copia de datos
+.que sucede con los datos si se cierra la cuenta
+
+

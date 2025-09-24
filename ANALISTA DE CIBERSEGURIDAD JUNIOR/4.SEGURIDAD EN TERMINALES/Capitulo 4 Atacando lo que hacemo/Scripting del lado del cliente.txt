@@ -1,0 +1,40 @@
+Scripting del lado del cliente
+
+Secuencias de comandos entre sitios - cross site scripting
+
+No todos los ataques se inician desde el servidor. El scripting entre sitios (XSS, Cross-Site Scripting) ocurre cuando páginas web que se ejecutan en el propio navegador web del cliente se inyectan con secuencias de comandos maliciosas. Visual Basic, Javascript y otras aplicaciones pueden usar estas secuencias de comandos para tener acceso a una computadora, recopilar información confidencial o implementar más ataques y propagar malware. 
+
+Al igual que con la inyección SQL, el XSS suele originarse cuando el atacante publica contenido en un sitio web confiable que no tiene validación de entrada. Los futuros visitantes del sitio web de confianza estarán expuestos al contenido publicado por el atacante.
+
+IPS: sistema de detención de intrusiones
+
+Estas son algunas maneras de prevenir o reducir los ataques XSS:
+
+Asegúrese de que los desarrolladores de aplicaciones web conozcan las vulnerabilidades de XSS y cómo evitarlas.
+Utilizar una implementación de IPS para detectar y evitar script maliciosos.
+Utilizar un proxy web para bloquear sitios maliciosos.
+Utilizar un servicio como Cisco Umbrella para evitar que los usuarios visiten sitios web que se sabe que son maliciosos.
+Al igual que con las demás medidas de seguridad, asegúrese de educar a los usuarios finales. Enséñeles a identificar los ataques de suplantación de identidad y notificar al personal de seguridad de la información si tienen cualquier tipo de sospecha relacionada con la seguridad.
+
+para salvaguardar las bases de datos se debe:
+
+Las respuestas variarán, pero deberían incluir: 
+filtrarla entrada delusuario,
+implementarun firewall de aplicaciones web,
+ deshabilitarcaracterísticas y funciones innecesarias de labase dedatos, 
+monitorearlas sentencias SQL, 
+usarparámetros con procedimientosalmacenados 
+usar parámetros conSQL dinámico.
+
+En los registros de archivo del servidor para mi la herramienta mas útil es more, pero hay otras
+cat - no muestra todo el archivo si pasa de pagina
+more - me gusto bastante
+less - muy enredado además es un editor aparte
+tail -  solo muestra las 10 ultimas paginas
+tail -f puede ver en tiempo real como se muestran mas líneas en tiempo real
+
+
+analyst@secOps ~$ sudo tail –f /home/analyst/lab.support.files/logstash-tutorial.log
+[analyst@secOps ~]$ echo "esta es una nueva entrada al archivo de registro monitoreado" >> lab.support.files/logstash-tutorial.log
+
+Debido a su importancia, es común concentrar archivos de registro en una computadora de monitoreo. Syslog es un sistema diseñado para permitir que los dispositivos envíen sus archivos de registro a un servidor centralizado, que se conoce como servidor syslog. Los clientes se comunican con un servidor syslog por medio del protocolo syslog. Syslog es comunmente utilizado y admite prácticamente todas las plataformas informáticas.

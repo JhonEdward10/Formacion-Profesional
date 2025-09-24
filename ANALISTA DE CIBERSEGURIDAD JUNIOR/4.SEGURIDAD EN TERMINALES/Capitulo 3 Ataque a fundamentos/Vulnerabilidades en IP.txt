@@ -1,0 +1,33 @@
+Vulnerabilidades en IP
+
+Existen distintos ataques de IP, aquí algunos relacionados con IP.
+
+Ataques ICMP: los atacantes utilizan paquetes echo de protocolo de mensajes para detectar subredes y host en una red protegida, luego generar ataques DoS de saturación y asi modificar las tablas de enrutamiento.
+
+Ataques de denegación de servicios (DoS): los atacantes intentan impedir que usuarios legitimos tengan acceso a un servicio como una web, información, etc.
+
+Ataque de denegación de servicios distribuida DDoS: es lo mismo que el DoS, pero con un ataque coordinado y muchas maquinas enviando este tipo de solicitudes.
+
+Ataques de suplantación de dirección: aquí los atacantes suplantan direcciones IP llevando a cabo como blind spoofing o non-blind spoofing, que el atacante puede ver lo que haces o el no puede ver lo que haces.
+
+Ataques Man-in-the-middle (MiTM): aquí los atacantes se posicionan entre el origen y el destino de las solicitudes, en donde pueden escuchar y ver todo lo que la victima realiza en su cotidianidad.
+
+Ataques de sesiones.
+
+Ataques de ICMP: Aquí los atacantes utilizan ICMP para los ataques de reconocimiento y análisis. Aquí se puede reconocer la topología de red, los host que están activos en la red o dentro del alcance de esta, determinar el sistema operativo y hasta el tipo de firewall que tenga este.
+Ademas los atacantes utilizan este tipo de ataque para hacer DoS y DDoS, ya que inundan todo la red con solicitudes echo y saturan el sistema.
+
+Acontinuacion algunos mensajes de interés para los atacantes.
+
+.Echo request y echo reply -> Esto se utiliza para realizar la verificación del host y los ataques DoS.
+.Unreachable -> Esto se utiliza para realizar ataques de reconocimiento y escaneo de la red.
+.Mask reply -> Se utiliza para mapear una red IP interna.
+.Redirects -> Se utiliza para lograr que un host objetivo envíe todo el tráfico a través de un dispositivo comprometido y crear un ataque de MiTM.
+.Router Discovery -> Esto se utiliza para inyectar entradas de rutas falsas en la tabla de routing de un host objetivo.
+
+Las redes deben tener filtros estrictos de Lista de Control de Acceso (ACL, siglas en inglés) de ICMP en el perímetro de la red para evitar sondeos de ICMP desde Internet.
+
+"Smurf attack"
+
+Ataques de suplantación (Spoofing) de direcciones: aquí es cuando el atacante se hace pasar por una victima y envia paquetes a una red haciéndose pasar por esa victima
+  

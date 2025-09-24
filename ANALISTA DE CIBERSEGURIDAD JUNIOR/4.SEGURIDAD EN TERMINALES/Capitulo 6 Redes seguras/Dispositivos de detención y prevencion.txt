@@ -1,0 +1,3 @@
+Dispositivos de detención y prevención de intrusiones
+
+IPS (Intrusión Prevention System) e IDS (Intrusion Detection System), es lo que se hace para prevenir las intrusiones, las empresas lo están implementando. 

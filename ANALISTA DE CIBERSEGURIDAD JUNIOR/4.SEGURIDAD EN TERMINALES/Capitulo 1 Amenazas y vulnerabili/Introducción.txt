@@ -1,0 +1,51 @@
+Introducción 
+
+Capitulo 1
+Amenazas en la nube publica: 
+
+Amenazas naturales como el clima extremo y los peligros geológicos.
+Alguien que obtiene acceso no autorizado a las instalaciones.
+Interrupciones eléctricas
+Ataques de ingeniería social que intentan conocer las políticas y los procedimientos de seguridad de una organización.
+Violación de las defensas del perímetro electrónico
+Robo
+Centro de datos desbloqueado
+Falta de vigilancia en las instalaciones.
+
+Un dominio de usuario incluye a cualquier persona con acceso al sistema de información de una organización: todos los empleados, clientes y partners contractuales.
+
+Un dominio de dispositivo se refiere a cualquier computadora y otros dispositivos conectados a una red de computadoras.
+
+El dominio de las instalaciones físicas incluye todas las instalaciones utilizadas por una organización, así como las medidas de seguridad física empleadas para proteger las instalaciones de una organización.
+
+Un dominio LAN es un conjunto de dispositivos conectados localmente por cables o ondas de radio. 
+
+Un dominio de nube privada: incluye cualquier servidor privado, recursos e infraestructura de TI disponibles solo para miembros de una sola organización a través de Internet.
+Nube pública: incluye todos los servicios de computación alojados por una nube, servicio o proveedor de Internet que están disponibles para el público y compartido entre las organizaciones. 
+Hay tres modelos diferentes de servicio en la nube:
+
+SaaS ofrece a las organizaciones software alojado de manera centralizada por los usuarios a través de Internet.
+
+Plataforma como servicio (PaaS ): proporciona una plataforma que permite que una organización desarrolle, ejecute y administre sus aplicaciones en el hardware del servicio con herramientas provistas por el servicio.
+
+Infraestructura como servicio (IaaS ): proporciona recursos de computación virtualizados, como hardware, software, servidores, almacenamiento y otros componentes de infraestructura en Internet.
+
+amenaza persistente avanzada (APT)
+
+Puertas Traseras: Utilizan programas para ingresar por detrás y saltarse cualquier tipo de autenticación como Netbus y Back Orificio. el propósito es otrogar al delincuente acceso en el futuro, incluso si la organización arregla el problema de seguridad que se tenga.
+
+RootKits: Es el malware que esta diseñado para tener la puerta trasera, el cual al ingresar tiene accesos privilegiados y modifican el sistema a su gusto, en un caso un sistema infectado con rootKits, debe borrarse e instalarse de nuevo.
+
+Entre la ingeniería social, se encuentran: pretexto, una cosa por otra(quid pro quo), fraude de identidad.
+
+También se encuentran la autoridad, intimidación, consenso, escasez, urgencias, familiaridad o confianza.
+
+.shoulder surfing y dumpster diving: La navegación de hombro es un ataque simple que implica observar o literalmente mirar por encima del hombro de un objetivo para obtener información valiosa, como PIN, códigos de acceso o detalles de tarjetas de crédito.
+.piggybacking y tailgating: 
+.Estafas de facturas
+.Ataque de brevadero: describe un ataque en el que un atacante observa o adivina qué sitios web utiliza una organización con más frecuencia e infecta uno o más de ellos con malware.
+.Error tipografico
+.Antecedente: Los atacantes pueden eliminar la etiqueta de correo electrónico "externa" utilizada por las organizaciones para advertir al destinatario que un correo electrónico se originó a partir de una fuente externa.
+.Campaña de influencia
+.Scareware es cuando las víctimas son engañadas al pensar que su sistema está infectado con malware y reciben falsas alarmas que les instan a instalar software que no es necesario o es en sí mismo malware. 
+ 

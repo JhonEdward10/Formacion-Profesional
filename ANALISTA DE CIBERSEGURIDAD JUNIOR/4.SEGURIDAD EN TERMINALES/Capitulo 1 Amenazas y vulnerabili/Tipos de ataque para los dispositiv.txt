@@ -1,0 +1,23 @@
+Tipos de ataque para los dispositivos móviles.
+
+.Grayware y SMiShing:
+el Grayware se puede comportar de manera molesta o no deseada. Pues se puede presentar como publicidad no deseada o para que el usuario comparta su ubicación.
+aquí es donde se vuelve un reto para la seguridad porque muchos usuarios instalan software en su dispositivo sin tener en cuenta estos pasos o letra pequeña como se le conoce.
+el SMiShing: es una táctica utilizada por el atacante para engañarlo, pues le pide a este mediante mensaje de texto falso que visite un sitio web malicioso o que llamen de un numero de teléfono fraudulento, lo que puede ocasionar una descarga de malware en el dispositivo o intercambio de información personal.
+
+.Puntos de acceso no autorizado: es un punto de red instalado en una red segura, que aunque podría ser instalado sin malas intenciones, puede ofrecer la oportunidad para los atacantes obtener acceso a la red de una organización.
+
+.Bluethoot: tiene algunas variantes para robar información ya que es un protocolo de corto alcance y encaja perfectamente sobre las redes PAN, entonces hay dos tipos de ataques que se pueden perpetuar mediante bluetooth.
+
+Bluejacking: utilizan bluetooth para enviar mensajes, e imágenes mediante dispositivos bluetooth.
+
+Bluesnarf: es cuando un atacante copia contactos, mensajes de texto, correos, mediante bluetooth.
+
+Para defender las redes existen protocolos para los que no tengan acceso autorizado no ingresen a las redes inalámbricas.
+
+Privacidad por cable equivalente (WEP) 
+Acceso protegido Wi-Fi (WPA)
+
+NetStumbler pueden descubrir puntos de acceso dudosos o estaciones de trabajo no autorizadas. 
+
+
