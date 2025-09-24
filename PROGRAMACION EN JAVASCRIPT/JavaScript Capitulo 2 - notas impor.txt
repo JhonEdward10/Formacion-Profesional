@@ -1,0 +1,5 @@
+JavaScript Capitulo 2 -> notas importantes
+
+Una de las diferencias básicas en el uso de var y let es que let nos impide declarar otra variable con el mismo nombre (se genera un error). El uso de var le permite volver a declarar una variable, lo que puede provocar errores en la ejecución del programa.
+
+"use strict";. Esta afirmación ha cambiado radicalmente el comportamiento del intérprete. ¿Por qué? Lo usamos cuando queremos obligar al intérprete a comportarse de acuerdo con los estándares modernos de JavaScript. Por lo tanto, siempre que no esté ejecutando un código realmente antiguo, siempre debe usarlo. 
