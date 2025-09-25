@@ -135,8 +135,29 @@ git push origin programacion-javascript
 git checkout main
 git merge programacion-javascript
 git push origin main
-NOTAS IMPORTANTES:
 
+______________________________________________________________________________________________
+12.Agregar todos los cambios al repositorio
+*git add -A (All)
+Función: Agrega TODOS los cambios del repositorio completo
+
+Comparación con otros comandos:
+*git add . (punto)
+Función: Solo agrega cambios en la carpeta actual y subcarpetas
+Archivos modificados ✓
+Archivos nuevos ✓
+Archivos eliminados ❌ (NO los elimina del repo)
+
+*git add -u (update)
+Función: Solo actualiza archivos que ya están siendo rastreados
+Archivos modificados ✓
+Archivos eliminados ✓
+Archivos nuevos ❌ (NO los agrega)
+
+*git add nombre-archivo
+Función: Agrega solo ese archivo específico
+
+NOTAS IMPORTANTES:
 main es tu rama principal donde todo debe aparecer para el calendario de GitHub
 Los commits solo cuentan para el calendario si se hacen en la rama por defecto (main)
 Siempre usar comillas para nombres de archivos/carpetas con espacios
