@@ -1,0 +1,29 @@
+Más vulnerables a las técnicas de evasión de seguridad de red habilitadas mediante diversos métodos de ataque de red
+IDS
+
+Puede afectar al rendimiento de red mediante la introducción de latencia y fluctuación
+IPS
+
+Deben aplicarse para que las aplicaciones sensibles al tiempo no se vean afectadas negativamente
+IPS
+
+No puede detener el paquete de activación ni está garantizado que detenga una conexión
+IDS
+
+Implementado en modo sin conexión
+IDS
+
+Puede usar técnicas de normalización de transmisiones para reducir o eliminar muchas de las capacidades de evasión de seguridad de redexistentes
+IPS
+
+Se puede configurar para que omita el paquete a fin de detener el paquete de activación
+IPS
+
+Se centra principalmente en identificar posibles incidentes, registrar información sobre ellos e informarlos
+IDS
+
+Debe ser implementado en línea y el tráfico debe ser capaz de atravesarlo
+IPS
+
+No tan útil para detener virus de correo electrónico y ataques automatizados, como los gusanos
+IDS

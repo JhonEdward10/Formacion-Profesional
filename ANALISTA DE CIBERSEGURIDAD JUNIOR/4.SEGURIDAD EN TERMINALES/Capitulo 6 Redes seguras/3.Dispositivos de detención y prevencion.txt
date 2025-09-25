@@ -27,7 +27,21 @@ las tecnologías de IPS e IDS son reglas que detectan trafico malicioso al ingre
 					.Al implementarse en linea, puede tener sobrecalentamiento del sensor IPS, con mucho trafico puede tener un efecto negativo en la red, introduciendo latencia y fluctuación.
 
 Tipos de IPS:
+En base a host: (HIPS) ->  es un software instalado en un host para controlar y analizar actividades sospechosas. Entre los comportamientos sospechosos esta actualizaciones del registro no autorizadas, cambios en el directorio del sistema, ejecución de programas de instalación y actividades que provocan desbordamientos del búfer.
+HIPS puede considerarse una combinación de firewall, software antivirus y software antimalware. Combinado con IPS con base en la red, HIPS es una herramienta eficaz para brindar protección adicional al host.
 
+Una desventaja de HIPS -> es que actúa solamente a nivel local. No tiene una perspectiva completa de la red o de los eventos coordinados que podrían estar ocurriendo en toda la red. Para ser eficaz en una red, HIPS debe instalarse en cada host y ser compatible con cada sistema operativo.
 
+En base a la red:  IPS con base en la red se puede implementar utilizando un dispositivo IPS exclusivo o no exclusivo. Los sensores detectan actividad maliciosa y no autorizada en tiempo real y pueden tomar medidas cuando es necesario.
+
+Dispositivos de seguridad especializados
+
+AMP -> Cisco Advanced Malware Protection (AMP) es una solución de protección y análisis de malware avanzado de clase empresarial. Brinda protección integral contra malware para las organizaciones antes, durante y después de un ataque
+AMP tiene acceso a la inteligencia de seguridad colectiva del grupo de inteligencia e investigación de seguridad Cisco Talos. Talos detecta y correlaciona amenazas en tiempo real por medio de la mayor red de detección de amenazas del mundo.
+
+WSA ->  (Cisco Web Security Appliance)  (WSA) -> ofrece protección contra malware, visibilidad y control de las aplicaciones, controles de políticas de uso aceptable, informes detallados y movilidad segura. Pero si el usuario sale de la red en la que se encuentra WSA, no puede protegerlo ya que esta por fuera del perímetro donde esta esta tecnología, por tanto se recomienda instalar Cisco Cloud Web Security (CWS).
+. La solución Cisco CWS impone comunicación segura desde y hacia Internet.
+
+ESA -> Cisco Email Security Appliance (ESA) y Cisco Cloud Email Security ayudan a reducir las amenazas con base en el correo electrónico.
 
 
