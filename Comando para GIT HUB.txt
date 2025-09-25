@@ -1,0 +1,138 @@
+1. COMANDOS DE CONFIGURACIÓN INICIAL
+*git init
+
+Función: Inicializa un nuevo repositorio Git en la carpeta actual
+Uso: Se ejecuta una sola vez al crear un proyecto
+
+*git config --global user.name "Tu Nombre"
+
+Función: Configura tu nombre para todos los repositorios
+
+git config --global user.name "Jhon Edward Mendez"
+git config --global user.email "tu-email@gmail.com"
+Función: Configura tu email para todos los repositorios (debe coincidir con tu email de GitHub)
+bashgit config --global user.email "tu-email@gmail.com"
+______________________________________________________________________________________________
+2. COMANDOS DE INFORMACIÓN Y ESTADO
+*git branch
+Función: Muestra todas las ramas locales y marca con * la rama actual
+
+*git branch -a
+Función: Muestra todas las ramas (locales y remotas)
+
+*git status
+Función: Muestra el estado actual del repositorio (archivos modificados, agregados, etc.)
+
+*git log
+Función: Muestra el historial de commits
+bashgit log
+______________________________________________________________________________________________
+3. COMANDOS DE TRABAJO CON RAMAS
+*git checkout nombre-rama
+Función: Cambia a la rama especificada
+*git checkout main
+
+*git checkout programacion-python
+
+*git checkout -b nueva-rama
+Función: Crea una nueva rama y cambia a ella inmediatamente
+
+
+*git branch -D nombre-rama
+Función: Elimina una rama local (forzado)
+______________________________________________________________________________________________
+4. COMANDOS DE GESTIÓN DE ARCHIVOS
+*git add nombre-archivo
+Función: Agrega un archivo específico al área de preparación
+
+git add "PROGRAMACION EN PYTHON/ejercicio.py"
+git add README.md
+
+*git add .
+Función: Agrega TODOS los archivos modificados al área de preparación
+
+*git rm -rf "nombre-carpeta"
+Función: Elimina una carpeta y sus archivos del repositorio
+______________________________________________________________________________________________
+5. COMANDOS DE COMMITS
+*git commit -m "mensaje"
+Función: Crea un commit con un mensaje descriptivo
+______________________________________________________________________________________________
+6. COMANDOS DE REPOSITORIO REMOTO
+*git remote add origin URL
+Función: Conecta tu repositorio local con GitHub
+
+*git push origin nombre-rama
+Función: Sube los commits de una rama específica a GitHub
+
+*git push origin programacion-python
+
+*git push -u origin nombre-rama
+Función: Sube la rama por primera vez y establece seguimiento
+
+*git push origin --delete nombre-rama
+Función: Elimina una rama del repositorio remoto (GitHub)
+______________________________________________________________________________________________
+7. COMANDOS DE FUSIÓN
+*git merge nombre-rama
+Función: Fusiona otra rama en la rama actual
+
+*git checkout main
+*git merge programacion-python
+
+*git merge nombre-rama --no-ff -m "mensaje"
+Función: Fusiona creando un commit de merge específico
+______________________________________________________________________________________________
+8. COMANDOS DE DIAGNÓSTICO
+*git config --global user.email
+Función: Muestra el email configurado actualmente
+
+*git log -1 --pretty=format:"%ae"
+Función: Muestra el email del último commit
+______________________________________________________________________________________________
+9. FLUJO DE TRABAJO RECOMENDADO
+Para trabajo diario (calendario verde):
+bash# 1. Ir a main
+git checkout main
+
+# 2. Hacer cambios en archivos
+
+# 3. Agregar cambios
+git add .
+
+# 4. Hacer commit
+git commit -m "Descripción del progreso"
+
+# 5. Subir a GitHub
+git push origin main
+Para experimentación:
+bash# 1. Ir a rama específica
+git checkout programacion-python
+
+# 2. Experimentar y hacer cambios
+
+# 3. Si funciona bien, replicar en main
+git checkout main
+git add "archivo-modificado"
+git commit -m "Add successful experiment"
+git push origin main
+______________________________________________________________________________________________
+10. COMANDOS ÚTILES ADICIONALES
+*ls o dir
+Función: Muestra archivos y carpetas en el directorio actual
+
+*cd "nombre-carpeta"
+Función: Navega a una carpeta específica
+______________________________________________________________________________________________
+NOTAS IMPORTANTES:
+
+main es tu rama principal donde todo debe aparecer para el calendario de GitHub
+Los commits solo cuentan para el calendario si se hacen en la rama por defecto (main)
+Siempre usar comillas para nombres de archivos/carpetas con espacios
+El email de Git debe coincidir exactamente con el email de GitHub
+Para reclutadores: trabajar principalmente en main para mostrar actividad consistente
+
+
+Fecha de creación: Septiembre 2025
+Repositorio: Formacion-Profesional
+Autor: Jhon Edward Mendez Tovar

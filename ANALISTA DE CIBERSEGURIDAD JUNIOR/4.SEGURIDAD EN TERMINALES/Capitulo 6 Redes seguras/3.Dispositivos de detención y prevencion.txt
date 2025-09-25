@@ -26,6 +26,8 @@ las tecnologías de IPS e IDS son reglas que detectan trafico malicioso al ingre
 	.Desventajas de IPS: 
 					.Al implementarse en linea, puede tener sobrecalentamiento del sensor IPS, con mucho trafico puede tener un efecto negativo en la red, introduciendo latencia y fluctuación.
 
+Tipos de IPS:
+
 
 
 
