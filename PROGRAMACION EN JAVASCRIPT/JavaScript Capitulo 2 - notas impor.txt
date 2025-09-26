@@ -11,3 +11,10 @@ Después de esta breve introducción a las funciones (obviamente esta no es nues
 Si declaramos una variable usando la palabra clave var dentro de una función, su alcance se limitará solo al interior de esa función (es un alcance local). Esto significa que el nombre de la variable se reconocerá correctamente solo dentro de esta función.
 
 En la mayoría de los casos, esto no es deseable, así que trate de evitar dar los mismos nombres de variable a varias variables, independientemente de dónde las declare.
+
+Ojo
+En JavaScript, hay seis tipos de datos primitivos (o simples): Booleano, Número, BigInt, Cadena, Símbolo e indefinido.
+
+Podemos realizar, sin conversión (es decir, cambio a otro tipo) operaciones lógicas en valores booleanos, algunos quizás que conozcas por matemáticas, como NOT, AND y OR 
+(los símbolos !, && y || respectivamente)
+

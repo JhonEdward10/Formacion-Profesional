@@ -10,6 +10,7 @@
 //___________________________________________________________________________________________
 
 //Capitulo 2
+
 // var height;
 // console.log(height); // -> undefined
 // console.log(weight); // -> Uncaught ReferenceError: weight is not defined
@@ -221,10 +222,37 @@
 // console.log("Name: "+ name1,"/", "Number: "+ number1,"/", "Email: "+ email1);
 // console.log("Name: "+ name3,"/", "Number: "+ number3,"/", "Email: "+ email3);
 
+//______________________________________________________________________________________________________________
 
+//Capitulo 2.1
 
+//Operador typeof
 
+// const email3 = true;
+// console.log(typeof(email3));
 
+// let year = 1990;
+// console.log(typeof (year)); // -> number
+// console.log(typeof 1991); // -> number
+   
+// let name = "Alice";
+// console.log(typeof name); // -> string
+// console.log(typeof "Bob"); // -> string
+   
+// let typeOfYear = typeof year;
+// console.log(typeOfYear); // -> number
+// console.log(typeof typeOfYear); // -> string
+
+//Booleanos
+// let isDataValid = true;
+// let isStringTooLong = false;
+// let isGameOver = false;
+// continueLoop = true;
+   
+// console.log(false); // -> false
+// console.log(typeof false); // -> boolean
+// console.log(isDataValid); // -> true
+// console.log(typeof isDataValid); // -> boolean
 
 
 
