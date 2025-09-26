@@ -1,0 +1,30 @@
+Servicios de seguridad
+
+Servidor Syslog:  es un sistema centralizado que recibe, almacena y organiza mensajes de registro, lo cual se hace para monitorear la red, dar diagnósticos de problemas, influye en seguridad y auditoria de toda la red.
+
+Que es el core en una red? : el core transporta grandes cantidades de tráfico, que pueden incluir segmentos TCP, pero no los procesa como lo haría un firewall o un servidor. Solo los encamina. Capa 3 y en ocasiones Capa 2.
+
+Servidor AAA: Auntenticacion (Token), Autorización (Permisos) y Auditoria (Que realiza, cuanto tiempo y como), entre estos servidores destacan dos Terminal access controller  access-control system Plus (TACACS+) y Remote authentication Dial- in User Service (RADIUS) 
+
+Servidor Radius: Es un servidor que controla quién entra a la red. Se usa para autenticar, autorizar y registrar a los usuarios que quieren conectarse, por ejemplo, a una red Wi-Fi empresarial o a una VPN.
+- Autentica: verifica si el usuario es quien dice ser (usuario y contraseña).
+- Autoriza: decide qué permisos tiene ese usuario.
+- Registra: guarda un historial de quién se conectó, cuándo y desde dónde.
+📌 Se usa mucho en empresas para controlar el acceso seguro a la red.
+
+📊 NetFlow
+Es una tecnología de Cisco que permite ver y analizar el tráfico que pasa por los routers y switches.
+- Te dice quién está usando la red, qué está haciendo, y cuánto ancho de banda consume.
+- Ayuda a detectar problemas, ataques o simplemente a entender el comportamiento de la red.
+📌 Es como tener una cámara que graba todo el tráfico de datos, pero sin ver el contenido, solo los movimientos.
+
+📡 SNMP (Simple Network Management Protocol)
+Es un protocolo para monitorear y administrar dispositivos de red como routers, switches, servidores, impresoras, etc.
+- Permite ver el estado de los equipos (si están encendidos, si tienen errores, cuánta memoria usan, etc.).
+- También se puede usar para configurar remotamente ciertos parámetros.
+📌 Es como tener un panel de control que te muestra cómo está tu red en tiempo real.
+
+💡VPN: Una VPN (Red Privada Virtual) es como un túnel secreto por Internet. En vez de usar cables exclusivos entre dos lugares, usa la red pública (Internet) para conectar, pero de forma segura y privada.
+- Virtual porque usa Internet para transportar los datos.
+- Privada porque esos datos van cifrados, como si fueran en una caja fuerte digital.
+

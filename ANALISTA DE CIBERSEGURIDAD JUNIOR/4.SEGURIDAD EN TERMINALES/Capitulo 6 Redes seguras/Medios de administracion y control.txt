@@ -1,0 +1,16 @@
+(SNMP): El protocolo simple de administración de redes (SNMP),  les permite a los administradores gestionar terminales en una red IP, como servidores, estaciones de trabajo, routers, switches y dispositivos de seguridad. Permite que los administradores de redes monitoreen y administren el rendimiento de la red, detecten y resuelvan problemas de red y planifiquen el crecimiento de la red.
+.SNMP es un protocolo de capa de aplicación que proporciona un formato de mensaje para la comunicación entre administradores y agentes.
+
+NetFlow: Mientras que SNMP intenta proporcionar una amplia variedad de características y opciones de administración de red, NetFlow se centra en proporcionar estadísticas sobre los paquetes IP que fluyen a través de los dispositivos de red.
+
+Puertos reflejados, en donde se utiliza un sniffer: Un analizador de paquetes (también conocido como sniffer de paquetes o sniffer de tráfico) es, normalmente, un software que captura paquetes de entrada y salida
+
+Servidor Syslog:  es un sistema centralizado que recibe, almacena y organiza mensajes de registro, lo cual se hace para monitorear la red, dar diagnósticos de problemas, influye en seguridad y auditoria de toda la red.
+
+No es aconsejable en una red tener todos los dispositivos con la mismas hora, sino con hora manual o en este caso con Configuración del protocolo de tiempo de red (NTP). Las redes NTP utilizan un sistema jerárquico de fuentes horarias. Cada nivel en este sistema jerárquico se denomina estrato. El nivel de estrato se define como la cantidad de saltos desde fuente autorizada. La hora sincronización se distribuye en la red mediante el protocolo NTP.
+
+Los servidores NTP están dispuestos en tres niveles, conocidos como estratos:
+
+Estrato 0 - una red NTP obtiene la hora de fuentes horarias autorizadas. Estas fuentes autorizadas, conocidas como dispositivos de estrato 0, son dispositivos de cronometraje de alta precisión que son presuntamente precisos y con poco o ningún retraso asociado con los mismos.
+Estrato 1 -Los dispositivos del estrato 1 están conectados directamente a las fuentes horarias autorizadas. Actúan como el estándar horario de la red principal.
+Estrato 2 e inferiores - Los servidores del estrato 2 están conectados a dispositivos del estrato 1 mediante conexiones de red. Los dispositivos del estrato 2, como clientes de NTP, sincronizan su horario con los paquetes NTP desde servidores del estrato 1. Podrían también actuar como servidores para dispositivos del estrato 3.

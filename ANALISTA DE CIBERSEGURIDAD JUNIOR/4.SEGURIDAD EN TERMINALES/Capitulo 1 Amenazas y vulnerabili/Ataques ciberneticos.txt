@@ -1,19 +1,29 @@
 Los ciberdelincuentes utilizan muchos métodos para poder cometer el daño e ingresar al sistema, entre ellos el tipo de malware es un tipo de código que se utiliza para robar datos, eludir controles de acceso, o comprometer el sistema. Los ataques mas comunes son:
 
 .Virus: es un código que esta disfrazado y es ejecutado cuando se abre en un archivo, imagen y que al ejecutarse se propaga, se adjunta e inserta su propio código malicioso.
+
 .Gusanos: son un código malicioso que se ejecuta en la red y es muy peligroso pues se puede propagar fácilmente una vez iniciado, aprovechan las vulnerabilidades del sistema y en su código se tiene una carga útil para dañar los sistemas.
+
 .Troyano: este malware lleva malas intenciones al ser desenmascarado, es muy peligroso, además se utiliza para el espionaje, además se añade a los archivos no ejecutables como música, audio, fotos, que actúan como trampas para dañar los sistemas.
+
 .Bombas lógicas: Las bombas lógicas son software malicioso que se activa cuando se ejecuta o a una fecha y hora exacta, además interviene en el hardware de los dispositivos en los que esta alojado.
+
 .Ransomware: malware que una vez ejecutado, captura la información, cifrándola para que el dueño no pueda acceder a ella y para que tenga acceso, debe realizar un pago.
+
 .Ataque por denegación de servicios: DoS o DDos, es un ataque que abruma los servidores o pc y que hace que se ralentice los procesos que estén realizando o mediante paquetes maliciosos hacen que los dispositivos se ralenticen porque no pueden Ingresar a ellos.
+
 .Reputación del dominio Falsificación de DNS: Aquí es donde una empresa debe cuidar su reputación en internet y buscar la manera de hacerla legitima, además acerca de la falsificación de dns quiere decir que alguien redirige el trafico de la red y se hace pasar por una empresa legitima.
+
 .secuestro del dominio: es cuando un atacante obtiene el control del dominio del objetivo, el cual puede realizar cambios significativos no autorizados, a eso se le conoce como secuestro de dominio.
+
 .Localizador uniforme de recursos(URL): identificador para encontrar un recurso de internet, el redireccionamiento suele ser con fines legítimos ya que los actores maliciosos lo pueden llevar a un sitio ilegitimo para que ingresen a esa pagina web.
 
 
 Ataques de capa 2:
 .Suplantación de identidad(spoofing): aquí es donde el atacante suplanta la dirección Mac de un dispositivo que es valido en la red interna, para omitir el proceso de autenticación.
+
 .ahí falsifica los mensajes que envía ARP atraves de la LAN. Esto lo que hace es hacerse pasar también por miembro de la red y se hace pasar por la misma dirección IP que un usuario legitimo.
+
 .Saturación de direcciones MAC: un usuario ilegitimo inunda la red con direcciones Mac falsas para así comprometer la seguridad del switch de red.
 
 

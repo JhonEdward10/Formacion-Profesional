@@ -1,0 +1,25 @@
+Una lista de control de acceso (ACL, Access Control List) es una serie de comandos que controla si un dispositivo reenvía o descarta paquetes según la información que se encuentra en el encabezado del paquete.
+
+- Es como un portero digital que decide quién entra y quién no.
+- Se basa en cosas como:
+- Dirección IP de origen o destino
+- Tipo de protocolo (TCP, UDP, ICMP)
+- Número de puerto (HTTP, FTP, etc.)
+
+Esta capacidad es similar a tener un pase vip para un concierto o un evento deportivo. El pase vip brinda a ciertos invitados privilegios que no se ofrecen a los asistentes que poseen entradas de admisión general, como prioridad de entrada o el ingreso a un área restringida.
+
+Exacto, además ACL deja cierta IPv4s pasar, no las que vengan de todo lado, sino de sitios conocidos.
+
+
+comandos para revisar configuración ACL 
+#show access-lists
+#show ip interface
+#show run 
+
+Para cambiar la configuración en un router se necesita los siguientes comandos
+a.  En la interfaz serial0/0/0, quite la lista access-list 11, aplicada anteriormente a la interfaz como filtro de salida:
+R1(config)# int se0/0/0
+R1(config-if)#no ip access-group 11 out
+b.  En el modo de configuración global, elimine la ACL por medio del siguiente comando:
+R1(config)# no access-list 11
+
