@@ -4,7 +4,6 @@ Una de las diferencias básicas en el uso de var y let es que let nos impide dec
 
 "use strict";. Esta afirmación ha cambiado radicalmente el comportamiento del intérprete. ¿Por qué? Lo usamos cuando queremos obligar al intérprete a comportarse de acuerdo con los estándares modernos de JavaScript. Por lo tanto, siempre que no esté ejecutando un código realmente antiguo, siempre debe usarlo. 
 
-
 La variable var
 Después de esta breve introducción a las funciones (obviamente esta no es nuestra última reunión con ellas) volvamos a la palabra clave var y los ámbitos de las variables.
 
@@ -15,6 +14,20 @@ En la mayoría de los casos, esto no es deseable, así que trate de evitar dar l
 Ojo
 En JavaScript, hay seis tipos de datos primitivos (o simples): Booleano, Número, BigInt, Cadena, Símbolo e indefinido.
 
+Boleanos
 Podemos realizar, sin conversión (es decir, cambio a otro tipo) operaciones lógicas en valores booleanos, algunos quizás que conozcas por matemáticas, como NOT, AND y OR 
 (los símbolos !, && y || respectivamente)
 
+Numeros
+Se supone, entre otras cosas, que para garantizar la exactitud de los cálculos, los valores enteros deben limitarse en JavaScript al rango de -(253 – 1) a (253 – 1).
+Los números en JavaScript generalmente se presentan en forma decimal, a lo que estamos acostumbrados en la vida cotidiana. Sin embargo, si un literal que describe un número está precedido por un prefijo apropiado, podemos presentarlo en forma hexadecimal (0x...), octal (0o...) o binaria (0b...). También podemos escribir números en forma exponencial, por ejemplo, en lugar de 9000, podemos escribir 9e3, y en lugar de 0.00123, podemos escribir 123e-5. 
+
+BigInt: Tambien existen los BigInt que son numeros enteros muy grandes, pero poco usados y para ello utilizan una n al final del numero
+No puede usar otros tipos en operaciones aritméticas en BigInts, es decir, no puede agregar un BigInt y un Number entre sí (esto generará un error).
+
+String: Las cadenas, como otras primitivas, son inmutables, por lo que cuando queremos cambiar incluso una letra en una cadena, en realidad, creamos una nueva cadena.   
+Eso significa que si se utiliza el operador menos con strings, 
+ JS intenta convertirlos a numeros, pero si se hace con el operador mas
+ simplemente los concatena.
+
+Que es el método en JavaScript: Un método es un tipo especial de función que pertenece a un objeto. Los objetos son tipos de datos complejos, que pueden constar de muchos valores (almacenados en propiedades) y métodos. Si desea llamar al método de un objeto, escriba el nombre del método después de un punto. ¿Te recuerda esto a algo? Esta es exactamente la notación que usas cuando llamas a console.log. El objeto console tiene muchos otros métodos además del método log, como time y timeEnd (que se pueden usar para medir el tiempo).

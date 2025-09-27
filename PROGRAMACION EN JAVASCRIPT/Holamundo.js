@@ -254,18 +254,85 @@
 // console.log(isDataValid); // -> true
 // console.log(typeof isDataValid); // -> boolean
 
+//______________________________________________________________________________________________________________
+
 //Numeros
-const year = 1991;
-let delayInSeconds = 0.00016;
-let area = (16 * 3.14);
-let halfArea = area / 2;
+// const year = 1991;
+// let delayInSeconds = 0.00016;
+// let area = (16 * 3.14);
+// let halfArea = area / 2;
+
+// //Tambien existen los numeros especiales
+// let a = 10; // decimal - default
+// let b = 0x10; // hexadecimal
+// let c = 0o10; // octal
+// let d = 0b10; // binary
    
-console.log(year); // -> 1991;
-console.log(typeof year); // -> number;
-console.log(delayInSeconds);
-console.log(area);
-console.log(halfArea);
-console.log(typeof halfArea); // -> number;
+// console.log(a); // -> 10
+// console.log(b); // -> 16
+// console.log(c); // -> 8
+// console.log(d); // -> 2
+   
+// let x = 9e3;
+// let y = 123e-5;
+// console.log(x); // -> 9000
+// console.log(y); // -> 0.00123
+
+//Ademas se puede apreciar que existen dos tipos de numeros especiales
+// let a = Infinity;
+// let b = -Infinity;
+// let c = NaN;
+
+// let a = 1 / 0;
+// let b = -Infinity;
+   
+// console.log(a); // -> Infinity
+// console.log(b); // -> -Infinity
+// console.log(typeof a); // -> number
+// console.log(typeof b); // -> number
+   
+// let s = "it's definitely not a number";
+// let n = s * 10;
+// console.log(n); // -> NaN // Not a Number
+// console.log(typeof n); // -> number
+
+//Tambien existen los BigInt que son numeros enteros muy grandes, pero poco usados y para ello utilizan
+// una n al final del numero
+
+// let bigIntNumber = 1234567890123456789012345678901234567890n;
+// console.log(bigIntNumber);
+// console.log(typeof bigIntNumber);
+
+//______________________________________________________________________________________________________________
+
+//Strings
+
+// let name = "Alice";
+// let greeting = 'Hello';
+// let phrase = `Welcome to the party, ${name}!`;
+
+// console.log(phrase);
+// console.log(typeof phrase);
+// console.log(`Welcome ${name}`);
+
+// let message1 = 'The vessel \'Mars\' called at the port.';
+// let message2 = "Cyclone \"Cilida\" to pass close to Mauritius.";
+
+// console.log(message1);
+// console.log(message2);
+
+// let path = "C:\\Windows" - "Windows";
+// console.log(path); // -> NaN
+   
+// let test1 = "100" + "10";
+// let test2 = "100" - "10";
+// console.log(test1); // -> 90
+// console.log(typeof test1); // -> string
+// console.log(test2);
+// console.log(typeof test2); // -> number
+
+//Eso significa que si se utiliza el operador menos con strings, 
+// JS intenta convertirlos a numeros, pero si se hace con el operador mas
+// simplemente los concatena 
 
 
-console.log("Hello");
