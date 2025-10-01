@@ -340,16 +340,23 @@
 // let character = river.charAt(-);
 // console.log(character); // -> k
 
-let str = "java script language";
+// let str = "java script language";
    
-console.log(str.length); // -> 20
-console.log('test'.length); // -> 4
+// //OBTIENE LA LONGITUD DE UNA CADENA DE TEXTO
+// console.log(str.length); // -> 20
+// console.log('test'.length); // -> 4
+
+//// OBTIENE UN CARACTER EN UNA POSICION ESPECIFICA
+// console.log(str.charAt(0)); // -> 'j'
+// console.log('abc'.charAt(1)); // -> 'b'
+
+////CREA UNA SUBCADENA APARTIR DE CARACTERES INICIALES Y FINALES
+// console.log(str.slice(0, 4)); // -> 'java'
+// console.log('test'.slice(1, 3)); // -> 'es'
    
-console.log(str.charAt(0)); // -> 'j'
-console.log('abc'.charAt(1)); // -> 'b'
-   
-console.log(str.slice(0, 4)); // -> 'java'
-console.log('test'.slice(1, 3)); // -> 'es'
-   
-console.log(str.split(' ')); // -> ['java', 'script', 'language']
-console.log('192.168.1.1'.split('.')); // -> ['192', '168', '1', '1']
+// //DIVIDE UNA CADENA DE TEXTO EN UN ARRAY
+// console.log(str.split(' ')); // -> ['java', 'script', 'language']
+// console.log('192.168.1.1'.split('.')); // -> ['192', '168', '1', '1']
+
+//______________________________________________________________________________________________________________
+
