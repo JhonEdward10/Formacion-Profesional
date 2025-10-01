@@ -1,0 +1,10 @@
+notepad $PROFILE -> para ingresar al powerShell configuración
+
+code "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -> para ingresar a la carpeta json de los terminales y eso ingresa a los json, para editar
+
+code "$env:POSH_THEMES_PATH\night-owl.omp.json" -> para ingresar al tema de configuración, ya sabes como cambiar los editores
+
+code "$env:POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json" -> el mismo pero con diferente tema 
+
+echo $env:POSH_THEMES_PATH -> Comando para saber donde están las rutas del Power Themes
+C:\Users\Edward\AppData\Local\Programs\oh-my-posh\themes\ -> ruta de donde están los temas 
