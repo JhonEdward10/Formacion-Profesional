@@ -1,3 +1,10 @@
 El sistema Operativo Windows
 
 Los comienzos fueron con MS-DOS
+
+Ya casi no se utiliza MS-DOS, solo se utiliza el formato de GUI, y los mas utilizados de los sistemas operativos son apartir de Windows 7 hasta hoy dia Windows 11.
+
+Para conectar el hardware con el software aplicativo se utiliza una capa de abstracion que esto permite la comunicación entre el hardware y el kernel.
+
+El código que se ejecuta en el modo de núcleo tiene acceso ilimitado al hardware subyacente y es capaz de ejecutar cualquier instrucción de la CPU. Un error en el modo núcleo y puede parar la computadora. Todo el código que se ejecuta en el modo de núcleo usa el mismo espacio para la dirección postal. Si se produce un error con el controlador en el modo de núcleo y escribe en el espacio para la dirección postal incorrecto, el sistema operativo u otro controlador del modo de núcleo podrían verse afectados negativamente.
+
