@@ -8,3 +8,23 @@ Para conectar el hardware con el software aplicativo se utiliza una capa de abst
 
 El código que se ejecuta en el modo de núcleo tiene acceso ilimitado al hardware subyacente y es capaz de ejecutar cualquier instrucción de la CPU. Un error en el modo núcleo y puede parar la computadora. Todo el código que se ejecuta en el modo de núcleo usa el mismo espacio para la dirección postal. Si se produce un error con el controlador en el modo de núcleo y escribe en el espacio para la dirección postal incorrecto, el sistema operativo u otro controlador del modo de núcleo podrían verse afectados negativamente.
 
+Hay diferentes sistemas de archivos de Windows entre ellos exFAT, Sistema de archivos jerárquicos (HFS), Sistema de archivos extendidos EXT, Sistemas de archivos de nuevas tecnologías (NTFS); NTFS es el sistema de archivos más utilizado en Windows por numerosas razones. NTFS admite archivos y particiones muy grandes y es muy compatible con otros sistemas operativos. Además, NTFS también es muy confiable y admite funciones de recuperación.
+
+.En NTFS hay un sistema alternativo para guardar información llamada Flujo de datos alternativos (ADS),  son unos "huecos secretos" que tiene el sistema de archivos NTFS para guardar información adicional sin crear archivos separados.  
+
+También en Windows es importante el arranque que cuando se enciende la pc o laptop hay unos procedimientos anteriores antes de iniciar el sistema operativo y hay dos métodos que se utilizan o veras muy seguido que es BIOS Y UEFI. Luego de localizar el sistema operativo con el arranque MBR se pasa a un sistema protegido Bootmgr.exe. Bootmgr.exe.
+
+Luego de iniciar Windows se inicia sesión en la maquina y el usuario:
+
+.HKEY_LOCAL_MACHINE y HKEY_CURRENT_USER, para observar un poco mas como inicia Windows, se puede observar con msconfig.
+.También es importante el apagado de Windows, saberlo apagar o incluso hibernar, ya que si se apaga se deben cerrar los procesos correctamente que este corriendo, ya que si se apaga de forma apresurada o forzada la cantidad de daños que se pueden generar en el sistema son catastróficos o incluso costosos.
+
+.También por otro lado existen los procesos y subprocesos de las aplicaciones: Una aplicación de Windows se compone de procesos. Un proceso es cualquier programa que se esté ejecutando. Cada proceso en ejecución está compuesto de, al menos, un subproceso. Un subproceso es una parte del proceso que puede ejecutarse.
+
+Para ingresar al administrador de tareas se ingresa por MSCONFIG en ejecutar Windows + R
+
+- Las redes son muy importantes también en la computación, por eso Windows tiene un apartado, para ello, en centro de redes y recursos compartidos
+
+185.228.168.10
+185.228.169.11
+

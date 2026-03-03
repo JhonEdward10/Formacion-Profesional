@@ -1451,14 +1451,16 @@
 # ________________________________________________________________________________________________________
 # my_list = [i for i in range(-1, 2)]
 # print(my_list)
-t = [[3-i for i in range (3)] for j in range (3)]
-s = 0
-for i in range(3):
-    s += t[i][i]
-print(s)
 
-my_list = [[0, 1, 2, 3] for i in range(2)]
-print(my_list[2][0])
+###############################################################################################
+# t = [[3-i for i in range (3)] for j in range (3)]
+# s = 0
+# for i in range(3):
+#     s += t[i][i]
+# print(s)
+
+# my_list = [[0, 1, 2, 3] for i in range(2)]
+# print(my_list[2][0])
 
 
 
