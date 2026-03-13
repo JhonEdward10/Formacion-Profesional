@@ -10,6 +10,8 @@
 # el codigo es comprensible como el ingles simple, 
 # adecuado para desarrollo de tareas cotidianas.
 
+###################################################
+# 11/03/2026
 # Python Software Foundation (PSF)
 
 # Hay varios python entre ellos Cython, que es Python pasado a lenguaje C;
@@ -48,5 +50,88 @@
 
 ###########################################################################
 
-print("La Witsi Witsi Araña subió a su telaraña.")
-print("Vino la lluvia y se la llevó.")
+#12/03/2026
+
+# print("La Witsi Witsi Araña \nsubió a su telaraña.")
+# print()
+# print("Vino la lluvia \ny se la llevó.")
+
+# \n = Caracter de Nueva Linea 
+# print("La Witsi Witsi Araña","subio","a su telaraña")
+
+# print("Mi nombre es", "Python.", end="\n") #Formacion posicional
+# print("Monty Python.")
+
+# print("Mi nombre es ", end="")
+# print("Monty Python.")
+
+# Lo que puede procesar espacios es la palabra clave sep=
+# print("My","name","is","Monty",sep="-")
+
+
+# print("Mi", "nombre", "es", sep="_", end="*")
+# print("Monty", "Python.", sep="*", end="*\n")
+
+# print("Programming","Essentials","in",sep="***", end="...")
+# print("Python")
+
+########################################################
+
+#Original
+# print("    *")
+# print("   * *")
+# print("  *   *")
+# print(" *     *")
+# print("***   ***")
+# print("  *   *")
+# print("  *   *")
+# print("  *****")
+
+#En una sola linea
+# print("    *\n   * *\n  *   *\n *     *\n***   ***\n  *   *\n  *   *\n  *****")
+
+#El doble de grande
+# print("         *")
+# print("        * *")
+# print("       *   *")
+# print("      *     *")
+# print("     *       *")
+# print("    *         *")
+# print("   *           *")
+# print("  *             *")
+# print(" *               *")
+# print("*                 *")
+# print("******       ******")
+# print("     *       *")
+# print("     *       *")
+# print("     *       *")
+# print("     *       *")
+# print("     *       *")
+# print("     *********")
+
+#Doble
+# print("    *","           ","    *")
+# print("   * *","          ","   * *")
+# print("  *   *","         ","  *   *")
+# print(" *     *","        "," *     *")
+# print("***   ***","       ","***   ***")
+# print("  *   *","         ","  *   *")
+# print("  *   *","         ","  *   *")
+# print("  *****","         ","  *****")
+
+#Doble*2
+# print("    *    "*10)
+# print("   * *   "*10)
+# print("  *   *  "*10)
+# print(" *     * "*10)
+# print("***   ***"*10)
+# print("  *   *  "*10)
+# print("  *   *  "*10)
+# print("  *****  "*10)
+
+###########################################################################
+# print("Mi\nnombre\nes\nBond.", end=" ")
+# print("James Bond.")
+
+# print(sep="&", "fish", "chips")
+#Recuerda: Los argumentos de palabras clave deben pasarse después de cualquier argumento posicional requerido.
