@@ -130,8 +130,107 @@
 # print("  *****  "*10)
 
 ###########################################################################
+
 # print("Mi\nnombre\nes\nBond.", end=" ")
-# print("James Bond.")
+# print("James Bond.", "El mejor")
 
 # print(sep="&", "fish", "chips")
 #Recuerda: Los argumentos de palabras clave deben pasarse después de cualquier argumento posicional requerido.
+
+###########################################################################
+###########################################################################
+
+#13/03/2026
+
+# print("2")
+# print(2)
+
+# #Valores tanto Octal como Hexadecimal
+# print(0o123)
+# print(0x123)
+
+# #Flotantes
+# print(3e10)
+# print(6.62607E-34)
+# print(0.0000000000000000000001)
+
+#Cadenas
+# print("Me gusta \"Monty python\"")
+# print("Me gusta 'Monty python'")
+# print('Me gusta "Monty python"')
+
+# print("I'm Monty Python")
+# print('I\'m Monty Python.')
+
+#Boleanos
+# print(True > False) #-> True siempre va a ser mayor que False
+# print(True < False) #-> False nunca sera mayor que True
+
+# print('"Estoy"\n""aprendiendo""\n"""Python"""')
+
+# Ojo Jhon Edward, siempre en la division el resultado es flotante /, pero con la division sencilla
+# Por eso se utiliza la otra solucion que es //, ahi es donde el resultado es Entero.
+
+# print(12 % 4.5)
+# 3.0 – no 3 pero 3.0. La regla aun funciona:
+
+# 12 // 4.5 da 2.0,
+# 2.0 * 4.5 da 9.0,
+# 12 - 9.0 da 3.0. -> de ahi sale el 3
+# print(9 % 6 % 2)
+# print(2 ** 2 ** 3)
+
+# print(-3 ** 2)
+# print(-2 ** 3)
+# print(-(3 ** 2))
+
+##Prioridades 
+# 1.** 
+# 2.(+,-)-> Unario 
+# 3.*,/,//,% 
+# 4.+,- -> Binario
+
+# print(2 * 3 % 5)
+##############################################################################
+#15/03/2026
+
+# print((560/26)//2)
+
+# print((2 ** 4), (2 * 4.), (2 * 4))
+# print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4))
+# print((2 % -4), (2 % 4), (2 ** 3 ** 2))
+
+##############################################################################
+
+#################################Variables####################################
+
+# var = 1
+# account_balance = 1000.0
+# client_name = 'John Doe'
+# print(var, account_balance, client_name)
+# print(var)
+
+# var = "3.5.8"
+# print("Version de Python:" + var)
+
+# var = 1
+# print(var)
+# var = var + 1
+# print(var)
+#560
+
+# a = 3.0
+# b = 4.0
+# c = (a ** 2 + b ** 2) ** 0.5
+# print("c =", c)
+
+# John = 3
+# Mary = 5
+# Adan = 6
+# print(John, Mary, Adan, sep=",") #-> Ojo Jhon Edward hay que utilizar el end, 
+#                                     #que es para seguir y el sep que es para separar
+# TotalManzanas = John + Mary + Adan
+# print("Suma de las manzanas:" , TotalManzanas)
+
+
+
