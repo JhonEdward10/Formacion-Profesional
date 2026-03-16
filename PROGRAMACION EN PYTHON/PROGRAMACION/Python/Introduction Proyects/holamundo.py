@@ -250,12 +250,59 @@
 # print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
 
 #El dolar Hoy 15/03/2026
-Euro = 7.38
-Dolar = 12.25
+# Euro = 7.38
+# Dolar = 12.25
 
-Euro_a_Dolar = Euro / 0.87
-Dolar_a_Euro =  Dolar * 0.87
+# Euro_a_Dolar = Euro / 0.87
+# Dolar_a_Euro =  Dolar * 0.87
 
-print(Euro, "Euros son", round(Euro_a_Dolar, 2), "Dolares")
-print(Dolar, "Dolares son", round(Dolar_a_Euro, 2), "Euros")
+# print(Euro, "Euros son", round(Euro_a_Dolar, 2), "Dolares")
+# print(Dolar, "Dolares son", round(Dolar_a_Euro, 2), "Euros")
+
+############################################################################
+
+#16/03/2026
+
+# Escenario
+# Observa el código en el editor: lee un valor float, 
+# lo coloca en una variable llamada x, e imprime 
+# el valor de la variable llamada y. Tu tarea es completar el código para evaluar 
+# la siguiente expresión:
+
+# 3x3 - 2x2 + 3x - 1
+
+# El resultado debe ser asignado a y.
+
+# x =  0
+# x = float(x)
+# # Escribe tu código aquí.
+# y = 3*x**3 - 2*x**2 + 3*x - 1
+# print("y =", y)
+
+# x =  1
+# x = float(x)
+# # Escribe tu código aquí.
+# y = 3*x**3 - 2*x**2 + 3*x - 1
+# print("y =", y)
+
+# x =  -1
+# x = float(x)
+# # Escribe tu código aquí.
+# y = 3*x**3 - 2*x**2 + 3*x - 1
+# print("y =", y)
+
+# var = 2
+# print(var)
+ 
+# var = 3
+# print(var)
+ 
+# var += 1
+# print(var)
+################################################################################
+
+# a = 6
+# b = 3
+# a /= 2 * b
+ 
 
