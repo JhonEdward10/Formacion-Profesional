@@ -232,5 +232,30 @@
 # TotalManzanas = John + Mary + Adan
 # print("Suma de las manzanas:" , TotalManzanas)
 
+# x = x + 1 === x *= 1
+# sheep = sheep + 1 === sheep += 1 -> Son la forma abreviada de conseguir lo mismo, que lo anterior
 
+# variable = variable op expresión -> Es exactamente lo mismo
+# variable op= expresión
+
+#############################################################################
+
+# kilometers = 12.25
+# miles = 7.38
+
+# miles_to_kilometers = miles * 1.61
+# kilometers_to_miles =  kilometers / 1.61
+
+# print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
+# print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
+
+#El dolar Hoy 15/03/2026
+Euro = 7.38
+Dolar = 12.25
+
+Euro_a_Dolar = Euro / 0.87
+Dolar_a_Euro =  Dolar * 0.87
+
+print(Euro, "Euros son", round(Euro_a_Dolar, 2), "Dolares")
+print(Dolar, "Dolares son", round(Dolar_a_Euro, 2), "Euros")
 
