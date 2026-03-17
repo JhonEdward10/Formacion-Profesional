@@ -301,8 +301,23 @@
 # print(var)
 ################################################################################
 
-# a = 6
-# b = 3
-# a /= 2 * b
+# print("Dime lo que sea!")
+# anything = input()
+# print("Mmm...", anything, "Es enserio?")
  
+# anything = input("Dime lo que sea...!\n")
+# print("Mmm...", anything, "Es enserio?")
 
+# anything = float(input("Ingresa un Numero: "))
+# something = anything ** 2
+# print(anything, "Elevado al cuadrado es:", something)
+
+# anything = float(input("Ingresa un número: "))
+# something = anything ** 2.0
+# print(anything, "al cuadrado es", something)
+
+print("Analizador del teorema de pitagoras")
+cat_1 = int(input("Ingrese el primer numero: "))
+cat_2 = int(input("Ingrese el segundo numero: "))
+hip = (cat_1 ** 2 + cat_2 ** 2) ** 0.5
+print("La longitud de la hipotenusa es:", hip)
