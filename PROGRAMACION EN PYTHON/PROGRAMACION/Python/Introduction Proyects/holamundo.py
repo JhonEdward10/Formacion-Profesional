@@ -71,6 +71,7 @@
 
 # print("Mi", "nombre", "es", sep="_", end="*")
 # print("Monty", "Python.", sep="*", end="*\n")
+# print("Hello World!")
 
 # print("Programming","Essentials","in",sep="***", end="...")
 # print("Python")
@@ -316,8 +317,129 @@
 # something = anything ** 2.0
 # print(anything, "al cuadrado es", something)
 
-print("Analizador del teorema de pitagoras")
-cat_1 = int(input("Ingrese el primer numero: "))
-cat_2 = int(input("Ingrese el segundo numero: "))
-hip = (cat_1 ** 2 + cat_2 ** 2) ** 0.5
-print("La longitud de la hipotenusa es:", hip)
+# print("Analizador del teorema de pitagoras")
+# cat_1 = int(input("Ingrese el primer numero: "))
+# cat_2 = int(input("Ingrese el segundo numero: "))
+# hip = (cat_1 ** 2 + cat_2 ** 2) ** 0.5
+# print("La longitud de la hipotenusa es:", hip)
+
+##############################################################
+
+#17/03/2026
+# print("+" + "-"*10 + "+")
+# print(("|" + " "*10 + "|\n")*5, end="") # -> Ese end sirve para que se quite el espacio
+# print("+" + "-"*10 + "+")
+
+# leg_a = float(input("Ingresa la longitud del primer cateto: "))
+# leg_b = float(input("Ingresa la longitud del segundo cateto: "))
+# print("La longitud de la hipotenusa es " + str((leg_a**2 + leg_b**2) ** .5))
+
+
+# # ingresa un valor flotante para la variable a aquí
+# print("Escribe dos numeros, pero ten encuenta que en ese orden se van a operar!")
+# number1 = float(int(input("Escriba el primer numero aqui: ")))
+# # ingresa un valor flotante para la variable b aquí
+# number2 = float(int(input("Escriba el segundo numero aqui: ")))
+
+# # mostrar el resultado de la suma aquí
+# print("\n" + "La suma de los dos numeros, es:", number1 + number2, "\n")
+
+# # mostrar el resultado de la resta aquí
+# print("La resta de los dos numeros, es:", number1 - number2, "\n")
+
+# # mostrar el resultado de la multiplicación aquí
+# print("La multiplicacion de los dos numeros, es:", number1 * number2, "\n")
+
+# # mostrar el resultado de la división aquí
+# print("La division de los dos numeros, es:", number1 / number2)
+
+# print("\n¡Eso es todo, amigos!")
+
+##############################################################
+
+# x = float(input("Ingresa el valor para x: "))
+# # Escribe tu código aquí.
+# y = 1/(x+1/(x+1/(x +(1/x))))
+
+# print("y =", y)
+
+# print(700%60)
+# print(700//60)
+
+
+# hour = int(input("Hora de inicio (horas): "))
+# mins = int(input("Minuto de inicio (minutos): "))
+# dura = int(input("Duración del evento (minutos): "))    
+# # Escribe tu código aquí.
+# minsTotal = mins + dura
+# minsFinal = minsTotal % 60
+# hourExtra = minsTotal // 60
+# hourFinal = (hourExtra + hour) % 24
+# print(hourFinal,minsFinal,sep=":")
+
+
+##El programa hizo esto 
+
+# hour = int(input("Hora de inicio (horas): "))
+# mins = int(input("Minuto de inicio (minutos): "))
+# dura = int(input("Duración del evento (minutos): "))
+# mins = mins + dura # encuentra el número total de minutos
+# hour = hour + mins // 60 # encuentra el número de horas ocultas en los minutos y actualiza las horas
+# mins = mins % 60 # corrige los minutos para que estén en un rango de (0..59)
+# hour = hour % 24 # corrige las horas para que estén en un rango de (0..23) 
+# print(hour, ":", mins, sep='')
+
+
+# x = int(input("Ingresa un número: ")) # El usuario ingresa un 2
+# print(x * "5")
+
+# x = 1
+# y = 2
+# z = x
+# x = y
+# y = z
+# print(x, y)
+
+# x = input()
+# y = input()
+# print(type(x + y))
+
+# x = int(input())
+# y = int(input())
+
+# x = x / y
+# y = y / x
+
+# print(y)
+
+# x = int(input())
+# y = int(input())
+
+# x = x % y
+# x = x % y
+# y = y % x
+
+# print(y)
+# x = input()
+# y = int(input())
+
+# print(x * y)
+
+# z = y = x = 1
+# print(x, y, z, sep='*')
+
+# x = 1 / 2 + 3 // 3 + 4 ** 2
+# print(x)
+
+x = int(input())
+y = int(input())
+
+print(x + y)
+
+
+
+
+
+
+
+
