@@ -431,14 +431,117 @@
 # x = 1 / 2 + 3 // 3 + 4 ** 2
 # print(x)
 
-x = int(input())
-y = int(input())
+# x = int(input())
+# y = int(input())
 
-print(x + y)
+# print(x + y)
+
+########################################################################
+
+#18/03/2026
+
+# El = es asignacion de valor
+
+# El == es verficar si es igual, si lo es la respuesta es True, sino es, la respuesta es False
+
+# Tambien existe otro que es !=, donde no es igual, si no lo es, la respuesta es True y si son iguales,
+# la respuesta es False
+
+# var = 0  # Asignando 0 a var
+# print(var != 0)
+
+# var = 1  # Asignando 1 a var
+# print(var != 0)
 
 
+#Tambien se utiliza el > Mayor que y < Menor que, que son estrictos, a diferencia del <= y >= que no 
+#son estrictos como los anteriores
 
+#Asi se puede hacer uso de las respuestas en una variable
+#answer = number_of_lions >= number_of_lionesses
 
+# n = int(input("Escribe un numero: "))
+# print(n >= 100 )
+
+#Formas de anidamiento
+
+# if the_weather_is_good:
+#     if nice_restaurant_is_found:
+#         have_lunch()
+#     else:
+#         eat_a_sandwich()
+# else:
+#     if tickets_are_available:
+#         go_to_the_theater()
+#     else:
+#         go_shopping()
+
+# if the_weather_is_good:
+#     go_for_a_walk()
+# elif tickets_are_available:
+#     go_to_the_theater()
+# elif table_is_available:
+#     go_for_lunch()
+# else:
+#     play_chess_at_home()
+
+# Se debe prestar atención adicional a este caso:
+
+# No debes usar else sin un if precedente;
+# else siempre es la última rama de la cascada, independientemente de si has usado elif o no;
+# else es una parte opcional de la cascada, y puede omitirse;
+# Si hay una rama else en la cascada, solo se ejecuta una de todas las ramas;
+# Si no hay una rama else, es posible que no se ejecute ninguna de las opciones disponibles.
+
+# # Se leen dos números
+# number1 = int(input("Ingresa el primer número: "))
+# number2 = int(input("Ingresa el segundo número: "))
+ 
+# # Elige el número más grande
+# if number1 > number2:
+#     larger_number = number1
+# else:
+#     larger_number = number2
+ 
+# # Imprime el resultado
+# print("El número más grande es:", larger_number)
+
+# # Se leen tres números
+# number1 = int(input("Ingresa el primer número: "))
+# number2 = int(input("Ingresa el segundo número: "))
+# number3 = int(input("Ingresa el tercer número: "))
+ 
+# # Asumimos temporalmente que el primer número
+# # es el más grande.
+# # Lo verificaremos pronto.
+# largest_number = number1
+ 
+# # Comprobamos si el segundo número es más grande que el mayor número actual
+# # y actualiza el número más grande si es necesario.
+# if number2 > largest_number:
+#     largest_number = number2
+ 
+# # Comprobamos si el tercer número es más grande que el mayor número actual
+# # y actualiza el número más grande si es necesario.
+# if number3 > largest_number:
+#     largest_number = number3
+ 
+# # Imprime el resultado.
+# print("El número más grande es:", largest_number)
+
+number1 = int(input("Ingresa el primer número: "))
+number2 = int(input("Ingresa el segundo número: "))
+number3 = int(input("Ingresa el tercer número: "))
+
+big_number = number1
+
+if number2 > big_number:
+    big_number = number2
+    
+if number3 > big_number:
+    big_number = number3
+    
+print("El numero mas grande es:", big_number)
 
 
 
