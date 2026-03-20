@@ -529,20 +529,89 @@
 # # Imprime el resultado.
 # print("El número más grande es:", largest_number)
 
-number1 = int(input("Ingresa el primer número: "))
-number2 = int(input("Ingresa el segundo número: "))
-number3 = int(input("Ingresa el tercer número: "))
+# number1 = int(input("Ingresa el primer número: "))
+# number2 = int(input("Ingresa el segundo número: "))
+# number3 = int(input("Ingresa el tercer número: "))
 
-big_number = number1
+# big_number = number1
 
-if number2 > big_number:
-    big_number = number2
+# if number2 > big_number:
+#     big_number = number2
     
-if number3 > big_number:
-    big_number = number3
+# if number3 > big_number:
+#     big_number = number3
     
-print("El numero mas grande es:", big_number)
+# print("El numero mas grande es:", big_number)
 
+# Hay una manera de llamar a los numero o buscar el mayor, con la funcion max() y para la funcion
+#buscar el numero menor se elige el min()
+# # Se leen tres números.
+# number1 = int(input("Ingresa el primer número: "))
+# number2 = int(input("Ingresa el segundo número: "))
+# number3 = int(input("Ingresa el tercer número: "))
+ 
+# # Verifica cuál de los números es el mayor
+# # y pásalo a la variable largest_number.
+ 
+# largest_number = max(number1, number2, number3)
+ 
+# # Imprime el resultado.
+# print("El número más grande es:", largest_number)
 
+# # Se leen tres números.
+# number1 = int(input("Ingresa el primer número: "))
+# number2 = int(input("Ingresa el segundo número: "))
+# number3 = int(input("Ingresa el tercer número: "))
 
+# min_number = max(number1, number2, number3)
+# print("El numero menor es:", min_number)
+# #Ó
+# print("El numero menor es:", min(number1, number2, number3))
 
+###########################################################################
+
+# LAB - Operadores de comparación y ejecución condicional
+# word = input("Ingrese por favor una palabra: ")
+
+# if word == "ESPATIFILIO": 
+#     print("Si - ¡El Espatifilo! es la mejor planta de todos los tiempos!")
+# elif word == "espatifilo": 
+#     print("No, ¡quiero un gran Espatifilo!")
+# else: 
+#     print("¡Espatifilo!, ¡No "+word+"!" )
+
+###########################################################################
+
+# LAB - Ejercicio de impuesto
+
+# income = float(input("Introduce el ingreso anual: "))
+
+# if income < 85528:
+# 	tax = income * 0.18 - 556.02
+# elif income >= 85528: 
+# 	tax = 14839.02 + (income-85528)*0.32
+# if tax < 0:
+# 	tax = float(0)
+	
+# tax = round(tax, 0)
+
+# print("El impuesto es:", tax, "pesos")
+
+###########################################################################
+
+#20/03/2026
+
+year = int(input("Introduce un año: "))
+
+if year < 1582:
+	print("No esta dentro del período del calendario Gregoriano")
+else:
+    #  Escribe el bloque if-elif-elif-else aquí.
+	if year % 4 != 0:
+		print("Año comun")
+	elif year % 100 != 0:
+		print("Año bisiesto")
+	elif year % 400 != 0:
+		print("Año comun")
+	else:
+		print("Año bisiesto")
