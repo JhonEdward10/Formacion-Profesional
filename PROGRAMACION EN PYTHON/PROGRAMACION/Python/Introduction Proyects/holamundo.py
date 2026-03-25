@@ -619,3 +619,159 @@
 
 ###########################################################################
 
+#25/03/2026
+# La diferencia semántica es más importante: cuando se cumple la condición, 
+# if realiza sus sentencias sólo una vez; 
+# while repite la ejecución siempre que la condición se evalúe como True.
+
+# # Almacena el actual número más grande aquí.
+# largest_number = -999999999
+ 
+# # Ingresa el primer valor.
+# number = int(input("Introduce un número o escribe -1 para detener: "))
+ 
+# # Si el número no es igual a -1, continuaremos
+# while number != -1:
+#     # ¿Es el número más grande que el valor de largest_number?
+#     if number > largest_number:
+#         # Sí si, se actualiza largest_number.
+#         largest_number = number
+#     # Ingresa el siguiente número.
+#     number = int(input("Introduce un número o escribe -1 para detener: "))
+ 
+# # Imprime el número más grande.
+# print("El número más grande es:", largest_number)
+
+###########################################################################
+
+# Un programa que lee una secuencia de números
+# y cuenta cuántos números son pares y cuántos son impares.
+# El programa termina cuando se ingresa un cero.
+# odd_numbers = 0
+# even_numbers = 0
+ 
+# # Lee el primer número.
+# number = int(input("Introduce un número o escribe 0 para detener: "))
+
+# # 0 termina la ejecución.
+# while number != 0:
+#     # Verificar si el número es impar.
+#     if number % 2 == 1:
+#         # Incrementar el contador de números impares odd_numbers.
+#         odd_numbers += 1
+#     else:
+#         # Incrementar el contador de números pares even_numbers.
+#         even_numbers += 1
+#     # Leer el siguiente número.
+#     number = int(input("Introduce un número o escribe 0 para detener: "))
+ 
+# # Imprimir resultados.
+# print("Conteo de números impares:", odd_numbers)
+# print("Conteo de números pares:", even_numbers)
+
+# counter = 5
+# while counter != 0:
+#     print("Dentro del bucle.", counter)
+#     counter -= 1
+# print("Fuera del bucle.", counter)
+
+# counter = 5
+# while counter:
+#     print("Dentro del bucle.", counter)
+#     counter -= 1
+# print("Fuera del bucle.", counter)
+
+# No te sientas obligado a codificar tus programas 
+# de una manera que siempre sea la más corta y la más compacta.
+# La legibilidad puede ser un factor más importante. 
+# Manten tu código listo para un nuevo programador.
+
+###########################################################################
+
+#Juego del Mago
+# print("¡Bienvenido al juego del mago, en donde debes encontrar el numero secreto!")
+
+# print(
+# """
+# +================================+
+# | ¡Bienvenido a mi juego, muggle!|
+# | Introduce un número entero     |
+# | y adivina qué número he        |
+# | elegido para ti.               |
+# |¿Cuál es el número secreto?     |
+# +================================+
+# """)
+
+# secret_number = int(input("Ingresa un numero: "))
+# secret_number_mago= 777
+
+# while secret_number != secret_number_mago:
+#     print("¡Ja, ja! ¡Estás atrapado en mi bucle!")
+#     secret_number = int(input("Ingresa un numero de nuevo: "))
+
+# print("Bien hecho, muggle! Eres libre")
+
+##############################################################
+#Bucle For
+
+# for i in range(10):
+#     print("El valor de i es", i)
+
+# for i in range(2, 8):
+#     print("El valor de i es", i)
+
+# for i in range(2, 8, 3):
+#     print("El valor de i es", i)
+
+# numero_inicial = 1
+# for exponencial in range(16):
+#     print("2 a la potencia de", exponencial,"es",numero_inicial)
+#     numero_inicial = numero_inicial *2
+
+# import time
+
+# # Escribe un bucle for que cuente hasta cinco.
+# for conteo in range(1,6):
+#     # Cuerpo del bucle: imprime el número de iteración del bucle y la palabra "Mississippi"
+#     print(conteo,"Mississippi")
+#     # Cuerpo del bucle, emplea : time.sleep(1)
+#     time.sleep(1)
+# # Escribe una función print con el mensaje final.
+# print("¡Listos o no, ahí voy!") 
+
+################################################################################
+# # break - ejemplo
+
+# print("La instrucción break:")
+# for i in range(1, 6):
+#     if i == 3:
+#         break
+#     print("Dentro del bucle.", i)
+# print("Fuera del bucle.")
+
+
+# # continue - ejemplo
+
+# print("\nLa instrucción continue:")
+# for i in range(1, 6):
+#     if i == 3:
+#         continue
+#     print("Dentro del bucle.", i)
+# print("Fuera del bucle.")
+
+################################################################################
+# largest_number = -99999999
+# counter = 0
+
+# while True:
+#     number = int(input("Ingresa un número o escribe -1 para finalizar el programa: "))
+#     if number == -1:
+#         break
+#     counter += 1
+#     if number > largest_number:
+#         largest_number = number
+
+# if counter != 0:
+#     print("El número más grande es", largest_number)
+# else:
+#     print("No has ingresado ningún número.")
