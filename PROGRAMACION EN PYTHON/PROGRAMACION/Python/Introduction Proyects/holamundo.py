@@ -775,3 +775,56 @@
 #     print("El número más grande es", largest_number)
 # else:
 #     print("No has ingresado ningún número.")
+
+################################################################################
+
+# largest_number = -99999999
+# counter = 0
+
+# number = int(input("Ingresa un número o escribe -1 para finalizar el programa: "))
+
+# while number != -1:
+#     if number == -1:
+#         continue
+#     counter += 1
+
+#     if number > largest_number:
+#         largest_number = number
+#     number = int(input("Ingresa un número o escribe -1 para finalizar el programa: "))
+
+# if counter:
+#     print("El número más grande es", largest_number)
+# else:
+#     print("No has ingresado ningún número.")
+
+################################################################################
+#3.2.9   LAB   La sentencia break - atrapado en un bucle
+
+# while True:
+#     word = input("Plese, Enter a word: ")
+#     secret_word = "chupacabra"    
+#     if secret_word == word:
+#         break
+#     # word = input("Please, try again!: ")
+# print("Has dejado el bucle con éxito.")
+
+################################################################################
+#3.2.10   LAB   La sentencia continue – el Feo Devorador de Vocales
+
+user_word = input("Ingrese una palabra: ")
+user_word = user_word.upper()
+
+for letter in user_word:
+    if letter == "A":
+        continue
+    elif letter == "E":
+        continue
+    elif letter == "I":
+        continue
+    elif letter == "O":
+        continue
+    elif letter == "U":
+        continue
+    print(letter)
+
+    
