@@ -717,7 +717,7 @@
 # for i in range(10):
 #     print("El valor de i es", i)
 
-# for i in range(2, 8):
+# for i in range(2, 10,2):
 #     print("El valor de i es", i)
 
 # for i in range(2, 8, 3):
@@ -811,20 +811,71 @@
 ################################################################################
 #3.2.10   LAB   La sentencia continue – el Feo Devorador de Vocales
 
-user_word = input("Ingrese una palabra: ")
-user_word = user_word.upper()
+# user_word = input("Ingrese una palabra: ")
+# user_word = user_word.upper()
 
-for letter in user_word:
-    if letter == "A":
-        continue
-    elif letter == "E":
-        continue
-    elif letter == "I":
-        continue
-    elif letter == "O":
-        continue
-    elif letter == "U":
-        continue
-    print(letter)
+# for letter in user_word:
+#     if letter == "A":
+#         continue
+#     elif letter == "E":
+#         continue
+#     elif letter == "I":
+#         continue
+#     elif letter == "O":
+#         continue
+#     elif letter == "U":
+#         continue
+#     print(letter)
 
-    
+################################################################################
+
+# #3.2.11   LAB   La sentencia continue – el Lindo Devorador de Vocales
+# user_word = input("Ingrese una palabra: ")
+# user_word = user_word.upper()
+# word_without_vowels = ""
+
+# for letter in user_word:
+#     if letter == "A":
+#         continue
+#     elif letter == "E":
+#         continue
+#     elif letter == "I":
+#         continue
+#     elif letter == "O":
+#         continue
+#     elif letter == "U":
+#         continue
+#     word_without_vowels = word_without_vowels + letter
+
+# print(word_without_vowels)
+
+################################################################################
+
+# while con else
+# i = 5
+# while i < 5:
+#     print(i)
+#     i += 1
+# else:
+#     print("else:", i)
+
+# # for con else
+# for i in range(5):
+#     print(i)
+# else:
+#     print("else:", i)
+
+################################################################################
+# 3.2.14   LAB   Fundamentos del bucle while
+
+blocks = int(input("Ingresa el número de bloques: "))
+layer = 0
+height = 0
+
+# Escribe tu código aquí.
+while blocks > layer:
+    layer += 1
+    blocks = blocks - layer
+    height += 1
+
+print("La altura de la pirámide:", height)
