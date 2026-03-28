@@ -28,3 +28,6 @@ Para ingresar al administrador de tareas se ingresa por MSCONFIG en ejecutar Win
 185.228.168.10
 185.228.169.11
 
+nslookup = para saber que direccion tiene una pagina web
+netstat = mira que esta activo o quien lo esta en tu pc
+
