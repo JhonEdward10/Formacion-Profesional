@@ -868,14 +868,33 @@
 ################################################################################
 # 3.2.14   LAB   Fundamentos del bucle while
 
-blocks = int(input("Ingresa el número de bloques: "))
-layer = 0
-height = 0
+# blocks = int(input("Ingresa el número de bloques: "))
+# layer = 0
+# height = 0
 
-# Escribe tu código aquí.
-while blocks > layer:
-    layer += 1
-    blocks = blocks - layer
-    height += 1
+# # Escribe tu código aquí.
+# while blocks > layer:
+#     layer += 1
+#     blocks = blocks - layer
+#     height += 1
 
-print("La altura de la pirámide:", height)
+# print("La altura de la pirámide:", height)
+
+################################################################################
+
+#3.2.15   LAB   La hipótesis de Collatz
+
+c0 = int(input("Coloca cualquier numero entero que no sea 0, ni negativo: "))
+step = 0
+
+while c0 > 1:
+    step = step + 1
+    if c0 % 2 == 0:
+        c0 = c0//2
+        print(c0)
+    elif c0 % 2 == 1:
+        c0 = 3 * c0 + 1
+        print(c0)
+
+print(c0)
+print("Pasos =",step)
