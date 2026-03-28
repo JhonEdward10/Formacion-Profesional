@@ -12,7 +12,7 @@ Redirección 3xx: Un cliente DEBE detectar bucles de redireccionamiento infinito
 
 Error de cliente 4xx: en caso de que el cliente cometa un error, el servidor DEBE incluir una entidad que contenga una explicación de la situación, y si es temporal.
 
-Error del servidor: aquí es donde el servidor detecta que se equivoco o no puede solucionar una respuesta.  Excepto al responder a una petición de ENCABEZADO, el servidor DEBE incluir una entidad que contenga una explicación de la situación de error, y si es temporal.
+Error del servidor 5xx: aquí es donde el servidor detecta que se equivoco o no puede solucionar una respuesta.  Excepto al responder a una petición de ENCABEZADO, el servidor DEBE incluir una entidad que contenga una explicación de la situación de error, y si es temporal.
 
 .Actualizar siempre el sistema operativo y los navegadores con versiones y parches actuales.
 .Utilizar un proxy web como Cisco Cloud Web Security o Cisco Web Security Appliance para bloquear sitios maliciosos.
