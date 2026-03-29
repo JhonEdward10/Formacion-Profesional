@@ -31,3 +31,9 @@ Para ingresar al administrador de tareas se ingresa por MSCONFIG en ejecutar Win
 nslookup = para saber que direccion tiene una pagina web
 netstat = mira que esta activo o quien lo esta en tu pc
 
+El visor de eventos es el que monitorea el registro de lo que se hace en windows.
+Cuando se realiza un cambio de configuracion queda registrado en registro de windows
+
+Esta el windows defender que ayuda a proteger la seguridad de la pc.
+
+
