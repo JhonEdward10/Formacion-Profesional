@@ -882,19 +882,110 @@
 
 ################################################################################
 
-#3.2.15   LAB   La hipótesis de Collatz
+# #3.2.15   LAB   La hipótesis de Collatz
 
-c0 = int(input("Coloca cualquier numero entero que no sea 0, ni negativo: "))
-step = 0
+# c0 = int(input("Coloca cualquier numero entero que no sea 0, ni negativo: "))
+# step = 0
 
-while c0 > 1:
-    step = step + 1
-    if c0 % 2 == 0:
-        c0 = c0//2
-        print(c0)
-    elif c0 % 2 == 1:
-        c0 = 3 * c0 + 1
-        print(c0)
+# while c0 > 1:
+#     step = step + 1
+#     if c0 % 2 == 0:
+#         c0 = c0//2
+#         print(c0)
+#     elif c0 % 2 == 1:
+#         c0 = 3 * c0 + 1
+#         print(c0)
 
-print(c0)
-print("Pasos =",step)
+# print(c0)
+# print("Pasos =",step)
+
+################################################################################
+
+# 1. Existen dos tipos de bucles en Python: while y for:
+
+# El bucle while ejecuta una sentencia o un conjunto de sentencias 
+# siempre que una condición booleana especificada sea verdadera
+
+# El bucle for ejecuta un conjunto de sentencias muchas veces; se usa para 
+# iterar sobre una secuencia (por ejemplo, una lista, un diccionario, una 
+# tupla o un conjunto; pronto aprenderás sobre ellos) u otros objetos que 
+# son iterables (por ejemplo, cadenas). Puedes usar el bucle for para iterar sobre una 
+# secuencia de números usando la función incorporada range. Mira los ejemplos 
+# a continuación:
+
+# 2. Puedes usar las sentencias break y continue para cambiar el flujo de un bucle:
+
+# Utiliza break para salir de un bucle, por ejemplo:
+
+# text = "OpenEDG Python Institute
+# for letter in text:
+#     if letter == "P":
+#         break
+#     print(letter, end="")
+
+# Utiliza continue para omitir la iteración actual, y continuar con la siguiente iteración, por ejemplo:
+
+# text = "pyxpyxpyx
+# for letter in text:
+#     if letter == "x":
+#         continue
+#     print(letter, end="")
+ 
+#  3. Los bucles while y for también pueden tener una cláusula 
+# else en Python. La cláusula else se ejecuta después de que 
+# el bucle finalice su ejecución siempre y cuando no haya 
+# terminado con break, por ejemplo:
+
+# n = 0
+ 
+# while n != 3:
+#     print(n)
+#     n += 1
+# else:
+#     print(n, "else")
+ 
+# print()
+ 
+# for i in range(0, 3):
+#     print(i)
+# else:
+#     print(i, "else")
+ 
+# 4. La función range() genera una secuencia de números. 
+# Acepta enteros y devuelve objetos de rango. La sintaxis 
+# de range() tiene el siguiente aspecto: range(start, stop, step), donde:
+
+# start es un parámetro opcional que especifica el número de 
+# inicio de la secuencia (0 por defecto)
+# stop es un parámetro opcional que especifica el final de 
+# la secuencia generada (no está incluido).
+# y step es un parámetro opcional que especifica la diferencia 
+# entre los números en la secuencia es (1 por defecto.)
+# Código de ejemplo:
+
+
+# for i in range(3):
+#     print(i, end=" ")  # output: 0 1 2
+ 
+# for i in range(6, 1, -2):
+#     print(i, end=" ")  # output: 6, 4, 2
+
+################################################################################
+
+# Pregunta 1: Crea un bucle for que cuente de 0 a 10, 
+# e imprima números impares en la pantalla. 
+# Usa el esqueleto de abajo:
+
+# for i in range(1, 11):
+#     if i % 2 != 0:
+#         print(i)
+
+# Pregunta 2: Crea un bucle while que cuente de 0 a 10, 
+# e imprima números impares en la pantalla. 
+# Usa el esqueleto de abajo:
+
+# x = 1
+# while x < 11:
+#     if x % 2 != 0:
+#         print(x)
+#     x += 1

@@ -1,0 +1,19 @@
+Capitulo 8 Linux
+
+EL SOC es una plataforma que monitorea y es como el cuartel general de una empresa ya que detecta y responde a amenazas de seguridad.
+
+algunas herramientas de SOC son:
+. software de captura de paquetes: WIreshark para analizar tipo de trafico en una red.
+. Herramientas de analisis de malware
+. Sistema de detecion de intrusiones (IDS)
+. Firewalls
+. Administradores de registros
+. Administracion de informacion y eventos de seguridad.
+. Sistema de tiquetes
+
+Entre estas herramientas de pentesting se encuentra Kali linux, una distro con muchas herramientas para auditoria y pentensting
+_________________________________________________________________________________________________________________________________________
+
+Trabajando en el shell de linux
+
+
