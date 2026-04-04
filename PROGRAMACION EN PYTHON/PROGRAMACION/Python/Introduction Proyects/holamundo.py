@@ -989,3 +989,94 @@
 #     if x % 2 != 0:
 #         print(x)
 #     x += 1
+
+# Pregunta 3: Crea un programa con un bucle for y una sentencia break.
+# El programa debe iterar sobre los caracteres en una dirección de correo
+# electrónico, salir del bucle cuando llegue al símbolo @ e imprimir la 
+# parte antes de @ en una línea. Usa el esqueleto de abajo:
+
+# for ch in "john.smith@pythoninstitute.org":
+#     if ch == "@":
+#         break
+#     print(ch)
+
+# Pregunta 4: Crea un programa con un bucle for y una sentencia continue. 
+# El programa debe iterar sobre una cadena de dígitos, reemplazar cada 0 
+# con x, e imprimir la cadena modificada en la pantalla. Usa el esqueleto de abajo:
+
+# for digit in "0165031806510":
+#     if digit == "0":
+#         print("x", end="")
+#         continue
+#     print(digit, end="")
+
+################################################################################
+
+#Operadores de bit a bit, si es & es una conjucion y si es OR es una disyuncion, entonces a eso se refiere
+# hay que tener mucho cuidado con eso
+
+# Puedes estar familiarizado con las leyes de De Morgan. Dicen que:
+
+# La negación de una conjunción es la separación de las negaciones.
+
+# La negación de una disyunción es la conjunción de las negaciones.
+
+# Escribamos lo mismo usando Python:
+
+# not (p and q) == (not p) or (not q)
+# not (p or q) == (not p) and (not q)
+
+# i = 1
+# j = not not i
+
+# print(i, j)
+
+# La diferencia en el funcionamiento de los operadores lógicos y de bits es importante: los operadores lógicos
+# no penetran en el nivel de bits de su argumento. Solo les interesa el valor entero final.
+
+# La diferencia en una frase:
+
+# Lógico → mira el número completo y pregunta ¿es cero o no?
+# Bits → mira cada bit individualmente y opera sobre ellos
+
+########################################################################################
+
+# Operadores lógicos (and, or, not):
+# No miran los bits individuales, solo ven si el número es cero o no cero.
+# pythoni = 15  # En bits es: 0000 1111
+# j = 22  # En bits es: 0001 0110
+
+# print(i and j)  # Resultado: 22
+
+########################################################################################
+
+# Operadores de bits (&, |, ~, ^):
+# Sí penetran hasta el nivel de cada bit individual y operan uno por uno.
+# pythoni = 15  # En bits: 0000 1111
+# j = 22  # En bits: 0001 0110
+
+# print(i & j)  # Resultado: 6
+
+####################################################################################
+
+flag_register = 0x1234  # valor del sistema
+the_mask = 8            # 8 en binario es 00001000, el bit 3
+
+if flag_register | the_mask:
+    print("Mi bit está en 1, función activa")
+else:
+    print("Mi bit está en 0, función inactiva")
+
+
+###################Permisos de usuarios en Linux##################################
+
+# Número      Binario                 Permisos
+# ✅7           111         lectura + escritura + ejecución 
+# ✅6           110         lectura + escritura
+# ✅5           101         lectura + ejecución
+# ✅4           100         solo lectura
+# ✅3           011         escritura + ejecución
+# ✅2           010         solo escritura
+# ✅1           001         solo ejecución0000sin permisos
+
+####################################################################################
