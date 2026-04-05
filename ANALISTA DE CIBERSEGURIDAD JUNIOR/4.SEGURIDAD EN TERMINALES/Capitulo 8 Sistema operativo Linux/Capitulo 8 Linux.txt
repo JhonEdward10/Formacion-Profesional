@@ -17,6 +17,33 @@ ________________________________________________________________________________
 Trabajando en el shell de linux
 En Linux, los emuladores de terminal comunes son Terminator, eterm, xterm, konsole y gnome-terminal.
 
+Puertos como se utilizan en linux
+·  Well-Known Ports (0-1023) 
+
+·  Registered Ports (1024 - 49,151)
+
+·  Dynamic / Private Ports (49,152 - 65,535)
+
+20 - File Transfer Protocol - Data (FTP-DATA)
+
+21 - File Transfer Protocol - Control (FTP)
+
+22 - Secure Shell (SSH)
+
+23 - Telnet (TELNET)
+
+25 - Simple Mail Transfer Protocol (SMTP)
+
+53 - Domain Name System (DNS)
+
+67 - Protocolo de configuración dinámica de host de cliente a servidor v4 (DHCPv4)
+
+68 - Server to client Dynamic Host Configuration Protocol v4 (DHCPv4)
+
+69 - Trivial File Transfer Protocol (TFTP)
+
+80 - Hypertext Transfer Protocol (HTTP)
+
 
 
 

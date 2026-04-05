@@ -1059,13 +1059,13 @@
 
 ####################################################################################
 
-flag_register = 0x1234  # valor del sistema
-the_mask = 8            # 8 en binario es 00001000, el bit 3
+# flag_register = 0x1234  # valor del sistema
+# the_mask = 8            # 8 en binario es 00001000, el bit 3
 
-if flag_register | the_mask:
-    print("Mi bit está en 1, función activa")
-else:
-    print("Mi bit está en 0, función inactiva")
+# if flag_register | the_mask:
+#     print("Mi bit está en 1, función activa")
+# else:
+#     print("Mi bit está en 0, función inactiva")
 
 
 ###################Permisos de usuarios en Linux##################################
