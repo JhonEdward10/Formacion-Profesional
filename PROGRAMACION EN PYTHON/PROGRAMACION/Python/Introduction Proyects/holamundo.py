@@ -1068,7 +1068,7 @@
 #     print("Mi bit está en 0, función inactiva")
 
 
-###################Permisos de usuarios en Linux##################################
+##################################Permisos de usuarios en Linux##################################
 
 # Número      Binario                 Permisos
 # ✅7           111         lectura + escritura + ejecución 
@@ -1080,3 +1080,41 @@
 # ✅1           001         solo ejecución0000sin permisos
 
 ####################################################################################
+
+#05/04/2026 -> Dia del cumpleaños de laura
+
+#Porque se necesitan las listas, es porque si se necesitan muchas variables, aqui entran las listas
+
+# numbers = [10, 5, 7, 2, 1, 30, 5, 4, 2026]
+# print("Imprimir los numeros de la lista:", numbers)
+
+# numbers[4] = 7
+# print("Imprimir los numeros de la lista:", numbers)
+
+# numbers[1] = numbers[4]
+# print("Imprimir los numeros de la lista:", numbers)
+
+# del numbers[5]
+# print(numbers)
+
+# print("Longitud de la lista:", len(numbers)) 
+
+# # numbers = [111, 7, 2, 1]
+# print(numbers[-3])
+
+#####3.4.6   LAB   Los fundamentos de las listas#####
+
+hat_list = [1, 2, 3, 4, 5]  # Esta es una lista existente de números ocultos en el sombrero.
+print(hat_list)
+
+# Paso 1: escribe una línea de código que solicite al usuario
+# reemplazar el número de en medio con un número entero ingresado por el usuario.
+hat_list[2] = int(input("Por favor cambia el tercer numero que vez en pantalla, escribe cualquier numero: "))
+
+# Paso 2: escribe aquí una línea de código que elimine el último elemento de la lista.
+del hat_list[-1]
+
+# Paso 3: escribe aquí una línea de código que imprima la longitud de la lista existente.
+print("La lista tiene", len(hat_list),"numeros.")
+
+print(hat_list)
