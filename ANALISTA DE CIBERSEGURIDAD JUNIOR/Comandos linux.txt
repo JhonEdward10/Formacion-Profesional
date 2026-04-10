@@ -27,5 +27,26 @@ netstat
 
 ✅ netstat -tunap -> muestra conexiones TCP, muestra conexiones UDP, muestra IPs y puertos en números, sin resolver DNS (más rápido), muestra puertos en escucha Y conexiones activas y muestra el PID y nombre del proceso dueño de cada conexión
 
+✅ sudo netstat -tunap | grep " "-> Ver en qué puertos está escuchando
+
+#######################################################################################
+Nginx -> Servidor web, como correrlo
+
+
+✅ sudo apt install nginx -y ->Instalarlo
+✅ sudo systemctl status nginx -> Estado del servicio
+✅ sudo systemctl start nginx -> Iniciar
+✅ sudo systemctl stop nginx -> Detener
+✅ sudo systemctl restart nginx -> Reiniciar
+✅ sudo systemctl reload nginx -> # Recargar config sin reiniciar (recomendado)
+
+#######################################################################################
+Docker -> Estanteria
+
+✅ docker ps | grep " " -> Ver si está corriendo
+✅ docker logs -f n8n -> Ver logs en tiempo real
+✅ docker stop n8n -> Detener n8n
+✅ docker restart n8n -> Reiniciar n8n
+✅ docker rm -f n8n -> Eliminar contenedor
 
 

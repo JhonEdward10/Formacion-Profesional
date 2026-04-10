@@ -47,6 +47,17 @@ Puertos como se utilizan en linux
 
 #################################################################################################
 
+Monitoreo de los registros de servicio 
+
+Aqui es donde se monitorea que hacen las personas en el dispositivo; En donde el administrador de red debe estar
+visualizando constantemente, entre los registros que se llevan a cabo estan:
+.Registros de aplicaciones
+.Registros de eventos
+.Registros del sistema
+.Registros del servicio
+
+
+
 
 
 
