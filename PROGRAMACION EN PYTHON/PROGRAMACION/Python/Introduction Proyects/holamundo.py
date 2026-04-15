@@ -1104,17 +1104,126 @@
 
 #####3.4.6   LAB   Los fundamentos de las listas#####
 
-hat_list = [1, 2, 3, 4, 5]  # Esta es una lista existente de números ocultos en el sombrero.
-print(hat_list)
+# hat_list = [1, 2, 3, 4, 5]  # Esta es una lista existente de números ocultos en el sombrero.
+# print(hat_list)
 
-# Paso 1: escribe una línea de código que solicite al usuario
-# reemplazar el número de en medio con un número entero ingresado por el usuario.
-hat_list[2] = int(input("Por favor cambia el tercer numero que vez en pantalla, escribe cualquier numero: "))
+# # Paso 1: escribe una línea de código que solicite al usuario
+# # reemplazar el número de en medio con un número entero ingresado por el usuario.
+# hat_list[2] = int(input("Por favor cambia el tercer numero que vez en pantalla, escribe cualquier numero: "))
 
-# Paso 2: escribe aquí una línea de código que elimine el último elemento de la lista.
-del hat_list[-1]
+# # Paso 2: escribe aquí una línea de código que elimine el último elemento de la lista.
+# del hat_list[-1]
 
-# Paso 3: escribe aquí una línea de código que imprima la longitud de la lista existente.
-print("La lista tiene", len(hat_list),"numeros.")
+# # Paso 3: escribe aquí una línea de código que imprima la longitud de la lista existente.
+# print("La lista tiene", len(hat_list),"numeros.")
 
-print(hat_list)
+# print(hat_list)
+
+
+####################################################################
+# Funciones vs metodos
+
+# Los metodos son funciones, pero con la diferencia que los metodos se aplican a un objeto,
+# mientras que las funciones no necesitan de un objeto para ser utilizadas, por ejemplo:
+
+# Esta es una invocacion normal de una funcion: result = function(arg)
+
+# Esta es una invocacion normal de un metodo: result = data.method(arg)
+
+# append() es un metodo y este hace que un nuevo elemento se añada al final de la lista.
+
+# insert() es un metodo y este hace que un nuevo elemento se añada a la lista en la posicion 
+# que se le indique,
+# por ejemplo: list.insert(0, "nuevo elemento") esto hace que el nuevo 
+# elemento se añada al inicio de la lista, y si se le indica list.insert(2, "nuevo elemento")
+# esto hace que el nuevo elemento se añada en la posicion 2 de la lista, y asi sucesivamente. 
+
+# len() es una funcion y esta hace que se cuente el numero de elementos que hay en la lista.
+
+# numbers = [111, 7, 2, 1]
+# print(len(numbers))
+# print(numbers)
+
+# ###
+
+# numbers.append(4)
+# print(len(numbers))
+# print(numbers)
+
+# ###
+
+# numbers.insert(0, 222)
+# print(len(numbers))
+# print(numbers)
+
+# numbers.insert(1, 333)
+# print(len(numbers))
+# print(numbers)
+
+
+# my_list = []  # Creando una lista vacía.
+
+# for i in range(5):
+#     my_list.append(i+1)
+# print(my_list)
+
+
+# my_list = []  # Creando una lista vacía.
+ 
+# for i in range(5):
+#     my_list.insert(0, i + 1)
+# print(my_list)
+
+# 3.4.9 Haciendo uso de las listas
+
+# my_list = [10, 1, 8, 3, 5]
+# total = 0
+
+# print(len(my_list))
+
+# for i in range(len(my_list)): # -> La función len() devuelve el número de elementos en la lista,
+                                #  y range() genera una secuencia de números desde
+                                #  0 hasta len(my_list)-1, lo que nos permite acceder a cada    
+                                #  elemento de la lista utilizando su índice.   
+                                #  Pero para ser realistas, no es necesario usar len(mi_list) para recorrer la lista, 
+                                #  se puede hacer de una manera mas sencilla, como se muestra a continuacion: 
+#     total += my_list[i]
+# print(total)
+
+# my_list = [10, 1, 8, 3, 5]
+# total = 0
+# for i in my_list:
+#     total += i
+# print(total)
+
+# Que son las listas en accion? -> Son una estructura de datos que nos permite almacenar una 
+# colección de elementos,
+# y estos elementos pueden ser de cualquier tipo de dato, como por ejemplo: enteros,
+
+# variable_1 = 1
+# variable_2 = 2
+ 
+# variable_2 = variable_1
+# variable_1 = variable_2
+
+# print(variable_1, variable_2)
+
+#Aqui se puede cambiar el valor de las variables sin necesidad de usar una variable temporal, 
+#como se muestra a continuacion:
+# variable_1 = 1
+# variable_2 = 2
+# variable_1, variable_2 = variable_2, variable_1
+
+# my_list = [10, 1, 8, 3, 5]
+ 
+# my_list[0], my_list[4] = my_list[4], my_list[0]
+# my_list[1], my_list[3] = my_list[3], my_list[1]
+ 
+# for i in range(length // 2):
+#     my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]
+ 
+# print(my_list)
+
+
+###3.4.11   LAB   Los fundamentos de las listas: los Beatles###
+
