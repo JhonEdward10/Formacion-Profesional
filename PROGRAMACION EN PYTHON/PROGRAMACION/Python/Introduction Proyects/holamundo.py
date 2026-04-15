@@ -1227,22 +1227,32 @@
 
 ###3.4.11   LAB   Los fundamentos de las listas: los Beatles###
 
-beatles = []  # Crea una lista vacía llamada beatles.
-print("Paso 1:", beatles)  # Imprime la lista.
+# beatles = []  # Crea una lista vacía llamada beatles.
+# print("Paso 1:", beatles)  # Imprime la lista.
 
-# Agrega los Beatles a la lista.
-beatles.append("John Lennon")
-beatles.append("Paul McCartney")
-beatles.append("George Harrison")
-print("Paso 2:", beatles)  # Imprime la lista.
+# # Agrega los Beatles a la lista.
+# beatles.append("John Lennon")
+# beatles.append("Paul McCartney")
+# beatles.append("George Harrison")
+# print("Paso 2:", beatles)  # Imprime la lista.
 
-for i in range(2):
-    beatles.append(input("Ingrese el nombre de un miembro de los Beatles: "))
-print("Paso 3:", beatles)  # Imprime la lista.
+# for i in range(2):
+#     beatles.append(input("Ingrese el nombre de un miembro de los Beatles: "))
+# print("Paso 3:", beatles)  # Imprime la lista.
 
-del beatles[-2]
-del beatles[-1] 
-print("Paso 4:", beatles)  # Imprime la lista.
+# del beatles[-2]
+# del beatles[-1] 
+# print("Paso 4:", beatles)  # Imprime la lista.
 
-beatles.insert(0, "Ringo Starr")
-print("Paso 5:", beatles)  # Imprime la lista.
+# beatles.insert(0, "Ringo Starr")
+# print("Paso 5:", beatles)  # Imprime la lista.
+
+# lst = [1, 2, 3, 4, 5]
+# lst_2 = []
+# add = 0
+ 
+# for number in lst:
+#     add += number
+#     lst_2.append(add) 
+ 
+# print(lst_2)
