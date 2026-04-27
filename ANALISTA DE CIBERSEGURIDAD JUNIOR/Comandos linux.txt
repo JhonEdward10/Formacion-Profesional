@@ -4,34 +4,27 @@ Comandos linux
 Nmap
 
 ✅ nmap -> Herramienta de exploración de redes y de sondeo de seguridad / puertos; Se utiliza para analizar puertos.
-
 ✅ nmap + direccion IP o localhost -> Escaneo básico TCP de los 1000 puertos más comunes del objetivo. Muestra cuáles están abiertos, cerrados o filtrados.
-
 ✅ sudo nmap -sU localhost -> Escanea puertos UDP. Requiere privilegios root porque UDP no tiene handshake y el kernel necesita acceso de bajo nivel. Útil para encontrar servicios como DNS (53), SNMP (161) o DHCP (67).
-
 ✅ nmap –sV localhost -> Detecta la versión exacta del software corriendo en cada puerto abierto (ej: OpenSSH 8.9, Apache 2.4.52). Clave para identificar versiones desactualizadas con CVEs conocidos.
-
 ✅ nmap –A localhost -> Modo agresivo: combina detección de OS (-O), versiones (-sV), scripts NSE por defecto (-sC) y traceroute. Da el panorama más completo del objetivo en un solo comando.
+
 #######################################################################################
 ps
 
 ✅ ps (Process Status) muestra los procesos corriendo en el sistema.
-
 ✅ sudo ps -elf -> muestra todos los procesos del sistema, formato extendido con más columnas y muestra rutas completas y argumentos
-
 ✅ sudo ps -ejH -> muestra todos los procesos del sistema, muestra PID, PGID (group ID) y SID (session ID) y muestra el árbol de procesos con indentación Padre/Hijo de procesos.
+
 #######################################################################################
 netstat
 
 ✅ netstat -> Imprime las conexiones de red, las tablas de enrutamiento, las estadísticas de interfaz, las conexiones de enmascaramiento y las membresías de multidifusión
-
 ✅ netstat -tunap -> muestra conexiones TCP, muestra conexiones UDP, muestra IPs y puertos en números, sin resolver DNS (más rápido), muestra puertos en escucha Y conexiones activas y muestra el PID y nombre del proceso dueño de cada conexión
-
 ✅ sudo netstat -tunap | grep " "-> Ver en qué puertos está escuchando
 
 #######################################################################################
 Nginx -> Servidor web, como correrlo
-
 
 ✅ sudo apt install nginx -y ->Instalarlo
 ✅ sudo systemctl status nginx -> Estado del servicio
@@ -49,4 +42,4 @@ Docker -> Estanteria
 ✅ docker restart n8n -> Reiniciar n8n
 ✅ docker rm -f n8n -> Eliminar contenedor
 
-
+#######################################################################################
