@@ -43,7 +43,7 @@ Puertos como se utilizan en linux
 # ✅4           100         solo lectura
 # ✅3           011         escritura + ejecución
 # ✅2           010         solo escritura
-# ✅1           001         solo ejecución0000sin permisos
+# ✅1           001         solo ejecución sin permisos
 
 #################################################################################################
 

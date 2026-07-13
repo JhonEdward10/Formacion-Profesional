@@ -6,8 +6,8 @@ Nmap
 ✅ nmap -> Herramienta de exploración de redes y de sondeo de seguridad / puertos; Se utiliza para analizar puertos.
 ✅ nmap + direccion IP o localhost -> Escaneo básico TCP de los 1000 puertos más comunes del objetivo. Muestra cuáles están abiertos, cerrados o filtrados.
 ✅ sudo nmap -sU localhost -> Escanea puertos UDP. Requiere privilegios root porque UDP no tiene handshake y el kernel necesita acceso de bajo nivel. Útil para encontrar servicios como DNS (53), SNMP (161) o DHCP (67).
-✅ nmap –sV localhost -> Detecta la versión exacta del software corriendo en cada puerto abierto (ej: OpenSSH 8.9, Apache 2.4.52). Clave para identificar versiones desactualizadas con CVEs conocidos.
-✅ nmap –A localhost -> Modo agresivo: combina detección de OS (-O), versiones (-sV), scripts NSE por defecto (-sC) y traceroute. Da el panorama más completo del objetivo en un solo comando.
+✅ nmap -sV localhost -> Detecta la versión exacta del software corriendo en cada puerto abierto (ej: OpenSSH 8.9, Apache 2.4.52). Clave para identificar versiones desactualizadas con CVEs conocidos.
+✅ nmap -A localhost -> Modo agresivo: combina detección de OS (-O), versiones (-sV), scripts NSE por defecto (-sC) y traceroute. Da el panorama más completo del objetivo en un solo comando.
 
 #######################################################################################
 ps
@@ -43,3 +43,42 @@ Docker -> Estanteria
 ✅ docker rm -f n8n -> Eliminar contenedor
 
 #######################################################################################
+
+# Permisos numéricos
+✅chmod —> Cambia los permisos de un archivo (lectura, escritura, ejecución).
+✅chown —> Cambia el dueño de un archivo o carpeta.
+✅chmod 755 archivo ->         # rwxr-xr-x
+✅chmod +x script.sh ->        # dar permiso de ejecución
+
+# Búsqueda de archivos y mover archivos
+✅find / -name "archivo"  ->   # buscar archivos
+✅grep "texto" archivo    ->  # buscar texto dentro de archivos
+✅locate archivo          ->   # buscar rápido
+✅mv —> Mueve o renombra archivos y carpetas.
+✅pwd —> Muestra la ruta de la carpeta donde estás actualmente.
+✅dd —> Copia datos a bajo nivel, se usa para clonar discos o crear USB booteables.
+
+#Superusuario
+✅su —> Cambia de usuario, normalmente para volverte administrador (root).
+✅sudo —> Ejecuta un comando con permisos de administrador.
+
+#Gestor de paquetes
+✅apt-get — Gestor de paquetes para instalar programas.
+✅apt-get update — Actualiza la lista de paquetes disponibles.
+✅apt-get upgrade — Actualiza los programas instalados a su versión más nueva.
+
+# Red
+✅ping google.com            # verificar conectividad
+✅ss -tunap                  # moderno reemplazo de netstat
+✅iwconfig — Muestra o configura las interfaces de red inalámbricas (WiFi).
+✅ifconfig o ip a —> Muestra o configura las interfaces de red (antiguo, hoy se usa ip a).
+
+✅shutdown — Apaga o reinicia el sistema.
+
+✅passwd — Cambia la contraseña de un usuario.
+✅cat — Muestra el contenido de un archivo en la terminal.
+✅man — Muestra el manual de ayuda de cualquier comando.
+
+
+
+
