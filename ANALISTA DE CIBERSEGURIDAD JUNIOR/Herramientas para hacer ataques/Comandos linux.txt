@@ -1,4 +1,5 @@
-Comandos linux
+Comandos de linux
+Este es un espacio personal para hacer y escribir, ademas de aprender todos los comandos de Linux posible ademas de aprender lo necesario para hacer hacking.
 
 #######################################################################################
 Nmap
@@ -50,6 +51,8 @@ Docker -> Estanteria
 ✅chmod 755 archivo ->         # rwxr-xr-x
 ✅chmod +x script.sh ->        # dar permiso de ejecución
 
+#######################################################################################
+
 # Búsqueda de archivos y mover archivos
 ✅find / -name "archivo"  ->   # buscar archivos
 ✅grep "texto" archivo    ->  # buscar texto dentro de archivos
@@ -58,14 +61,20 @@ Docker -> Estanteria
 ✅pwd —> Muestra la ruta de la carpeta donde estás actualmente.
 ✅dd —> Copia datos a bajo nivel, se usa para clonar discos o crear USB booteables.
 
+#######################################################################################
+
 #Superusuario
 ✅su —> Cambia de usuario, normalmente para volverte administrador (root).
 ✅sudo —> Ejecuta un comando con permisos de administrador.
+
+#######################################################################################
 
 #Gestor de paquetes
 ✅apt-get — Gestor de paquetes para instalar programas.
 ✅apt-get update — Actualiza la lista de paquetes disponibles.
 ✅apt-get upgrade — Actualiza los programas instalados a su versión más nueva.
+
+#######################################################################################
 
 # Red
 ✅ping google.com            # verificar conectividad
@@ -73,12 +82,21 @@ Docker -> Estanteria
 ✅iwconfig — Muestra o configura las interfaces de red inalámbricas (WiFi).
 ✅ifconfig o ip a —> Muestra o configura las interfaces de red (antiguo, hoy se usa ip a).
 
-✅shutdown — Apaga o reinicia el sistema.
+#######################################################################################
 
-✅passwd — Cambia la contraseña de un usuario.
-✅cat — Muestra el contenido de un archivo en la terminal.
-✅man — Muestra el manual de ayuda de cualquier comando.
+✅shutdown —> Apaga o reinicia el sistema.
 
+#######################################################################################
+
+✅passwd —> Cambia la contraseña de un usuario.
+✅cat —> Muestra el contenido de un archivo en la terminal.
+✅man —> Muestra el manual de ayuda de cualquier comando.
+✅top -> Muestra los procesos en tiempo real actualizándose constantemente, con uso de CPU y memoria. Como un monitor en vivo.
+✅kill -> Termina un proceso usando su PID (número de identificación). Para cerrar programas colgados.
+
+#######################################################################################
+
+✅nvidia-smi -> Para saber que comando se encuentra el driver NVIDIA.
 
 
 
