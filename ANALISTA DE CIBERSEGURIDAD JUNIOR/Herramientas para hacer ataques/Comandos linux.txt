@@ -98,5 +98,36 @@ Docker -> Estanteria
 
 ✅nvidia-smi -> Para saber que comando se encuentra el driver NVIDIA.
 
+#######################################################################################
+
+#Rootkits
+✅sudo apt install rkhunter chkrootkit -y -> Instalar herramientas para detectar rootkit's
+✅sudo rkhunter --check -> Rootkit hunter
+✅sudo chkrootkit -> Rootkit chk
+
+#######################################################################################
+
+Enlaces simbólicos
+✅ ln -s /original /acceso -> Crea un acceso directo a un archivo o carpeta
+✅ ls -l -> Los symlinks aparecen con flecha ->
+
+#######################################################################################
+
+Logs (registros)
+✅ ls /var/log/ -> Ver todos los logs disponibles
+✅ sudo journalctl -f -> Ver logs en tiempo real
+✅ sudo journalctl -u nginx -> Logs de un servicio específico
+✅ sudo grep "Failed password" /var/log/auth.log -> Ver intentos de acceso fallidos
+
+#######################################################################################
+
+Sistemas de archivos
+✅ df -T -> Ver sistemas de archivos y espacio
+✅ mount | column -t -> Ver cómo están montados
+
+#######################################################################################
+
+
+
 
 

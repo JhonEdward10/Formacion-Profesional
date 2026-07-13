@@ -1,0 +1,54 @@
+Capitulo de linux 8.7
+
+Que es un rootkit-> es un tipo de malware diseñado para aumentar privilegios de usuario.
+
+Los rootkits, pueden ocultar la intrusion de un atacante, incluso manipular herramientas
+
+que son los piping | -> normalmente es la barra que ella hace ingresar mas comandos en una linea y esto hace que se pueda tener mas variedad de salidas, que se requieran.
+
+Perfecto! Vamos a profundizar en esos tres temas. 😄
+
+1. ENLACES SIMBÓLICOS (symlinks)
+Es un archivo que apunta a otro archivo o carpeta. Como un acceso directo de Windows.
+Crear un symlink:
+bashln -s /ruta/original /ruta/acceso_directo
+Ejemplo práctico para ti:
+bashln -s /mnt/disco/Proyecto_siga_diipa ~/siga
+Ahora escribiendo cd ~/siga llegas directo a tu proyecto sin escribir la ruta larga.
+Diferencia con enlace duro:
+
+Symlink → si borras el original, el symlink queda roto (apunta a la nada)
+Hard link → si borras el original, el hard link sigue funcionando
+
+Cómo identificarlos:
+bashls -l
+Los symlinks aparecen con una flecha: siga -> /mnt/disco/Proyecto_siga_diipa
+En hacking: Los atacantes usan symlinks para engañar sistemas y acceder a archivos protegidos.
+
+2. LOGS (registros del sistema)
+Son archivos donde Linux registra todo lo que pasa. Viven principalmente en /var/log/.
+Ver todos los logs:
+bashls /var/log/
+Logs más importantes:
+bashsudo cat /var/log/syslog        # eventos generales del sistema
+sudo cat /var/log/auth.log      # intentos de login (CLAVE para seguridad)
+sudo cat /var/log/kern.log      # eventos del kernel
+Ver logs en tiempo real:
+bashsudo journalctl -f
+Ver logs de un servicio específico:
+bashsudo journalctl -u nginx        # logs de nginx
+sudo journalctl -u ssh          # logs de SSH
+Para seguridad — ver intentos de acceso fallidos:
+bashsudo grep "Failed password" /var/log/auth.log
+Ese comando te muestra quién intentó entrar a tu sistema y falló. Oro puro para detectar ataques de fuerza bruta.
+
+3. SISTEMAS DE ARCHIVOS
+Es la forma en que se organizan los datos en el disco.
+Los principales:
+SistemaUsoCaracterísticaext4Linux moderno (tu Ubuntu)Rápido, estable, journalingext3Linux antiguoCon journalingext2Muy antiguoSin journalingNTFSWindows (tu disco 2TB)De MicrosoftFAT32USB antiguosMáximo 4GB por archivoexFATUSB modernosSin límite de tamañoNFSRedCompartir por red
+Ver tus sistemas de archivos:
+bashdf -T
+Ver cómo están montados:
+bashmount | column -t
+El journaling (importante):
+ext4 tiene "journaling" que es como un cuaderno donde anota lo que va a hacer antes de hacerlo. Si se corta la luz, puede recuperar los datos. Por eso Linux es más resistente a fallos que sistemas antiguos.
