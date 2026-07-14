@@ -1,0 +1,27 @@
+Capitulo 9 Defensas de sistemas y dispositivos
+
+La seguridad en los sistemas operativos tiene tres claves, un buen administrador, un enfoque sistematico (Establecimiento, evaluacion, planificacion, e instalaciones de las aplicaciones correspondientes) y linea de base en donde se compara una linea de base de como quiere que funcione el sistema y como funciona.
+
+El malware incluye virus, gusanos, troyanos, registradores de teclado, spyware y adware.
+
+✅ Monitores de protección antivirus para virus. Cuando se detecta un virus, se advierte al usuario y el programa intenta eliminar el virus o ponerlo en cuarentena.
+✅ La protección de adware busca programas que muestren publicidad no deseada en cuadros emergentes y bloqueen el adware sospechoso.
+✅ La protección contra phishing bloquea las direcciones IP de sitios web de phishing conocidos y advierte al usuario sobre sitios sospechosos.
+✅ La protección contra spyware analiza los registradores de teclas (un programa que registra las pulsaciones de teclas para acceder a contraseñas y otra información confidencial) y otros tipos de spyware.
+✅ La verificación de fuentes confiables / no confiables advierte al usuario sobre programas o sitios web no seguros.
+
+Jhon Edward, como administrador de red, siempre debes gestionar los parches de los programas, en donde muchos ataques se pueden evitar si se instalan los service pack correspondientes.
+
+Asi que el administrador de la red siempre es el responsable de hacer esto, mantener, actualizar y darle forma a la red.
+
+Entre la seguridad de los terminales se encuentra: 
+
+✅El firewall basado en el host, que es el que permite el acceso o no al dispositivo mediante el bloqueo de conexiones entrantes y salientes, segun las reglas establecidas, como windows defender claro ejemplo.
+✅El HIPS Y EL HIDS -> sistema de prevencion de intrusiones (monitorea sistemas o anomalias que no son del sistema operativo) y el sistema de detencion de intrusiones (software instalado para prevenir insidentes cuando ingresan al sistema operativo)
+✅EDR -> es como un antivirus que puede bloquear amenazas, pero este tambien busca en el sistema el tipo de amenazas.
+✅Herramientas DPL -> proporcionan de forma centralizada que los datos no se pierdan, se usen mal o se acceda a ellos de forma no autorizada.
+✅NGFW -> Es un conjunto de firewall que hace detension profunda a las aplicaciones y protege contra intrusiones.
+
+Cifrado del host -> cifra todo el disco con FDE o archivos y carpetas EFS con Windows.
+
+Aqui tambien se vela por la integridad de arranque ya que se quiere que el sistema operativo al arrancar no haya sido alterado que puede sucedes desde la BIOS.Para proporcionar un sistema operativo seguro se quiere que todo arranque con normalidad y con las partes que le correspondan, que ninguna pieza tanto de hardware como software haya sido alterada. 
