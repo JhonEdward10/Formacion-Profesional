@@ -73,6 +73,7 @@ Docker -> Estanteria
 ✅apt-get — Gestor de paquetes para instalar programas.
 ✅apt-get update — Actualiza la lista de paquetes disponibles.
 ✅apt-get upgrade — Actualiza los programas instalados a su versión más nueva.
+✅sudo apt update && sudo apt upgrade -y -> Cuando hayan paquetes desactualizados 
 
 #######################################################################################
 
@@ -105,6 +106,11 @@ Docker -> Estanteria
 ✅sudo rkhunter --check -> Rootkit hunter
 ✅sudo chkrootkit -> Rootkit chk
 
+✅sudo chkrootkit && sudo rkhunter --check
+
+✅sudo apt install lynis
+✅sudo lynis audit system
+
 #######################################################################################
 
 #Enlaces simbólicos
@@ -124,12 +130,6 @@ Docker -> Estanteria
 #Sistemas de archivos
 ✅ df -T -> Ver sistemas de archivos y espacio
 ✅ mount | column -t -> Ver cómo están montados
-
-#######################################################################################
-
-#Fortalecer el sistema de linux
-✅sudo apt install lynis
-✅sudo lynis audit system
 
 #######################################################################################
 
