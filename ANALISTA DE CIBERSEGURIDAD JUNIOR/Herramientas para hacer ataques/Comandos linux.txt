@@ -107,13 +107,13 @@ Docker -> Estanteria
 
 #######################################################################################
 
-Enlaces simbólicos
+#Enlaces simbólicos
 ✅ ln -s /original /acceso -> Crea un acceso directo a un archivo o carpeta
 ✅ ls -l -> Los symlinks aparecen con flecha ->
 
 #######################################################################################
 
-Logs (registros)
+#Logs (registros)
 ✅ ls /var/log/ -> Ver todos los logs disponibles
 ✅ sudo journalctl -f -> Ver logs en tiempo real
 ✅ sudo journalctl -u nginx -> Logs de un servicio específico
@@ -121,12 +121,20 @@ Logs (registros)
 
 #######################################################################################
 
-Sistemas de archivos
+#Sistemas de archivos
 ✅ df -T -> Ver sistemas de archivos y espacio
 ✅ mount | column -t -> Ver cómo están montados
 
 #######################################################################################
 
+#Fortalecer el sistema de linux
+✅sudo apt install lynis
+✅sudo lynis audit system
+
+#######################################################################################
+
+#Para saber el linux que se tiene se coloca el comando 
+✅uname -sr
 
 
 
