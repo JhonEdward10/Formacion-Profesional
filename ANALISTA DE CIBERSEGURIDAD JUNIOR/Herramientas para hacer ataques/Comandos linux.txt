@@ -136,6 +136,36 @@ Docker -> Estanteria
 #Para saber el linux que se tiene se coloca el comando 
 ✅uname -sr
 
+#######################################################################################
+
+#Encontrar dispositivos conectados (en mi caso los audifonos y mirar el porcentaje)
+✅upower -e
+✅upower -i /org/freedesktop/UPower/devices/headset_dev_41_42_D1_C7_56_4E
+
+#######################################################################################
+#Bluetooth
+✅ bluetoothctl → Abre el gestor de Bluetooth en la terminal
+✅ scan on → Escanea dispositivos Bluetooth cercanos (dentro de bluetoothctl)
+✅ devices → Lista los dispositivos emparejados (dentro de bluetoothctl)
+✅ info XX:XX:XX:XX:XX:XX → Muestra información de un dispositivo específico
+✅ trust XX:XX:XX:XX:XX:XX → Marca el dispositivo como confiable para autoconexión
+✅ connect XX:XX:XX:XX:XX:XX → Conecta manualmente un dispositivo
+✅ disconnect XX:XX:XX:XX:XX:XX → Desconecta un dispositivo
+✅ exit → Sale de bluetoothctl
+
+#######################################################################################
+Monitor extendido (autoarranque)
+✅ xrandr --query → Ver pantallas conectadas y sus nombres
+✅ xrandr --output HDMI-0 --mode 1920x1080 --right-of eDP-1-1 --primary → Modo extendido manual
+✅ Script autoarranque: ~/.local/bin/monitor-setup.sh
+✅ Autostart desktop: ~/.config/autostart/monitor-setup.desktop
+
+#######################################################################################
+Disco externo
+✅ lsblk → Ver discos conectados y sus particiones
+✅ sudo mkdir -p /mnt/externo → Crear punto de montaje
+✅ sudo mount /dev/sdc1 /mnt/externo → Montar disco externo
+✅ sudo umount /mnt/externo → Desmontar disco externo de forma segura
 
 
 
