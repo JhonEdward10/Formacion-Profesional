@@ -1,6 +1,9 @@
 Comandos de linux
 Este es un espacio personal para hacer y escribir, ademas de aprender todos los comandos de Linux posible ademas de aprender lo necesario para hacer hacking.
 
+Tamaño de disco
+✅ df -h /
+
 #######################################################################################
 Nmap
 
@@ -166,6 +169,75 @@ Disco externo
 ✅ sudo mkdir -p /mnt/externo → Crear punto de montaje
 ✅ sudo mount /dev/sdc1 /mnt/externo → Montar disco externo
 ✅ sudo umount /mnt/externo → Desmontar disco externo de forma segura
+
+#######################################################################################
+
+✅John The Ripper - Auditoría de contraseñas
+
+Instalar John the ripper en ubuntu y prueba de contraseñas
+✅sudo apt-get install john -y
+✅john -> para verificar si quedo instalado; Herramienta escencial para un analizador de contraseñas y crackeador.
+✅john --single + "Archivo" -> es el método más rápido e inteligente que tiene John the Ripper para empezar un ataque [🧠].
+✅openssl -> herramienta de criptografia de linux, sirve para cifrar y descifrar, generar certificados y crear hashes,
+
+GENERAR HASHES DE PRUEBA
+✅ openssl passwd -1 -salt "test" "123456"
+   → Genera hash MD5crypt de la contraseña "123456" con salt "test"
+   → El -1 indica algoritmo MD5crypt (mismo que $1$ en /etc/shadow)
+✅ openssl passwd -6 "micontraseña"
+   → Genera hash SHA-512 (más seguro, usado en Ubuntu moderno)
+✅ echo "usuario:HASH_AQUI" > prueba.txt
+   → Crea archivo de prueba con formato usuario:hash
+   
+ 
+#######################################################################################
+CREAR DICCIONARIO DE CONTRASEÑAS
+✅ printf "123456\npassword\nqwerty\nadmin\nadmin123\n" > diccionario.txt
+   → Crea diccionario básico con contraseñas comunes
+✅ cat /usr/share/john/password.lst | head -20
+   → Ver el diccionario que trae John por defecto
+
+#######################################################################################
+USAR JOHN THE RIPPER
+✅ john prueba.txt
+   → Ataque básico con reglas por defecto
+✅ john --single prueba.txt
+   → Modo single: intenta variaciones del nombre de usuario como contraseña
+✅ john --wordlist=diccionario.txt prueba.txt
+   → Ataque por diccionario con tu lista personalizada
+✅ john --wordlist=diccionario.txt --rules prueba.txt
+   → Diccionario + reglas (agrega números, mayúsculas, símbolos automáticamente)
+✅ john --show prueba.txt
+   → Muestra las contraseñas ya crackeadas
+✅ john --format=crypt prueba.txt
+   → Especifica el formato del hash manualmente
+
+#######################################################################################
+UNSHADOW (combinar passwd y shadow del sistema real)
+✅ sudo unshadow /etc/passwd /etc/shadow > mypasswd
+   → Combina los dos archivos del sistema en uno para auditar
+   → SOLO usar en tu propio sistema o con autorización
+
+#######################################################################################
+GESTIÓN DE SESIONES
+✅ rm ~/.john/john.pot
+   → Borra el caché de contraseñas crackeadas (para empezar de cero)
+✅ john --restore
+   → Continúa una sesión interrumpida
+✅ john --list=formats
+   → Ver todos los formatos de hash soportados
+
+#######################################################################################
+TIPOS DE HASH MÁS COMUNES
+✅ $1$  → MD5crypt (Linux antiguo)
+✅ $5$  → SHA-256 (Linux moderno)
+✅ $6$  → SHA-512 (Ubuntu actual, el más común)
+✅ $y$  → yescrypt (Ubuntu 22.04+)
+
+#######################################################################################
+VirtualBox 
+✅ sudo apt install virtualbox -y
+
 
 
 
