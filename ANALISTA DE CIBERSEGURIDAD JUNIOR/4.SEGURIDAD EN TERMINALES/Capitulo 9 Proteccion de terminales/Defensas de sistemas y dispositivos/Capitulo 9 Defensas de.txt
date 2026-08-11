@@ -17,9 +17,15 @@ Asi que el administrador de la red siempre es el responsable de hacer esto, mant
 Entre la seguridad de los terminales se encuentra: 
 
 ✅El firewall basado en el host, que es el que permite el acceso o no al dispositivo mediante el bloqueo de conexiones entrantes y salientes, segun las reglas establecidas, como windows defender claro ejemplo.
-✅El HIPS Y EL HIDS -> sistema de prevencion de intrusiones (monitorea sistemas o anomalias que no son del sistema operativo) y el sistema de detencion de intrusiones (software instalado para prevenir insidentes cuando ingresan al sistema operativo)
-✅EDR -> es como un antivirus que puede bloquear amenazas, pero este tambien busca en el sistema el tipo de amenazas.
-✅Herramientas DPL -> proporcionan de forma centralizada que los datos no se pierdan, se usen mal o se acceda a ellos de forma no autorizada.
+
+✅El HIDS (Host-based Intrusion Detection System) -> sistema de DETECCION de intrusiones basado en host, monitorea el comportamiento del sistema (archivos, procesos, registros) en busca de actividades anomalias y avisa cuando detecta una.
+
+✅El HIPS (Host-based Intrusion Prevention System) -> sistema de PREVENCION de intrusiones basado en host, ademas de detectar las anomalias, las BLOQUEA de forma activa para impedir el incidente.
+
+✅EDR (Endpoint Detection and Response) -> es como un antivirus que puede bloquear amenazas, pero ademas monitorea y analiza el comportamiento del terminal para detectar, responder e investigar la causa raiz de la amenaza, no solo limpiar archivos.
+
+✅Herramientas DLP (Data Loss Prevention) -> proporcionan de forma centralizada que los datos no se pierdan, se usen mal o se acceda a ellos de forma no autorizada.
+
 ✅NGFW -> Es un conjunto de firewall que hace detension profunda a las aplicaciones y protege contra intrusiones.
 
 Cifrado del host -> cifra todo el disco con FDE o archivos y carpetas EFS con Windows.

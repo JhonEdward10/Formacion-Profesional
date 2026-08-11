@@ -8,7 +8,7 @@ Proteger la red interna es tan importante como proteger la red externa o interne
 
 ✅.Ataques relacionados con LAN
 
-✅.Ataques con desordamiento de tablas de direcciones MAC
+✅.Ataques con desbordamiento de tablas de direcciones MAC
 
 ✅.Ataques de suplantacion
 
