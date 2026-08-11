@@ -1,0 +1,53 @@
+Capitulo 9.2 Amenazas en terminales
+
+En el curso se definira a los terminales como los host en la red que pueden tener acceso a otros host desde la red y viceversa. La seguridad se ve involucrada de forma exponecial, desde ransonware, hasta spam y distintos ataques, entonces esto se debe a que la brecha de seguridad a aumentado y no hay la mano de obra calificada para resolver a este problema, que actualmente cada dia es mayor.
+
+Los dispositivos pueden incluir un router fortalecido que proporciona servicios de VPN, un firewall de última generación (ASA en la figura), un dispositivo de IPS y servicios de autenticación, autorización y contabilidad (servidor de AAA en la figura).
+
+Proteger la red interna es tan importante como proteger la red externa o internet, por ello hay que tener cuidado con los distintos ataques que se pueden generar desde la red interna, entre estos ataques se puede presenciar:
+
+✅.Ataques relacionados con LAN
+
+✅.Ataques con desordamiento de tablas de direcciones MAC
+
+✅.Ataques de suplantacion
+
+✅.Ataques relacionados con DHCP
+
+✅.Ataques de tormenta de LAN -> muy similar a un ataque DOS, incluso ahi va incluido
+
+✅.Ataques de manipulacion de STP -> aqui es donde el manipula el trafico de forma logica para que el switch atacante pase toda la informacion por ahi.
+
+✅.Ataques de VLAN -> prevenir que un atacante ingrese a una red que esta separada de la que se encuentra y tenga acceso no autorizado, entonces es eso.
+
+
+Para mitigar estos ataques en la red LAN y proteger los terminales se utiliza e instala en los host diferentes aplicaciones como:
+
+🔴.Software de antivirus/antimalware: se utiliza en los host para detectar y mitigar virus y malware. Los antivirus deben tener tres enfoques en el momento de analizar un virus o malware para poder hacer frente, entre ellos: 
+	.Basado en firmas: reconoce las caracteristicas de archivos de malware conocidos.
+	.Basado en Heuristica: analiza caracteristicas generales que comparten los diversos tipos de malware.
+	.Basado en comportamiento: aqui se analiza el comportamiento sospechoso del archivo o actividad.
+
+🔴.Firewall basado en host: es como el guardian, no permite que malware ingrese o salga, del dispositivo.
+
+🔴.Conjunto de seguridad basado en los host: esto incluye funcionalidades de antivirus, antiphishing y navegacion segura de los sistemas, prevencion de intrusiones con base en el host y funcionalidades del firewall. Estas son las medidas que proporcionan una defensa en capas que brindan proteccion contra las amenazas mas comunes.
+
+Tambien se debe tener en cuenta que se debe proteger al dispositivo en la red, no solo dentro del dispositivo, sino fuera de el.
+Estos son algunos ejemplos de dispositivos y tecnicas basada en la red y basada en host.
+
+✅Protección avanzada contra malware (AMP, Advanced Malware Protection) - protege a los terminales de virus y malware.
+
+✅Dispositivo de seguridad de correo electrónico (ESA, Email Security Appliance) -> filtra el trafico del correo no deseados y los mensajes maliciosos antes de que lleguen.
+
+✅Dispositivo de seguridad web (WSA, Web Security Appliance) -> filtra sitios web y crea listas negras para evitar que los hosts lleguen a lugares peligrosos en la web, como lo hace Cisco WSA
+
+✅Control de Admisión de Redes (Network Admission Control NAC) -> Permite que se conecten a la red solamente los sistemas que estén autorizados y que cumplan con las normas.
+
+
+
+
+
+
+
+
+
