@@ -1,0 +1,14 @@
+Capitulo 10.2
+
+Datos en resposo, son los datos que nadie acceden a ellos y se encuentran sin transito e interaccion.
+Entre ellos existen datos de almacenamiento con conexion directa (DAS), almacenamiento con matriz redundante (RAID), Almacenamiento conectado a la red (NAS), tambien se encuentra el almacenamiento de red de area (SAN) y por ultimo el almacenamiento en la nube.
+
+Datos en transmision, se refiere a los datos que no estan en reposo, ni en uso, sino en transito.
+
+Datos en proceso, son aquellos que no se encuentran ni en reposo, ni tampoco en transito, sino aquellos que estan siendo manipulados o procesados durante la entrada inicial, la modificacion, el calculo de salida etc.
+
+es función de los profesionales de la ciberseguridad diseñar políticas y procedimientos integrales con respecto a las pruebas, el mantenimiento y las actualizaciones para mantener los sistemas operativos con la menor cantidad de errores.
+
+
+
+

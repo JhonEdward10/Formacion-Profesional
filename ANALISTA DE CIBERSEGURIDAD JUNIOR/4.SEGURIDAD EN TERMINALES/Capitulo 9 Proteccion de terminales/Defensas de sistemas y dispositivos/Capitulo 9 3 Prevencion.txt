@@ -1,3 +1,21 @@
 Capitulo 9.3 Prevencion de intrusiones basada en host
 
+Aqui se utiliza los firewall basados en host, en donde ellos controlas el trafico que entra y sale de una computadora, se encuentran disponibles para telefonos y tabletas android.
 
+Entre los firewalls que se conocen para host esta el firewall:
+
+Windows defender: desde windows xp, sirve para administrar desde el perfil publico, perfil privado y el tercer perfil es de dominio, que elige conexiones de confianza.
+
+iptable: permite a los administradores de linux configurar reglas de acceso a la red que forman parte de los modulos de netfilter del kernel de linux.
+
+nftables: es el sucesor de iptables, en donde utiliza una maquina virtual de linux.
+
+TCP Wrappers: Es un sistema de registro y control de acceso basado en reglas para Linux. El filtrado de paquetes se basa en direcciones IP y servicios de red.
+
+
+Tambien se habla de la deteccion de intrusiones basada en hosts (HIDS)
+Esto esta diseñado para proteger el host contra malware conocido y desconocidos. Puede proporcionar análisis de logs, correlación de eventos, verificación de integridad, aplicación de políticas, detección de rootkit y alertas. Un HIDS incluirá, con frecuencia, un terminal de servidor de administración, como se ve en la figura.
+
+El HIDS, combina funciones de aplicaciones antimalware con las de un firewall. Asi pues se puede decir que los sistemas de seguridad con base en host funcionan como sistemas de detencion y prevencion, pues evitan ataques conocidos y detectan ataques desconocidos
+
+Pero aveces es dificil detectar las posibles intrusiones, pues hay algunas firmas que cambian algunas cosas y pueden que evadan los sistemas, por tanto el enrutamiento puede cerrar las aplicaciones que muestran anomalias por el cambio, por haber infringido las reglas

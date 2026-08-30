@@ -1,0 +1,23 @@
+Capitulo 10 principios, practicas y procesos de ciberseguridad 
+
+La triada del cid son los principios de ciberseguridad: 
+Confidencialidad
+Integridad
+Disponibilidad
+
+Estados de los datos:
+Datos en transito
+Datos almacenados
+Datos en proceso
+
+Medidas de seguridad:
+Tecnologia
+Politicas
+Practicas
+
+Los tipos de informacion confidencial se dividen en tres categorias:
+Informacion personal: La información personal es cualquier cosa que pueda rastrearse hasta un individuo, como registros médicos, números de tarjetas de crédito o números de seguridad social.
+
+Informacion comercial: La información comercial contiene todo lo que representa un riesgo para una organización si la descubre el público o un competidor, como planes de adquisición, información de clientes o secretos comerciales.
+
+Informacion Clasificada: La información clasificada puede pertenecer a un órgano gubernamental o similar y se considera acceso secreto, confidencial o restringido.

@@ -1,0 +1,19 @@
+Capitulo 9.4 Seguridad en aplicaciones
+
+Superficie de ataque es la suma de todas las vulnerabilidades encontradas en un sistema.
+
+Entre ellas se encuentra las:
+
+✅Superficie de ataques de la red: Aqui se aprovecha las vulnerabilidades en las redes, incluidos protocolos inalambrico, por cable, dispositivos inalambricos en IOT. En donde se aprovechan los ataques en las capas de red y transporte
+
+✅Superficie de ataques del software: Aqui es donde se aprovechan los ataques de vulnerabilidades web, en la nube o aplicaciones basada en hosts.
+
+✅Superficie de ataque humana: Aqui es donde se aprovechan de los errores humanos, ingenieria social, recursos internos de confianza, errores de usuarios, etc.
+
+Imaginate como esta la brecha para 2021 el 20% del trafico sera por medio de dispositivos moviles.
+
+Una manera contundente de reducir esta brecha por medio de las aplicaciones, es bloqueando ciertos sitios y aplicaciones, en donde se pueden dividir entre aplicaciones de lista blanca (que son las que se pueden visitar), y las listas de lista negra (que son las que se prohiben para no comprometer la seguridad).
+
+Que son los sandbox: son aplicaciones en donde se pueden ejecutar programas en un entorno seguro, para el analisis de malware y detencion de ellos. Cuckoo Sandbox es un sistema sandbox gratuito para el análisis de malware. Estos servicios permiten la carga de muestras de malware para su análisis. Algunos de estos servicios son VirusTotal, Joe Sandbox y CrowdStrike Falcon Sandbox.
+
+

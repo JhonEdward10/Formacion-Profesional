@@ -1,0 +1,74 @@
+Capitulo 10.3
+
+✅Contramedidas utilizadas por los analistas de ciberseguridad basada en el software en los host o servidores individuales.
+
+Los firewalls de los software controlan el acceso mediante politica que permite el ingreso o no al sistema desde la red e incluso desde el mismo sistema, porque monitorean lo que sale e ingresa a este.
+
+Escaneres de red y puertos
+
+Analizadores de protocolos
+
+Analizadores de vulnerabilidades 
+
+Sistema de detencion de intrusiones basado en host (HIDS)
+
+✅Tambien existen las contramedidas de hardware que los analistas aplican para asi evitar intrusiones.
+
+Firewalls bloquean el trafico no deseado, pues contienen reglas que definen el trafico permitido dentro y fuera de la red.
+
+Servidor proxy 
+
+Control de acceso basado en hardware
+
+Conmutadores de red: Como parte integral de la red, los switches se utilizan comúnmente como punto de conexión, ya que conectan otros dispositivos, por ejemplo, en una red de área local. Sus características les permiten aumentar la eficacia de la seguridad de la red.
+
+Diferencia entre Proxy y VPN:
+
+		Proxy			VPN
+Cifrado		❌ Generalmente no	✅ Sí
+Velocidad	Más rápido		Más lento
+Protección	Parcial			Total
+Aplicaciones	Solo el navegador	Todo el sistema
+
+Hay que formar a las personas en ciberseguridad porque aveces estas pueden ser el eslabon mas debil, por tal motivo capacitarla hace que se conviertan en un excelente forma de proteger la organizacion.
+
+Cada miembro de la organizacion debe conocer las politicas de ciberseguridad e implementarlas en sus actividades cotidianas, capacitandolas, vinculando la conciencia de seguridad, realizando sesiones de capacitacion mediante gamificacion y actividades 
+
+✅Politicas
+
+Una política de seguridad establece los objetivos de seguridad, las reglas de comportamiento y los requisitos del sistema que se deben cumplir.
+
+entre estas se muestra que debe tener una politica de seguridad generalmente.
+
+Politica de identificacion y autenticacion : Especifican cuáles son las personas autorizadas que pueden acceder a los recursos de red y describen los procedimientos de verificación.
+
+Politicas de contraseñas.
+
+Politica de uso aceptable: Identifica las aplicaciones de red y los usos que son aceptables por la organización. También puede identificar las consecuencias de las violaciones de la política.
+
+Politicas de acceso remoto 
+
+Politicas de mantenimiento de red: Especifican los sistemas operativos de los dispositivos de la red y los procedimientos de actualización de las aplicaciones de los usuarios finales.
+
+Politicas de manejo de incidentes: Describen cómo se tratan los incidentes de seguridad.
+
+✅Normas
+
+Los estándares ayudan al personal de TI a mantener la uniformidad en el funcionamiento de la red.
+
+Un estandar de una compañia seria la de contraseñas en una organizacion
+
+✅Directrices
+Son la pautas o sugerencias que se tienen para hacer las cosas de forma mas eficaz y segura, sin embargo no son obligatorias.
+
+Instituto Nacional de Normas y Tecnología (NIST), Centro de recursos de seguridad informática.
+Departamento de Seguridad Nacional (NSA), Guías para la configuraciones de seguridad.
+El estándar de criterios comunes
+
+✅Procedimientos
+
+
+
+
+
+
