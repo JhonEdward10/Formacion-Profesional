@@ -1,0 +1,154 @@
+RESUMEN CAPÍTULO 8 - SISTEMA OPERATIVO LINUX (Repaso)
+
+=================================================================
+1. EL SOC (Security Operations Center)
+=================================================================
+- Es una plataforma que monitorea, detecta y responde a amenazas de
+  seguridad. Funciona como el "cuartel general" de seguridad de una empresa.
+- Herramientas del SOC:
+    · Software de captura de paquetes (Wireshark) - analiza el tráfico de red
+    · Herramientas de análisis de malware
+    · Sistema de detección de intrusiones (IDS)
+    · Firewalls
+    · Administradores de registros
+    · Gestión de información y eventos de seguridad (SIEM)
+    · Sistema de tiquetes
+- Kali Linux = distro con muchas herramientas para auditoría y pentesting.
+
+=================================================================
+2. TRABAJANDO EN EL SHELL DE LINUX
+=================================================================
+- Emuladores de terminal comunes: Terminator, eterm, xterm, konsole,
+  gnome-terminal.
+- Piping (|): barra que permite ingresar más de un comando en una línea,
+  encadenando la salida de uno como entrada de otro.
+
+=================================================================
+3. PUERTOS EN LINUX (importante memorizar)
+=================================================================
+Rangos de puertos:
+    · Well-Known Ports (0 - 1023)
+    · Registered Ports (1024 - 49,151)
+    · Dynamic / Private Ports (49,152 - 65,535)
+
+Puertos importantes:
+    20 - FTP - Data (datos)
+    21 - FTP - Control
+    22 - SSH (Secure Shell)
+    23 - Telnet
+    25 - SMTP (correo)
+    53 - DNS
+    67 - DHCPv4 (cliente a servidor)
+    68 - DHCPv4 (servidor a cliente)
+    69 - TFTP
+    80 - HTTP
+
+=================================================================
+4. PERMISOS DE USUARIOS EN LINUX (números)
+=================================================================
+    Número   Binario   Permisos
+    7        111       lectura + escritura + ejecución
+    6        110       lectura + escritura
+    5        101       lectura + ejecución
+    4        100       solo lectura
+    3        011       escritura + ejecución
+    2        010       solo escritura
+    1        001       solo ejecución
+
+=================================================================
+5. ROOTKIT
+=================================================================
+- Rootkit = tipo de malware diseñado para aumentar los privilegios de usuario.
+- Pueden ocultar la intrusión de un atacante e incluso manipular herramientas.
+
+=================================================================
+6. ENLACES SIMBÓLICOS (SYMLINK) vs ENLACES DUROS (HARD LINK)
+=================================================================
+- Symlink (enlace simbólico): un archivo que apunta a otro archivo o carpeta.
+  Es como un acceso directo de Windows.
+    · Crear:  ln -s /ruta/original /ruta/acceso_directo
+    · Si borras el ORIGINAL, el symlink queda ROTO (apunta a la nada).
+- Hard link (enlace duro): otra referencia al mismo archivo real (mismos datos).
+    · Si borras el ORIGINAL, el hard link SIGUE funcionando.
+- REGLA CLAVE: el hard link SOBREVIVE, el symlink SE ROMPE.
+- Identificar symlinks con: ls -l  (aparecen con flecha -> )
+- En hacking: los atacantes usan symlinks para engañar sistemas y acceder
+  a archivos protegidos.
+
+=================================================================
+7. LOGS (REGISTROS DEL SISTEMA) - /var/log/
+=================================================================
+- Los logs son archivos donde Linux registra todo lo que pasa.
+  Principalmente viven en /var/log/.
+- Ver todos los logs:  ls /var/log/
+- Logs más importantes:
+    · /var/log/syslog        -> eventos generales del sistema
+    · /var/log/auth.log      -> intentos de login (CLAVE para seguridad)
+    · /var/log/kern.log      -> eventos del kernel
+    · /var/log/dmesg         -> mensajes de arranque y hardware
+    · /var/log/dpkg.log      -> instalación de paquetes
+    · /var/log/boot.log      -> mensajes de arranque
+- Ver logs en tiempo real:        sudo journalctl -f
+- Ver logs de un servicio:        sudo journalctl -u nginx   (o -u ssh)
+- Ver intentos de login fallidos (fuerza bruta):
+    sudo grep "Failed password" /var/log/auth.log
+    · Este comando muestra quién intentó entrar al sistema y falló.
+    · Es clave para detectar ataques de fuerza bruta.
+- Contar intentos fallidos:  grep "Failed password" /var/log/auth.log | wc -l
+
+=================================================================
+8. SISTEMAS DE ARCHIVOS
+=================================================================
+    Sistema   Uso                  Característica
+    ext4      Linux moderno        Rápido, estable, journaling
+    ext3      Linux antiguo        Con journaling
+    ext2      Muy antiguo          Sin journaling
+    NTFS      Windows              De Microsoft
+    FAT32     USB antiguos         Máximo 4GB por archivo
+    exFAT     USB modernos         Sin límite de tamaño
+    NFS       Red                  Compartir por red
+
+- Ver sistemas de archivos:  df -T
+- Ver cómo están montados:   mount | column -t
+- Journaling: es como un "cuaderno" donde el sistema anota lo que va a
+  hacer antes de hacerlo. Si se corta la luz, puede recuperar los datos.
+  Por eso Linux es más resistente a fallos que sistemas antiguos.
+
+=================================================================
+9. DIRECTORIOS MÁS USADOS EN LINUX
+=================================================================
+    /        Raíz, directorio principal (todo cuelga de aquí)
+    /home    Carpetas personales de los usuarios
+    /etc     Archivos de configuración del sistema
+    /var     Datos variables, logs (/var/log), cachés
+    /bin     Comandos/ejecutables esenciales (ls, cat...)
+    /sbin    Programas de administración del sistema
+    /usr     Programas y aplicaciones instaladas
+    /tmp     Archivos temporales
+    /opt     Software opcional de terceros
+    /root    Carpeta personal del superusuario root (no tiene /home)
+    /mnt y /media   Puntos de montaje de discos/USB
+    /proc    Información del sistema en tiempo real (procesos)
+    /dev     Dispositivos (discos, USBs)
+
+=================================================================
+10. MONITOREO DE LOS REGISTROS DE SERVICIO
+=================================================================
+- Aquí se monitorea lo que hacen las personas en el dispositivo.
+- El administrador de red debe estar visualizando constantemente.
+- Tipos de registros:
+    · Registros de aplicaciones
+    · Registros de eventos
+    · Registros del sistema
+    · Registros del servicio
+
+=================================================================
+IDEAS CLAVE PARA EL EXAMEN
+=================================================================
+- SSH = 22, HTTP = 80, FTP = 20/21, DNS = 53, SMTP = 25.
+- Well-Known Ports = 0-1023.
+- 7 = rwx, 4 = r, 5 = r-x, 6 = rw-.
+- Hard link SOBREVIVE al borrar el original; symlink SE ROMPE.
+- /etc = configuración, /var/log = logs, /root = usuario root.
+- grep "Failed password" /var/log/auth.log  = detectar fuerza bruta.
+- Rootkit = malware que aumenta privilegios y oculta la intrusión.
