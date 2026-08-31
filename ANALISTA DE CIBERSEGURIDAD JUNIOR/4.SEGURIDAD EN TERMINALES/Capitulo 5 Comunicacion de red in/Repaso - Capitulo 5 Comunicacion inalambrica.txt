@@ -1,0 +1,126 @@
+RESUMEN CAPÍTULO 5 - COMUNICACIÓN DE RED INALÁMBRICA (Repaso)
+(Verificado y corregido con teoría oficial CCNA/Cisco)
+
+=================================================================
+1. CSMA/CA (Acceso al canal inalámbrico)
+=================================================================
+- CSMA/CA = Carrier Sense Multiple Access with Collision Avoidance
+  (Acceso múltiple con detección de portadora y EVITACIÓN de colisiones).
+- Es el método que usan las WLAN (redes inalámbricas 802.11) para determinar
+  cómo y cuándo enviar datos, evitando colisiones.
+- Diferencia clave con cable:
+    · Red cableada (802.3): usa CSMA/CD -> DETECTA las colisiones después.
+    · Red inalámbrica (802.11): usa CSMA/CA -> PREVIENE las colisiones antes.
+- ¿Por qué? Un dispositivo inalámbrico trabaja en semidúplex y NO puede
+  escuchar mientras transmite, así que no puede detectar la colisión.
+- Todos los dispositivos quieren conectarse a la vez; cuando el canal está
+  ocupado, el dispositivo ESPERA un tiempo aleatorio (back-off) y luego
+  intenta de nuevo.
+
+=========================================================================
+2. PROCESO DE COMUNICACIÓN CLIENTE - AP (6 pasos)
+=========================================================================
+Un cliente inalámbrico hace lo siguiente para enviar datos por CSMA/CA:
+
+1. ESCUCHA el canal (llamado "portador" / carrier) para ver si está inactivo,
+   es decir, que no haya otro tráfico en el canal.
+2. Envía un mensaje RTS (Ready To Send / listo para enviar) al AP para
+   solicitar acceso dedicado a la red.
+3. Recibe un mensaje CTS (Clear To Send / permiso para enviar) del AP que le
+   garantiza el acceso para enviar.
+4. Si NO recibe el CTS, espera una cantidad de tiempo ALEATORIA antes de
+   reiniciar el proceso.
+5. Después de recibir el CTS, TRANSMITE la información.
+6. Todas las transmisiones son RECONOCIDAS (ACK). Si el cliente no recibe el
+   reconocimiento, asume que hubo colisión y reinicia el proceso.
+
+  QUIÉN ENVÍA CADA MENSAJE:
+  · RTS  -> lo envía el CLIENTE al AP
+  · CTS  -> lo envía el AP al CLIENTE
+  · ACK  -> confirmación de recepción (802.11 exige un ACK por trama)
+
+=========================================================================
+3. LA TRAMA DE CAPA 2 (802.11)
+=========================================================================
+Toda trama de capa 2 tiene 3 partes:
+    ENCABEZADO + CARGA ÚTIL (PAYLOAD) + FCS
+
+El encabezado 802.11 es similar al de Ethernet pero con MÁS campos:
+
+· Control de trama (Frame Control): identifica el tipo de trama inalámbrica.
+  Contiene subcampos: versión del protocolo, tipo de trama, tipo de dirección,
+  gestión de energía y configuración de seguridad.
+· Duración: indica el tiempo restante necesario para recibir la siguiente
+  transmisión de tramas.
+· Dirección 1: normalmente la dirección MAC del dispositivo o AP RECEPTOR
+  inalámbrico.
+· Dirección 2: normalmente la dirección MAC del dispositivo o AP TRANSMISOR
+  inalámbrico.
+· Dirección 3: en ocasiones la dirección MAC del DESTINO final, como la
+  interfaz del router (puerta de enlace predeterminada) al que se conecta el AP.
+· Control de secuencia: información para controlar la secuencia y las tramas
+  fragmentadas.
+· Dirección 4: casi siempre vacía; se usa SOLO en modo AD HOC.
+
+· Payload (carga útil): contiene los datos para la transmisión.
+· FCS (Frame Check Sequence): control de errores de la capa 2.
+
+Tipos de tramas 802.11 (las 3 categorías):
+· Tramas de gestión (management): autenticación, asociación, beacons, probes.
+· Tramas de control (control): ACK, RTS y CTS.
+· Tramas de datos (data): llevan la carga útil real.
+
+=========================================================================
+4. DESCUBRIMIENTO DE REDES: MODO PASIVO vs MODO ACTIVO
+=========================================================================
+(CORRECCIÓN IMPORTANTE - concepto clave)
+Son dos formas en que un cliente detecta/descubre una red. Lo que cambia es
+QUIÉN inicia la comunicación. Visto desde el punto de vista del AP:
+
+· MODO PASIVO:  el AP ANUNCIA su red de forma periódica enviando tramas
+  BEACON (baliza) que incluyen el SSID, estándares soportados y ajustes de
+  seguridad. El CLIENTE solo ESCUCHA/recibe los beacons para localizar la red.
+  - El cliente NO transmite nada: solo "escucha el aire".
+  - Ventaja: ahorra batería del cliente (no transmite).
+
+· MODO ACTIVO: el CLIENTE es quien inicia, enviando una TRAMA PROBE REQUEST
+  (solicitud de sondeo) en varios canales preguntando por una red (SSID).
+  El AP que reconoce el SSID responde con una TRAMA PROBE RESPONSE
+  (respuesta al sondeo).
+  - Se usa cuando el AP está configurado para NO emitir beacons (SSID
+    oculto), así que el cliente debe conocer el SSID para preguntar por él.
+  - El cliente transmite la solicitud (gasta más batería que en pasivo).
+
+  RESUMEN RÁPIDO:
+  · Pasivo -> AP envía beacon / cliente escucha (inicia el AP)
+  · Activo -> cliente envía probe request / AP responde (inicia el cliente)
+
+=========================================================================
+5. ASOCIACIÓN DEL CLIENTE AL AP
+=========================================================================
+- Para lograr una asociación exitosa, el cliente inalámbrico y el AP deben
+  ACORDAR parámetros específicos.
+- Para permitir la negociación, se configuran los parámetros en el AP y luego
+  en el cliente.
+- Proceso típico: descubrimiento (pasivo/activo) -> autenticación ->
+  asociación.
+
+=========================================================================
+6. WLC y LWAP (Centralización de la gestión)
+=========================================================================
+- WLC (Wireless LAN Controller): controladora de LAN inalámbrica que
+  CENTRALIZA todas las funciones de control y gestión de los AP en una red.
+- LWAP (Lightweight AP): AP "ligeros" que actúan bajo el control del WLC
+  (no gestionan por sí mismos).
+
+=========================================================================
+IDEAS CLAVE PARA EL EXAMEN
+=========================================================================
+- CSMA/CA = EVITAR colisiones (inalámbrico). CSMA/CD = DETECTAR (cableado).
+- RTS lo envía el cliente; CTS lo envía el AP.
+- Si no llega el CTS -> el cliente espera tiempo aleatorio y repite.
+- Toda trama: encabezado + payload + FCS (FCS = control de errores capa 2).
+- Encabezado 802.11 tiene más campos que Ethernet; Dirección 4 solo en ad hoc.
+- Modo PASIVO: AP envía beacon, cliente escucha.
+- Modo ACTIVO: cliente envía probe request, AP responde con probe response.
+- WLC centraliza la gestión; los LWAP son APs ligeros dependientes del WLC.
