@@ -1,0 +1,169 @@
+RESUMEN CAPÍTULO 6 - REDES SEGURAS (Repaso)
+(Verificado con teoría oficial CCNA/Cisco)
+
+=================================================================
+1. CORTAFUEGOS (FIREWALLS) - Tipos según su función
+=================================================================
+· Cortafuegos de Red: filtra comunicaciones según la red o dirección IP.
+· Cortafuegos de capa de Transporte: filtra la entrada/salida de datos
+  dependiendo de los puertos. (Ej: bloquear el puerto 25/SMTP para evitar
+  que una estación difunda un virus por correo).
+· Cortafuegos de capa de Aplicación: filtra comunicaciones según la aplicación.
+· Cortafuegos sensible al contexto: filtra según usuario, aplicación,
+  dispositivo y perfil de amenaza.
+· Servidor Proxy: filtra solicitudes de sitios web (URL, nombres de dominio,
+  tipos de medios).
+· Servidor Proxy inverso: protegen, ocultan, descargan y distribuyen el acceso
+  a los servidores web.
+· Cortafuegos de traducción de direcciones (NAT): ocultan/enmascaran las
+  direcciones privadas de los hosts. Un firewall NAT filtra según IP de origen
+  y destino.
+· Firewall basado en host: filtra puertos y llamadas de servicio del sistema
+  en un solo sistema operativo de computadora.
+
+=================================================================
+2. TERMINOLOGÍA CLAVE (stateless / stateful / NGFW)
+=================================================================
+Los firewalls también se clasifican según cómo inspeccionan el tráfico:
+
+· Filtrado de paquetes / STATELESS (sin estado): el más básico. Filtra cada
+  paquete por separado según reglas fijas (IP origen/destino, protocolo,
+  puerto). NO mantiene estado de la conexión. Opera en capas 3 y 4 (suele
+  formar parte del router). Es rápido.
+
+· SENSIBLE AL CONTEXTO / STATEFUL (con estado): además de las reglas,
+  TRACKA/MANTIENE el estado de las conexiones activas, permitiendo tráfico de
+  retorno de conexiones ya aprobadas y bloqueando conexiones no solicitadas.
+  Analiza capas 4 y 5. Más seguro pero más lento.
+
+· Firewall de Aplicaciones (proxy): filtra información de capas 3,4,5 y 7.
+  Todo se realiza desde la parte lógica (software).
+
+· Firewall de PRÓXIMA GENERACIÓN (NGFW): va más allá del stateful:
+    - Prevención de intrusiones integrada (IPS)
+    - Reconocimiento y control de aplicaciones (ver y bloquear apps riesgosas)
+    - Inspección profunda de paquetes hasta la capa 7
+    - Rutas de actualización para futuras amenazas
+    - Técnicas contra amenazas en evolución
+
+· Firewall basado en host (servidor y personal): una PC o servidor con
+  software de firewall ejecutándose en él.
+· Firewall transparente: filtra el tráfico IP entre un par de interfaces
+  puenteadas.
+· Firewall híbrido: combina varios tipos. Ej: un firewall de inspección de
+  aplicación combina un firewall con estado y un gateway de aplicación.
+
+=================================================================
+3. FUNCIONES COMUNES DE LOS FIREWALLS
+=================================================================
+· Resisten ataques de red.
+· Son el único punto de tránsito entre las redes corporativas internas y las
+  externas: todo el tráfico circula por ellos.
+· Aplican la política de control de acceso.
+
+=================================================================
+4. LIMITACIONES DE LOS FIREWALLS
+=================================================================
+· Un firewall mal configurado puede ser un PUNTO ÚNICO DE FALLA.
+· Los datos de muchas aplicaciones no se pueden transmitir con seguridad
+  mediante firewalls.
+· Los usuarios pueden buscar maneras de esquivar el firewall para recibir
+  material bloqueado, exponiendo la red.
+· Puede reducirse la velocidad de la red.
+· El tráfico no autorizado se puede TUNELIZAR u ocultar como tráfico legítimo
+  a través del firewall.
+
+=================================================================
+5. IDS vs IPS
+=================================================================
+· IDS (Intrusion Detection System):
+    - Sistema de DETECCIÓN. Se implementa en modo SIN CONEXIÓN (fuera de línea).
+    - Observa, registra, ANALIZA y AVISA/ALARMA sobre tráfico malicioso.
+    - NO está en línea, por lo que NO PUEDE detener el paquete de activación.
+    - No afecta a la red si falla su sensor (no sobrecarga la red).
+    - Es menos útil para detener virus de correo, gusanos y ataques automáticos.
+    - Más vulnerable a técnicas de evasión (no está en línea).
+    - Se centra en identificar incidentes, registrar información e informar.
+
+· IPS (Intrusion Prevention System):
+    - Sistema de PREVENCIÓN. Se implementa EN LÍNEA (el tráfico lo atraviesa).
+    - Detecta e intenta BLOQUEAR/DETENER el ataque en tiempo real.
+    - Puede OMITIR/descartar el paquete para detener el paquete de activación.
+    - Usa NORMALIZACIÓN DE TRANSMISIÓN: técnica para reconstruir el flujo de
+      datos cuando el ataque se da en varios segmentos de datos.
+    - Al estar en línea, con mucho tráfico puede generar LATENCIA y
+      FLUCTUACIÓN (jitter) y afectar el rendimiento de la red.
+    - Debe aplicarse para que las aplicaciones sensibles al tiempo no se vean
+      afectadas.
+
+CARACTERÍSTICAS COMUNES DE IDS Y IPS:
+    · Se implementan como SENSORES.
+    · Usan FIRMAS para detectar patrones de uso indebido en el tráfico.
+    · Detectan patrones ATÓMICOS (un solo paquete) o COMPUESTOS/STATEFUL
+      (varios paquetes / estado de conexión).
+    · Son reglas que detectan infracciones de seguridad.
+
+=================================================================
+6. IPS BASADO EN HOST (HIPS)
+=================================================================
+· Software instalado en un host para controlar y analizar actividades
+  sospechosas.
+· Comportamientos sospechosos: actualizaciones del registro no autorizadas,
+  cambios en el directorio del sistema, ejecución de programas de instalación,
+  actividades que provocan desbordamientos del búfer.
+· HIPS puede verse como una combinación de FIREWALL + ANTIVIRUS + ANTIMALWARE.
+· Desventaja: actúa SOLO a nivel local (sin visión completa de la red);
+  debe instalarse en cada host y ser compatible con cada sistema operativo.
+
+=================================================================
+7. DISPOSITIVOS DE SEGURIDAD ESPECIALIZADOS (Cisco)
+=================================================================
+· AMP (Advanced Malware Protection): protección y análisis de malware de
+  clase empresarial. Protege antes, durante y después de un ataque.
+  Usa la inteligencia del grupo Cisco TALOS (detección y correlación de
+  amenazas en tiempo real por la mayor red de detección del mundo).
+  Aplicaciones: equipo SOC, respuesta a incidentes, inteligencia de amenazas,
+  ingeniería de infraestructura.
+
+· WSA (Web Security Appliance): ofrece protección contra malware, visibilidad
+  y control de aplicaciones, políticas de uso aceptable y movilidad segura.
+  PERO solo protege dentro de la red/el perímetro donde está. Si el usuario
+  sale de la red, no lo protege -> por eso se usa Cisco Cloud Web Security
+  (CWS) para imponer comunicación segura hacia y desde Internet.
+
+· ESA (Email Security Appliance): reduce las amenazas basadas en el correo
+  electrónico (junto con Cisco Cloud Email Security).
+
+=================================================================
+8. MEDIDAS DE SEGURIDAD - BUENAS PRÁCTICAS
+=================================================================
+· Realizar evaluación de riesgos.
+· Crear política de seguridad.
+· Medidas de seguridad física.
+· Medidas de seguridad de recursos humanos.
+· Realizar copias de seguridad.
+· Mantener actualizaciones y parches de seguridad.
+· Emplear controles de acceso.
+· Probar constantemente la respuesta a incidentes.
+· Implementar herramientas de administración, análisis y monitoreo.
+· Implementar dispositivos de seguridad de red.
+· Implementar seguridad en endpoints (terminales).
+· Educar a los usuarios.
+· Cifrar los datos.
+
+=================================================================
+IDEAS CLAVE PARA EL EXAMEN
+=================================================================
+- Firewall NAT filtra por IP origen/destino.
+- Proxy filtra por contenido web (URL, dominios, tipos de medios).
+- Firewall basado en host filtra puertos y llamadas de servicio en un solo SO.
+- Stateless = paquete por paquete, sin estado. Stateful = mantiene estado de
+  conexión. NGFW = stateful + app awareness (capa 7) + IPS integrado.
+- NGFW: prevención de intrusiones integrada, control de aplicaciones,
+  rutas de actualización, técnicas contra amenazas en evolución.
+- IDS = pasivo, fuera de línea, solo detecta y avisa, NO detiene el paquete.
+- IPS = en línea, bloquea y omite el paquete, usa normalización de transmisión.
+- Firmas: atómicas (1 paquete) vs compuestas/stateful (varios paquetes).
+- HIPS = firewall + antivirus + antimalware en el host; actúa solo local.
+- AMP -> Talos. WSA -> web (solo dentro del perímetro; CWS para la nube).
+  ESA -> correo electrónico.
