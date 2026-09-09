@@ -1,0 +1,183 @@
+RESUMEN CAPÍTULO 7 - SISTEMA OPERATIVO WINDOWS (Repaso)
+(Verificado con material oficial Microsoft/CCNA CyberOps)
+
+=================================================================
+1. HISTORIA: MS-DOS y la línea NT
+=================================================================
+- Los comienzos de Windows fueron con MS-DOS (línea antigua:
+  Windows 95/98/ME usaban MS-DOS por debajo).
+- El Windows moderno (Windows 7, 8, 10, 11 y Server) NO viene de MS-DOS
+  directamente: viene de WINDOWS NT (línea moderna, más estable y segura).
+- Hoy ya casi no se usa MS-DOS; todo es interfaz gráfica (GUI).
+- Windows más usados: desde Windows 7 hasta Windows 11.
+
+=================================================================
+2. CAPA DE ABSTRACCIÓN DE HARDWARE (HAL)
+=================================================================
+- Windows se instala en muchos tipos de hardware diferentes y debe AISLARSE
+  de esas diferencias.
+- HAL (Hardware Abstraction Layer / capa de abstracción de hardware):
+  es el código que maneja TODA la comunicación entre el HARDWARE y el KERNEL.
+- El KERNEL es el núcleo del sistema operativo: controla la computadora
+  completa, maneja solicitudes de entrada/salida, memoria y todos los
+  periféricos conectados.
+- El HAL "oculta/abstrae" los detalles del hardware a los controladores y al
+  SO, para que el mismo kernel funcione en distintas plataformas.
+- A veces el kernel también se comunica con el hardware directamente,
+  así que no es completamente independiente del HAL.
+
+=================================================================
+3. MODO NÚCLEO (KERNEL MODE) vs MODO USUARIO (USER MODE)
+=================================================================
+- La CPU tiene DOS modos de operación:
+
+KERNEL MODE (modo núcleo):
+    · Ejecuta el código del SISTEMA OPERATIVO y los componentes más críticos.
+    · Tiene acceso SIN RESTRICCIONES al hardware subyacente.
+    · Es capaz de ejecutar CUALQUIER instrucción de la CPU.
+    · Puede referenciar CUALQUIER dirección de memoria directamente.
+    · TODO el código en modo núcleo usa EL MISMO ESPACIO DE DIRECCIONES.
+    · Un ERROR en modo núcleo puede PARAR TODA la computadora (crash).
+    · Si un controlador en modo núcleo escribe en una dirección de memoria
+      incorrecta, el SO u otros controladores pueden verse afectados.
+    · Se reserva para las funciones más confiables del SO.
+
+USER MODE (modo usuario):
+    · Ejecuta las APLICACIONES instaladas (programas de usuario).
+    · NO tiene acceso directo al hardware ni a las direcciones de memoria.
+    · Debe pasar por el sistema operativo para acceder a los recursos.
+    · Un error en modo usuario solo afecta A LA APLICACIÓN (es recuperable),
+      NO detiene todo el sistema.
+
+CONTROLADORES (drivers):
+    · Software que permite que el SO y un dispositivo se comuniquen.
+    · Pueden correr en modo núcleo o en modo usuario, según el tipo.
+
+REGLA CLAVE: el error en KERNEL MODE detiene todo; el error en USER MODE
+solo afecta a la aplicación.
+
+=================================================================
+4. SISTEMAS DE ARCHIVOS DE WINDOWS
+=================================================================
+- Sistemas de archivos de Windows: exFAT, HFS (Sistema de archivos
+  jerárquico), EXT (Sistema de archivos extendido) y NTFS.
+
+- NTFS (New Technology File System / Sistema de archivos de nuevas
+  tecnologías) = el MÁS UTILIZADO en Windows. Razones:
+    · Admite archivos y particiones MUY GRANDES.
+    · Es muy COMPATIBLE con otros sistemas operativos.
+    · Es muy CONFIABLE.
+    · Admite funciones de RECUPERACIÓN.
+
+- ADS (Alternate Data Streams / Flujos de datos alternativos):
+    · Sistema alternativo que tiene NTFS para guardar información ADICIONAL
+      dentro de un archivo, SIN crear archivos separados.
+    · Son como "huecos secretos" / "bolsillos ocultos" del archivo.
+    · El contenido normal está en el stream $DATA (principal), y los stream
+      nombrados adicionales quedan ocultos (no se ven en el Explorador).
+    · USO LEGÍTIMO: Windows usa ADS "Zone.Identifier" para marcar archivos
+      descargados de Internet.
+    · RIESGO DE SEGURIDAD: los atacantes ocultan ejecutables/malware dentro
+      de los ADS de archivos inocentes, evadiendo antivirus y el explorador.
+      (MITRE ATT&CK: T1564.004 - Hide Artifacts).
+
+=================================================================
+5. PROCESO DE ARRANQUE DE WINDOWS
+=================================================================
+- Cuando se enciende la PC hay procedimientos ANTES de iniciar el SO.
+- Dos métodos que se ven seguido: BIOS y UEFI.
+
+BIOS:
+    · Sistema antiguo. Realiza el POST (prueba de hardware) y localiza el SO.
+    · Usa el arranque MBR (Master Boot Record / registro maestro de arranque).
+    · Después pasa el control a BOOTMGR (bootmgr.exe), el Administrador de
+      arranque protegido de Windows.
+    · Flujo: BIOS (POST) -> MBR -> BOOTMGR -> winload.exe -> ntoskrnl.exe
+
+UEFI:
+    · Sistema moderno (reemplaza al BIOS).
+    · Usa partición EFI (GPT) en vez de MBR.
+    · Ventajas: arranque MÁS RÁPIDO, soporta discos > 2TB, y SECURE BOOT
+      (verifica las firmas digitales de los componentes de arranque para
+      impedir que corra código no autorizado).
+    · El equivalente a BOOTMGR es bootmgfw.efi.
+
+RESUMEN DEL ARRANQUE (fases):
+    PreBoot (BIOS/UEFI + POST)
+    -> Boot Manager (BOOTMGR, lee el BCD: datos de configuración de arranque)
+    -> OS Loader (winload.exe/.efi, carga el kernel)
+    -> Inicialización del kernel (ntoskrnl.exe + drivers)
+
+BCD = Boot Configuration Data: base de datos donde Windows guarda la
+configuración de arranque (qué SO arrancar, etc.).
+
+Nota: los sistemas pre-Vista usaban NTLDR + boot.ini; los modernos usan
+BOOTMGR + BCD.
+
+=================================================================
+6. REGISTRO DE WINDOWS (Inicio de sesión)
+=================================================================
+- Cuando Windows inicia e inicia sesión el usuario, el registro contiene
+  los ajustes del sistema:
+    · HKEY_LOCAL_MACHINE -> configuración de TODA la máquina.
+    · HKEY_CURRENT_USER  -> configuración del USUARIO actual.
+- Para ver cómo inicia Windows se puede usar MSCONFIG (Configuración del
+  sistema): Win + R -> msconfig.
+- REGLA: OJO - MSCONFIG es para configurar el ARRANQUE y servicios que
+  inician con Windows. El ADMINISTRADOR DE TAREAS tiene su propio atajo:
+  Ctrl + Shift + Esc.
+- Todo cambio de configuración queda registrado en el REGISTRO de Windows.
+
+=================================================================
+7. APAGADO Y REINICIO CORRECTO
+=================================================================
+- Es importante apagar Windows correctamente (cerrando procesos de forma
+  adecuada) o usar HIBERNAR.
+- Si se apaga de forma APRESURADA o FORZADA, la cantidad de daños que se
+  pueden generar en el sistema pueden ser catastróficos o costosos (por
+  ejemplo, corrupción de archivos o del registro).
+
+=================================================================
+8. PROCESOS, SUBPROCESOS Y ADMINISTRADOR DE TAREAS
+=================================================================
+- Una aplicación de Windows se compone de PROCESOS.
+- Un PROCESO es cualquier programa que se está ejecutando.
+- Cada proceso en ejecución está compuesto de, al menos, un SUBPROCESO
+  (thread / subproceso).
+- Un SUBPROCESO es una parte del proceso que puede ejecutarse.
+- Administrador de tareas: se abre con Ctrl + Shift + Esc (no con msconfig).
+
+=================================================================
+9. REDES Y MONITOREO EN WINDOWS
+=================================================================
+- Centro de redes y recursos compartidos: apartado de Windows para
+  administrar redes.
+- nslookup: sirve para saber qué DIRECCIÓN IP tiene una página web
+  (resolver nombre de dominio -> IP).
+- netstat: muestra qué conexiones están ACTIVAS o quién está conectado a tu PC.
+- VISOR DE EVENTOS: es el que MONITOREA el registro de lo que se hace en
+  Windows (registros de eventos: errores, advertencias, inicios de sesión...).
+- REGISTRO DE WINDOWS: cuando se realiza un cambio de configuración, queda
+  registrado aquí.
+- WINDOWS DEFENDER: ayuda a proteger la seguridad de la PC
+  (antivirus/antimalware integrado).
+
+=================================================================
+IDEAS CLAVE PARA EL EXAMEN
+=================================================================
+- HAL = comunicación entre el HARDWARE y el KERNEL.
+- Kernel mode: acceso ilimitado al hardware, puede ejecutar cualquier
+  instrucción; un error aquí DETIENE todo el equipo.
+- User mode: aplicaciones; un error aquí solo afecta a la aplicación.
+- NTFS = sistema de archivos más usado (grande, compatible, confiable,
+  recuperación).
+- ADS = datos ocultos dentro de archivos NTFS; los atacantes los usan para
+  esconder malware.
+- Arranque: BIOS/UEFI -> MBR/GPT -> BOOTMGR -> winload -> ntoskrnl.
+- UEFI: más rápido, >2TB, Secure Boot (verifica firmas digitales).
+- Registro: HKEY_LOCAL_MACHINE y HKEY_CURRENT_USER.
+- Proceso = programa ejecutándose; subproceso (thread) = parte del proceso.
+- Admin de tareas: Ctrl + Shift + Esc (msconfig es para configuración del
+  arranque).
+- nslookup = resolver IP de un dominio. netstat = conexiones activas.
+- Visor de eventos = monitorea lo que se hace en Windows.
