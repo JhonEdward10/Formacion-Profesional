@@ -1,0 +1,132 @@
+RESUMEN CAPÍTULO 9 - PROTECCIÓN DE TERMINALES (Repaso)
+(Verificado con material oficial Cisco/CCNA y Microsoft)
+
+=================================================================
+1. LAS TRES CLAVES DE LA SEGURIDAD EN SISTEMAS OPERATIVOS
+=================================================================
+· Un BUEN ADMINISTRADOR.
+· Un ENFOQUE SISTEMÁTICO: establecimiento, evaluación, planificación e
+  instalación de las aplicaciones correspondientes.
+· LÍNEA DE BASE (baseline): se COMPARA una línea de base de cómo SE QUIERE
+  que funcione el sistema contra cómo FUNCIONA realmente.
+
+=================================================================
+2. MALWARE (tipos)
+=================================================================
+· Virus
+· Gusanos (worms)
+· Troyanos
+· Registradores de teclado (keyloggers): registran las pulsaciones de teclas
+  para acceder a contraseñas y otra información confidencial.
+· Spyware
+· Adware
+
+NOTA: los tres más comunes son Virus, Gusano y Troyano.
+
+=================================================================
+3. PROTECCIONES DE MALWARE (monitor de protección)
+=================================================================
+· Monitores de protección ANTIVIRUS: detectan virus, advierten al usuario y
+  el programa intenta eliminar el virus o ponerlo en CUARENTENA.
+· Protección de ADWARE: busca programas que muestren publicidad no deseada en
+  cuadros emergentes y bloquea el adware sospechoso.
+· Protección contra PHISHING: bloquea las direcciones IP de sitios web de
+  phishing conocidos y advierte al usuario sobre sitios sospechosos.
+· Protección contra SPYWARE: analiza registradores de teclas (keyloggers) y
+  otros tipos de spyware.
+· Verificación de fuentes CONFIABLES / NO CONFIABLES: advierte al usuario
+  sobre programas o sitios web no seguros.
+
+MATIZ (antivirus vs anti-malware):
+    · Antivirus: bloquea/elimina malware TRADICIONAL (por firmas/patrones).
+    · Anti-malware: técnicas para detectar variantes NUEVAS y sofisticadas
+      (heurística, análisis de comportamiento).
+    · Windows Defender combina ambos.
+
+=================================================================
+4. RESPONSABILIDAD DEL ADMINISTRADOR DE RED
+=================================================================
+· Gestionar los PARCHES (service packs) de los programas.
+· Muchos ataques se pueden EVITAR si se instalan los service packs
+  correspondientes.
+· El administrador de red es responsable de mantener, actualizar y darle
+  forma a la red.
+
+=================================================================
+5. SEGURIDAD DE TERMINALES (END POINTS)
+=================================================================
+· FIREWALL BASADO EN EL HOST:
+    - Permite o bloquea el acceso al dispositivo mediante el bloqueo de
+      conexiones ENTRANTES y SALIENTES, según las reglas establecidas.
+    - Ejemplo: Windows Defender.
+
+· HIDS (Host-based Intrusion Detection System):
+    - Sistema de DETECCIÓN de intrusiones basado en host.
+    - MONITOREA el comportamiento del sistema (archivos, procesos, registros)
+      en busca de actividades anómalas y AVISA cuando detecta una.
+    - Solo detecta y alerta; NO bloquea.
+
+· HIPS (Host-based Intrusion Prevention System):
+    - Sistema de PREVENCIÓN de intrusiones basado en host.
+    - Además de DETECTAR las anomalías, las BLOQUEA de forma ACTIVA para
+      impedir el incidente.
+    - Regla: HIDS = detecta/avisa.  HIPS = detecta BLOQUEA.
+
+· EDR (Endpoint Detection and Response):
+    - Es como un antivirus que puede BLOQUEAR amenazas, pero además
+      MONITOREA y ANALIZA el COMPORTAMIENTO del terminal.
+    - Detecta, RESPONDE e INVESTIGA la CAUSA RAÍZ de la amenaza, no solo
+      limpia archivos.
+    - Detecta también malware sin firma (fileless/evasivo).
+    - Conjunto: EPP (plataforma de protección) = línea base; EDR = capa de
+      detección y respuesta.
+
+· Herramientas DLP (Data Loss Prevention):
+    - Proporcionan de forma CENTRALIZADA que los datos no se pierdan, no se
+      usen mal o no se acceda a ellos de forma no autorizada.
+    - Protegen contra pérdida y FILTRACIÓN de información sensible
+      (monitorea/controla los datos).
+
+· NGFW (Next-Generation Firewall):
+    - Firewall de próxima generación: hace inspección PROFUNDA de las
+      aplicaciones (hasta capa 7) y protege contra intrusiones (IPS integrado).
+
+=================================================================
+6. CIFRADO DEL HOST
+=================================================================
+· FDE (Full Disk Encryption): cifra TODO EL DISCO. En Windows, BitLocker.
+    - Protege los datos en reposo si roban o se pierde el equipo.
+    - Cifra volúmenes, archivos del sistema e incluso archivos eliminados.
+    - Incluye protección pre-arranque (autenticación antes de que el SO arranque).
+
+· EFS (Encrypting File System): cifra ARCHIVOS y CARPETAS individuales
+  (no todo el disco).
+
+DIFERENCIA CLAVE: FDE = todo el disco; EFS = archivos/carpetas sueltos.
+
+=================================================================
+7. INTEGRIDAD DE ARRANQUE
+=================================================================
+· Se vela porque el sistema operativo al ARRANCAR NO haya sido alterado.
+· Puede suceder desde la BIOS / secuencia de arranque.
+· Para proporcionar un SO seguro, se quiere que TODO arranque con normalidad
+  y con las partes que correspondan: ninguna pieza de HW ni SW alterada.
+· Se relaciona con UEFI SECURE BOOT (cap 7): verifica las firmas digitales de
+  los componentes de arranque para impedir código no autorizado.
+
+=================================================================
+IDEAS CLAVE PARA EL EXAMEN
+=================================================================
+- 3 claves: buen admin + enfoque sistemático + línea de base.
+- Malware: virus, gusanos, troyanos, keyloggers, spyware, adware.
+- Antivirus = detecta/limpiar/cuarentena. Anti-phishing = bloquea IP de sitios
+  de phishing. Anti-spyware = analiza keyloggers.
+- Parches/service packs: evitan muchos ataques (responsabilidad del admin).
+- Firewall host: bloquea conexiones entrantes y salientes (Windows Defender).
+- HIDS = DETECTA y AVISA.  HIPS = DETECTA y BLOQUEA.
+- EDR = antivirus + análisis de comportamiento + investiga causa raíz.
+- DLP = evitar pérdida/uso indebido/fuga de datos.
+- NGFW = inspección profunda de apps + IPS integrado.
+- FDE = cifra todo el disco (BitLocker). EFS = cifra archivos/carpetas.
+- Integridad de arranque = que el SO no haya sido alterado al arrancar
+  (relacionado con Secure Boot/UEFI).

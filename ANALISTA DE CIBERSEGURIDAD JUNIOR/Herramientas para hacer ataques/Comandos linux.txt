@@ -72,7 +72,7 @@ Docker -> Estanteria
 
 #######################################################################################
 
-#Gestor de paquetes
+#Gestor de paquetes -> Actualizar sistema
 ✅apt-get — Gestor de paquetes para instalar programas.
 ✅apt-get update — Actualiza la lista de paquetes disponibles.
 ✅apt-get upgrade — Actualiza los programas instalados a su versión más nueva.
@@ -137,7 +137,19 @@ Docker -> Estanteria
 #######################################################################################
 
 #Para saber el linux que se tiene se coloca el comando 
-✅uname -sr
+✅uname -sr 
+✅neofetch  ->  Todo en uno (el más visual)
+✅sudo lshw -short  ->  Información detallada del hardware
+✅lscpu  -> Solo CPU
+✅free -h  -> Solo RAM
+✅lsblk  -> Solo discos
+
+✅nvidia-smi 
+✅lspci | grep -i "VGA\|Display"  -> Pantallas conectadas -> todo es un solo comando
+
+✅xrandr --query  -> Pantallas conectadas:
+✅sudo dmidecode | less  -> Todo el sistema detallado:
+
 
 #######################################################################################
 

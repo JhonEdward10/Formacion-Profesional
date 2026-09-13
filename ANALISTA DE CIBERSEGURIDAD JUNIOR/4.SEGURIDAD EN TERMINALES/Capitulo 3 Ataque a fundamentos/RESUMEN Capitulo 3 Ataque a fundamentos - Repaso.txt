@@ -1,0 +1,171 @@
+RESUMEN CAPÍTULO 3 - ATAQUE A FUNDAMENTOS (Vulnerabilidades de IP,TCP/IP)
+(Verificado con teoría oficial CCNA/Cisco y RFC 793/2460/4987)
+
+=================================================================
+1. IDEA CENTRAL: ¿por qué se puede atacar IP?
+=================================================================
+· IPv4 se limita a comunicar una dirección con otra.
+· NO rastrea el ENVÍO ni el CONTENIDO del envío (no hay verificación).
+· Por eso se pueden FALSIFICAR (SPOOFEAR) direcciones IP: el protocolo
+  confía en el encabezado sin validarlo.
+· Los atacantes aprovechan esto para mandar paquetes haciéndose pasar por
+  otros (suplantación) o para explotar el propio protocolo.
+
+=================================================================
+2. ENCABEZADO IPv4 (campos) - MEMORIZAR
+=================================================================
+| Campo                          | Tamaño   | Función                          |
+|--------------------------------|----------|----------------------------------|
+| Versión                        | 4 bits   | Binario 0100 = IPv4 (4)          |
+| Longitud de cabecera (IHL)     | 4 bits   | Longitud del encabezado; mínima 20 bytes |
+| Servicio diferenciado (DS)     | 8 bits   | Prioridad del paquete; 6 bits DSCP + 2 bits ECN |
+| Longitud total                 | 2 bytes  | Tamaño total del paquete; máximo 65,535 bytes |
+| Identificación/Flags/Offset    |          | Fragmentar y rearmar el paquete  |
+| TTL (Tiempo de vida)           | 8 bits   | Se reduce en 1 por cada router; llega a 0 -> descarta y envía ICMP "tiempo superado" |
+| Protocolo                      | 8 bits   | Capa superior: ICMP(1), TCP(6), UDP(17) |
+| Checksum del encabezado        |          | Detectar errores en el encabezado |
+| IP origen/destino              | 32 bits  | Direcciones; el ORIGEN siempre es UNICAST |
+| Opciones + Relleno             | variable | Múltiplo de 32 bits (se agregan ceros si hace falta) |
+
+Detalles finos:
+· La cabecera IPv4 mínima es de 20 bytes (5 bloques de 32 bits).
+· El checksum se RECALCULA en cada router (porque el TTL cambia).
+· IPv4 permite fragmentación en la cabecera base.
+
+=================================================================
+3. ENCABEZADO IPv6 (8 campos)
+=================================================================
+| Campo            | Tamaño   | Equivalencia/Comparación        |
+|------------------|----------|----------------------------------|
+| Versión          | 4 bits   | Binario 0110 = IPv6 (6)          |
+| Clase de tráfico | 8 bits   | Equivale al campo DS de IPv4     |
+| Etiqueta de flujo| 20 bits  | Paquetes de la misma etiqueta se manejan igual (flujo) |
+| Carga útil (payload) | 16 bits | Longitud de la parte de datos  |
+| Próximo encabezado | 8 bits  | Equivale al campo "Protocolo" de IPv4 |
+| Límite de saltos | 8 bits   | SUSTITUYE al TTL de IPv4; se reduce en 1 por router; a 0 descarta + ICMPv6 "tiempo superado" |
+| IP origen/destino| 128 bits | Direcciones de 128 bits (vs 32 de IPv4) |
+
+Cambios de IPv6 respecto a IPv4:
+· TTL -> Límite de saltos (Hop Limit).
+· Protocolo -> Próximo encabezado (Next Header).
+· Tipo de servicio -> Clase de tráfico.
+· Direcciones: 32 -> 128 bits.
+· ELIMINA el checksum de cabecera.
+· ELIMINA fragmentación y opciones de la cabecera base
+  (se hacen con cabeceras de extensión).
+
+=================================================================
+4. VULNERABILIDADES DE TCP (banderas y ataques)
+=================================================================
+LAS 6 BANDERAS TCP (flags):
+· URG - indicador urgente importante.
+· ACK - reconocimiento significativo.
+· PSH - función de empuje (enviar ya sin esperar buffer lleno).
+· RST - RESTABLECER la conexión (reset).
+· SYN - SINCRONIZAR números de secuencia (iniciar conexión).
+· FIN - no hay más datos del emisor (cerrar conexión).
+
+HANDSHAKE TCP DE 3 PASOS (comunicación antes de enviar):
+1. SYN (SEQ=100, CTL=SYN) -> El cliente ORIGEN solicita sesión al servidor.
+2. SYN, ACK (SEQ=300, ACK=101, CTL=SYN,ACK) -> El servidor reconoce al cliente
+   y solicita la sesión en sentido inverso.
+3. Establecido (SEQ=101, ACK=301, CTL=ACK) -> El cliente completa el handshake.
+
+ATAQUES RELACIONADOS CON TCP:
+· ESCANEO DE PUERTOS TCP: probar puertos para ver cuáles están abiertos
+  (ej: SYN scan / "half-open", el más rápido).
+· SATURACIÓN TCP SYN (SYN flood): el atacante envía un gran volumen de SYN
+  con IPs de origen FALSIFICADAS; el destino responde SYN-ACK a la IP falsa
+  y espera un ACK que nunca llega; la cola de conexiones MEDIO ABIERTAS
+  (half-open) se llena -> se deniega servicio a usuarios legítimos (DoS).
+· ATAQUE DE RESTABLECIMIENTO TCP (TCP reset): el atacante envía un RST con
+  un número de secuencia adivinado para TUMBAR una conexión legítima.
+· SECUESTRO DE SESIÓN TCP (TCP hijacking): el atacante se hace pasar por la
+  víctima y envía paquetes dentro de una conexión ya ESTABLECIDA
+  (inyectando datos / tomando la sesión).
+
+La clave de los ataques TCP: dependen de ADIVINAR los números de secuencia.
+
+=================================================================
+5. VULNERABILIDADES DE IP (ataques)
+=================================================================
+· ATAQUES ICMP: usan paquetes "echo" para DETECTAR subredes y hosts en una
+  red protegida, luego generar DoS de saturación y modificar tablas de
+  enrutamiento.
+
+· DoS (Denegación de Servicio): impedir que usuarios legítimos accedan a un
+  servicio (web, información, etc.).
+
+· DDoS (Denegación de Servicio Distribuida): lo mismo que DoS pero con MUCHAS
+  máquinas enviando solicitudes de forma coordinada.
+
+· SUPLANTACIÓN DE DIRECCIÓN (Spoofing): suplantar direcciones IP.
+    - BLIND spoofing: el atacante NO puede ver el tráfico/respuestas.
+    - NON-BLIND spoofing: el atacante SÍ puede ver el tráfico (sniffing).
+
+· MAN-IN-THE-MIDDLE (MiTM): el atacante se POSICIONA ENTRE el origen y el
+  destino; escucha y ve todo lo que hace la víctima.
+
+· ATAQUES DE SESIÓN: relacionado con TCP hijacking / adivinación de secuencia.
+
+=================================================================
+6. ATAQUES ICMP EN PROFUNDIDAD
+=================================================================
+Los atacantes usan ICMP para RECONOCIMIENTO:
+· Reconocer la topología de red, hosts activos, tipo de SO e incluso el
+  tipo de firewall.
+· Hacer DoS/DDoS inundando la red con solicitudes echo (saturan el sistema).
+
+MENSAJES ICMP de interés para atacantes:
+· Echo request / Echo reply -> verificación de hosts activos y DoS.
+· Unreachable (destino inalcanzable) -> reconocimiento y escaneo de la red.
+· Mask reply -> mapear una red IP interna.
+· Redirects -> lograr que un host objetivo envíe todo su tráfico a través de
+  un dispositivo comprometido (crear MiTM).
+· Router Discovery -> inyectar entradas de rutas FALSAS en la tabla de
+  enrutamiento de un host objetivo.
+
+MITIGACIÓN: las redes deben tener FILTROS ESTRICTOS de LISTA DE CONTROL DE
+ACCESO (ACL) de ICMP en el PERÍMETRO de la red para evitar sondeos de ICMP
+desde Internet.
+
+"SMURF ATTACK": ataque de amplificación con ICMP: el atacante envía solicitudes
+echo (ping) con la IP de la VÍCTIMA como origen (spoofing) a la dirección de
+BROADCAST de una red; TODOS los hosts responden a la víctima, saturándola
+(DoS).
+
+=================================================================
+7. RESUMEN DE ATAQUES (los que debes saber para el examen)
+=================================================================
+- Spoofing de IP (blind / non-blind)
+- DoS y DDoS
+- Man-in-the-Middle (MiTM)
+- Ataques ICMP (sondeo, DoS, redirects, router discovery)
+- Smurf attack
+- Escaneo de puertos TCP
+- SYN flood (saturación TCP SYN)
+- TCP reset
+- Secuestro de sesión TCP
+
+=================================================================
+IDEAS CLAVE PARA EL EXAMEN
+=================================================================
+- IPv4 no valida el origen -> se pueden falsificar IPs (spoofing).
+- Encabezado IPv4: versión 0100 (4), IHL (mín 20 bytes), DS (8 bits, 6 DSCP +
+  2 ECN), longitud total (máx 65,535 bytes), TTL (baja con cada router, a 0
+  descarta + ICMP "tiempo superado"), protocolo (ICMP 1, TCP 6, UDP 17),
+  checksum, IPs 32 bits, opciones (múltiplo de 32).
+- IP origen SIEMPRE unicast.
+- Encabezado IPv6: versión 0110 (6), 8 campos, hop limit = TTL, next header =
+  protocolo, 128 bits, sin checksum.
+- Banderas TCP: URG, ACK, PSH, RST, SYN, FIN (S=iniciar, F=cerrar,
+  R=reset, A=reconocer).
+- Handshake: SYN -> SYN-ACK -> ACK.
+- SYN flood llena la cola de conexiones medio abiertas (DoS).
+- TCP reset: adivinar secuencia para tumbar conexión.
+- TCP hijacking: adivinar secuencia para secuestrar sesión establecida.
+- Blind = no ve el tráfico; non-blind = sí lo ve (sniffing).
+- ICMP: echo=hosts activos/DoS, unreachable=escaneo, mask reply=mapeo IPs,
+  redirects=MiTM, router discovery=rutas falsas.
+- Mitigación ICMP: ACL estrictas en el perímetro.
+- Smurf: ping con IP de la víctima a broadcast -> todos responden -> DoS.
