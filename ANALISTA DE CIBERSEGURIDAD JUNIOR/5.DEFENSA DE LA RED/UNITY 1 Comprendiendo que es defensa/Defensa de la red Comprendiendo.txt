@@ -38,3 +38,14 @@ Entre las preguntas que se realizan estan estas:
 
 
 🌪️Identificacion de amenazas
+Identificando amenazas externas en la red se puede utilizar firewalls, routers, IPS (Sistema de prevencion de intrusion), AMP (proteccion avanzada contra malware), sistema de seguridad del contenido web y correo electronico, servicios de identidad y acceso a la red, ademas de otras.
+
+🧯Existen dos tipos de analogias para describir el enfoque de defensa en profundidad.
+ 
+🧅Security onion-> una analogia utilizada es describir el enfoque que se denomina la cebolla de seguridad. En donde un atacante tendria que quitar los mecanismos de defensa de la red capa por capa, de manera similar a una cebolla, solo asi podria penetrar la capa para llegar a los activos.
+
+
+🫛Alcachofa de seguridad -> es un panorama cambiannte de las redes, por 
+ 
+
+
