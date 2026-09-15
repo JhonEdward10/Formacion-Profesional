@@ -1,0 +1,40 @@
+Defensa de la red - Comprendiendo que es Defensa
+
+Siempre en la defensa debe saber que es lo que se va a proteger.
+
+Los activos tambien deben tener cierto tipo de clasificacion, entre ellos hay que determinar la categoria del activo, como:
+
+.Activos de informacion
+.Activos de software
+.Activos Fisicos
+.Servicios
+
+Hay que identificar al propietario del activo y al propietario del software
+
+Se determina los criterios de clasificacion, entre ellos:
+
+Confidencialidad
+Valor
+Tiempo
+Derecho de acceso
+Destruccion
+
+Esto se debe analizar de forma consistente para garantizar una proteccion uniforme y facilitar el control.
+
+Aqui es donde los especialistas en ciberseguridad, parte del trabajo de ellos consiste en administrar los recursos y los sistemas relacionados con la informacion.
+
+Los dispositivos que se adquieren obtienen un filtro de lo que van a realizar en la empresa:
+
+Adquisiciones, Implementacion, utilizacion, mantenimiento y eliminacion.
+
+☠️Identificacion de vulnerabilidades 
+Identificar los problemas o vulnerabilidades antes de que suceda puede ayudar a estar preparados para casos infortuitos
+
+Entre las preguntas que se realizan estan estas: 
+
+¿Cuáles son las posibles vulnerabilidades de un sistema?
+¿Quién podría aprovechar estas vulnerabilidades para obtener acceso a activos de información específicos?
+¿Cuáles serían las consecuencias si alguien aprovecha vulnerabilidades del sistema y se pierden activos?
+
+
+🌪️Identificacion de amenazas

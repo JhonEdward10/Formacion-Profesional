@@ -1,0 +1,101 @@
+CHEAT-SHEET CAPÍTULO 3 - ENCABEZADOS Y ATAQUES (Repaso rápido)
+(Verificado con CCNA/Cisco y RFC 793/2460/4987)
+
+=================================================================
+¿POR QUÉ MEMORIZAR EL ENCABEZADO?
+=================================================================
+El encabezado es la "caja negra" del paquete. Cada ataque ABUSA de un campo
+del encabezado. Si entiendes qué campo existe, entiendes qué se falsifica o
+se explota.
+
+TABLA ENCABEZADO -> ATAQUE:
+| Campo                          | Qué hace                     | Ataque que lo abusa        |
+|--------------------------------|------------------------------|----------------------------|
+| IP origen/destino              | dice quién envía y a quién   | SPOOFING (falsificar origen)|
+| Protocolo / Next Header        | TCP(6), UDP(17), ICMP(1)     | atacar ese protocolo       |
+| Banderas SYN/ACK/RST (TCP)     | iniciar/reconocer/resetear   | SYN flood, TCP reset       |
+| Números de secuencia (TCP)     | ordenar los datos            | TCP hijacking, reset       |
+| ICMP echo (tipo ICMP)          | ping: ¿responde el host?     | sondeo/reconocimiento, Smurf |
+| Checksum                       | detectar errores             | (mitigación de corrupción) |
+
+=================================================================
+LOS 6 ATAQUES CLAVE (definiciones cortas)
+=================================================================
+
+1) SPOOFING (suplantación de IP)
+   - Falsificar la dirección IP de ORIGEN en el paquete.
+   - BLIND  : el atacante NO ve las respuestas (manda a ciegas).
+   - NON-BLIND: el atacante SÍ ve el tráfico (hace sniffing).
+
+2) ATAQUES DE SESIÓN (TCP hijacking / secuestro de sesión)
+   - Adivina los números de secuencia y se inyecta en una sesión YA
+     establecida (se hace pasar por la víctima o como MiTM).
+   - Combina spoofing + adivinación de secuencia.
+
+3) DoS (Denegación de Servicio)
+   - UNA máquina impide que usuarios legítimos accedan a un servicio
+     (web, información, etc.).
+
+4) DDoS (Denegación de Servicio Distribuida)
+   - Lo mismo que DoS pero MANY máquinas coordinadas (botnet) envían
+     solicitudes a la vez.
+
+5) MiTM (Hombre en el medio)
+   - El atacante se POSICIONA ENTRE origen y destino; escucha y ve todo
+     lo que hace la víctima.
+   - Usa spoofing para lograrlo (suplanta al servidor frente al cliente
+     y viceversa).
+
+6) ATAQUES ICMP
+   - Usan el protocolo ICMP para:
+     · Reconocimiento: hosts activos, SO, firewall, topología.
+     · DoS/DDoS: inundar con solicitudes echo.
+   - Tipos de mensaje:
+     · Echo request/reply -> hosts activos y DoS.
+     · Unreachable        -> escaneo/reconocimiento.
+     · Mask reply         -> mapear red IP interna.
+     · Redirects          -> crear MiTM (redirigir tráfico).
+     · Router Discovery   -> inyectar rutas falsas en la tabla.
+   - Mitigación: ACL de ICMP estrictas en el PERÍMETRO de la red.
+
+EXTRA: SMURF ATTACK
+   - El atacante envía un ping (echo request) con la IP de la VÍCTIMA como
+     origen (spoofing) a la dirección de BROADCAST de la red.
+   - TODOS los hosts responden a la víctima -> la saturan (DoS).
+
+=================================================================
+TCP: BANDERAS Y HANDSHAKE
+=================================================================
+Banderas:  URG | ACK | PSH | RST | SYN | FIN
+   - SYN: iniciar (sincronizar secuencias)
+   - ACK: reconocer
+   - RST: resetear/tumbar la conexión
+   - FIN: no hay más datos (cerrar)
+   - PSH: empujar los datos ya
+   - URG: urgente
+
+Handshake 3 pasos:  SYN -> SYN-ACK -> ACK
+
+=================================================================
+IPv4 vs IPv6 EN 30 SEGUNDOS
+=================================================================
+IPv4: 32 bits -> 4 octetos (8 bits c/u) -> decimal con puntos.
+      192.168.1.10  |  Cabecera mínima 20 bytes | Sí checksum | fragmenta
+      TTL baja por cada router; a 0 descarta + ICMP "tiempo superado".
+
+IPv6: 128 bits -> 8 grupos (16 bits c/u) -> hexadecimal con dos puntos.
+      2001:0DB8:85A3::8A2E:0370:7334  |  Hop limit = TTL | SIN checksum
+      Next header = Protocolo | 128 bits | fragmentación por extensiones.
+
+=================================================================
+IDEAS CLAVE (memoriza estas frases)
+=================================================================
+- IPv4 no valida el origen -> SPOOFING.
+- Spoofing = falsificar identidad (técnica). MiTM = estar en medio (escenario).
+- Blind = no ves tráfico. Non-blind = sí lo ves.
+- SYN flood llena la cola de conexiones MEDIO ABIERTAS -> DoS.
+- TCP reset / hijacking: DEPENDEN de adivinar los números de secuencia.
+- ICMP: echo=hosts activos, unreachable=escaneo, mask reply=mapeo,
+  redirects=MiTM, router discovery=rutas falsas.
+- ACL de ICMP en el perímetro = mitigación.
+- Smurf: ping a broadcast con IP de la víctima = amplificación (DoS).
