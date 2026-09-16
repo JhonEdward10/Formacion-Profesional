@@ -45,7 +45,23 @@ Identificando amenazas externas en la red se puede utilizar firewalls, routers, 
 🧅Security onion-> una analogia utilizada es describir el enfoque que se denomina la cebolla de seguridad. En donde un atacante tendria que quitar los mecanismos de defensa de la red capa por capa, de manera similar a una cebolla, solo asi podria penetrar la capa para llegar a los activos.
 
 
-🫛Alcachofa de seguridad -> es un panorama cambiannte de las redes, por 
- 
+🫛Alcachofa de seguridad -> es un panorama cambiante para el atacante pues lo favorece, en donde la red misma va revelando datos confidenciales que no estan bien protegidos.
+
+Por eso es mas facil llegar a los diferentes dispositivos moviles, pues no tienen la misma seguridad que una red con diferentes capas de seguridad, en donde no hay que quitar hoja por hoja, sino que los hackers van descascarando la armadura del perimetro para llegar al corazon de la empresa.
+
+📏Estrategia de defensa en profundidad: si una empresa cuenta con una medida de defensa los ciberdelincuentes solo pueden superar esa unica defensa para robar informacion, o causar el daño. Para garantizar la seguridad una empresa debe utilizar estos consejos.
+
+Estratificacion: Debe establecer diferentes capas de proteccion ejemplo, si una empresa tiene informacion sensible, debe resguardarla en un cuarto seguro, en el edificio, en donde el acceso sea restringido, ademas de tener cierto certificado de acceso.
+
+Restriccion: Retomando lo anterior, se debe clasificar la informacion de donde se tiene y quienes la pueden utilizar de acuerdo a su trabajo; mediante permisos de archivos, el acceso de archivos. Ejemplo debe existir un procedimiento que restrinja el acceso a documentos sensibles y que la sala disponga CCTV (circuito cerrado de television), garantizara que nunca sacaran dichos documentos.
+
+Diversidad: debe existir los diferentes niveles de proteccion, porque no seria muy dificil para un delincuente realizar un ataque exitoso. en donde la empresa debe tener diferentes algoritmos de cifrado y sistemas de autenticacion en cada nivel para proteger los datos en diferentes estados. Para ellos pueden utilizar diferentes factores como autenticaciones, tarjeta magnetica, lectos de huellas dactilares, cerraduras de retardo en los tiempos de los armarios y la supervision de un miembro del personal de seguridad.
+
+Ocultamiento: una empresa jamas debe revelar ninguna informacion de los ciberdelincuentes para identificar el sistema operativo, el tipo o marca del equipo. Asi pues nunca se debe brindar informacion del sistema para no tener vulnerabilidades presentes.
+
+Simplicidad: sin embargo es una paradoja, tampoco se puede tener un sistema que sea dificil de entender, pues esto puede se contraproducente. Si los empleados no entienden como configurar correctamente la solucion, esto causara que los delincuentes pongan en peligro el sistema, porque los empleados pueden hacer mal las configuraciones o no las hacen, por la complejidad que esta desarrollada.
+
+
+
 
 
