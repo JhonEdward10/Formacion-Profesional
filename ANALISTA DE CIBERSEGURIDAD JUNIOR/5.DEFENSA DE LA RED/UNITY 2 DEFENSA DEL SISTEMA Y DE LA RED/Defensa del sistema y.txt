@@ -1,0 +1,7 @@
+Defensa del sistema y de la red
+
+Seguridad Fisica -> entre la seguridad fisica se encuentra las cercas y las barreras fisica, la biometria que esta siendo muy utilizada en formas como el rostro, huellas dactilares, o reticulares, ademas hay dos tipos de errores en la biometria que no permite pasar a las personas autorizadas, que es mas como una advertencia y la otra es un error que deje pasar a personas que no sean autorizadas, entre ellas los ciberdelincuentes.
+
+Tambien en la seguridad fisica se puede observar la vigilancia mediante personal de seguridad, bandas magneticas o camaras de seguridad
+
+Seguridad de las Aplicaciones -> 
