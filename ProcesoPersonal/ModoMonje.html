@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Modo Monje — Edward</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface2: #1a1a26;
+    --border: #2a2a3a;
+    --accent: #7c3aed;
+    --accent2: #a855f7;
+    --gold: #f59e0b;
+    --green: #10b981;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --text: #e8e8f0;
+    --text2: #9090a8;
+    --gym: #f59e0b;
+    --cisco: #3b82f6;
+    --algo: #10b981;
+    --ingles: #a855f7;
+    --nofap: #ef4444;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f0f0f8;
+      --surface: #ffffff;
+      --surface2: #f8f8ff;
+      --border: #d0d0e0;
+      --text: #1a1a2e;
+      --text2: #6060808;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; }
+  body { padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); overflow-x: hidden; }
+
+  .header {
+    background: linear-gradient(135deg, #0a0a1a, #1a0a2e);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 1.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .logo { font-family: 'Space Mono', monospace; font-size: 1.1rem; color: var(--accent2); letter-spacing: 0.1em; }
+  .day-badge {
+    background: var(--accent);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .progress-bar-wrap { background: var(--border); border-radius: 4px; height: 6px; overflow: hidden; }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  .progress-label { display: flex; justify-content: space-between; margin-top: 0.4rem; font-size: 0.75rem; color: var(--text2); }
+
+  .main { padding: 1.5rem; max-width: 600px; margin: 0 auto; }
+
+  .date-strip {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text2);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .tasks-section { margin-bottom: 2rem; }
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text2);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .task-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .task-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    border-radius: 4px 0 0 4px;
+  }
+  .task-card.gym::before { background: var(--gym); }
+  .task-card.cisco::before { background: var(--cisco); }
+  .task-card.algo::before { background: var(--algo); }
+  .task-card.ingles::before { background: var(--ingles); }
+  .task-card.nofap::before { background: var(--nofap); }
+  .task-card.nofap .task-xp { color: var(--nofap); }
+  .xp-fill.nofap { background: var(--nofap); }
+
+  .task-card:hover { border-color: var(--accent); transform: translateX(2px); }
+  .task-card.done { opacity: 0.6; }
+  .task-card.done .task-name { text-decoration: line-through; }
+
+  .task-check {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  .task-card.done .task-check { background: var(--green); border-color: var(--green); }
+
+  .task-info { flex: 1; }
+  .task-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }
+  .task-meta { font-size: 0.75rem; color: var(--text2); font-family: 'Space Mono', monospace; }
+
+  .task-xp {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    background: var(--surface2);
+  }
+  .task-card.gym .task-xp { color: var(--gym); }
+  .task-card.cisco .task-xp { color: var(--cisco); }
+  .task-card.algo .task-xp { color: var(--algo); }
+  .task-card.ingles .task-xp { color: var(--ingles); }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .stat-value { font-family: 'Space Mono', monospace; font-size: 1.8rem; font-weight: 700; line-height: 1; }
+  .stat-label { font-size: 0.7rem; color: var(--text2); margin-top: 0.3rem; letter-spacing: 0.05em; }
+
+  .calendar-section { margin-bottom: 2rem; }
+  .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.4rem; }
+  .cal-day {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text2);
+  }
+  .cal-day.completed { background: var(--accent); border-color: var(--accent); color: white; }
+  .cal-day.today { border-color: var(--gold); color: var(--gold); font-weight: 700; }
+  .cal-day.today.completed { background: var(--gold); border-color: var(--gold); color: #000; }
+  .cal-day.future { opacity: 0.3; }
+
+  .rules-section { margin-bottom: 2rem; }
+  .rule-item {
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--text2);
+  }
+  .rule-item:last-child { border-bottom: none; }
+  .rule-num { font-family: 'Space Mono', monospace; color: var(--accent2); font-size: 0.7rem; flex-shrink: 0; margin-top: 2px; }
+
+  .reset-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text2);
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 2rem;
+  }
+  .reset-btn:hover { border-color: var(--red); color: var(--red); }
+
+  .toast {
+    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 0.8rem 1.5rem; border-radius: 30px;
+    font-size: 0.875rem; font-weight: 500;
+    z-index: 999; opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+  }
+  .toast.show { opacity: 1; }
+
+  .xp-bar-wrap { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem; }
+  .xp-label { font-size: 0.7rem; color: var(--text2); width: 60px; flex-shrink: 0; }
+  .xp-track { flex: 1; background: var(--border); border-radius: 4px; height: 5px; overflow: hidden; }
+  .xp-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+  .xp-fill.gym { background: var(--gym); }
+  .xp-fill.cisco { background: var(--cisco); }
+  .xp-fill.algo { background: var(--algo); }
+  .xp-fill.ingles { background: var(--ingles); }
+  .xp-count { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text2); width: 40px; text-align: right; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="logo">// MODO MONJE</div>
+    <div class="day-badge" id="dayBadge">Día 1 / 21</div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="globalProgress" style="width:0%"></div>
+  </div>
+  <div class="progress-label">
+    <span id="progressLabel">0% completado hoy</span>
+    <span id="xpTotal">0 XP</span>
+  </div>
+</div>
+
+<div class="main">
+  <div class="date-strip" id="dateStrip"></div>
+
+  <!-- Tareas del día -->
+  <div class="tasks-section">
+    <div class="section-title">Misiones de hoy</div>
+
+    <div class="task-card gym" id="task-gym" onclick="toggleTask('gym')">
+      <div class="task-check" id="check-gym">💪</div>
+      <div class="task-info">
+        <div class="task-name">Gym</div>
+        <div class="task-meta">07:00 – 09:30 · Entrenamiento</div>
+      </div>
+      <div class="task-xp">+30 XP</div>
+    </div>
+
+    <div class="task-card cisco" id="task-cisco" onclick="toggleTask('cisco')">
+      <div class="task-check" id="check-cisco">🛡️</div>
+      <div class="task-info">
+        <div class="task-name">Defensa de Red</div>
+        <div class="task-meta">10:00 – 11:30 · Cisco for All</div>
+      </div>
+      <div class="task-xp">+40 XP</div>
+    </div>
+
+    <div class="task-card algo" id="task-algo" onclick="toggleTask('algo')">
+      <div class="task-check" id="check-algo">🧮</div>
+      <div class="task-info">
+        <div class="task-name">Algoritmos</div>
+        <div class="task-meta">11:45 – 13:15 · Khan Academy</div>
+      </div>
+      <div class="task-xp">+35 XP</div>
+    </div>
+
+    <div class="task-card nofap" id="task-nofap" onclick="toggleTask('nofap')">
+      <div class="task-check" id="check-nofap">🔒</div>
+      <div class="task-info">
+        <div class="task-name">No Fap</div>
+        <div class="task-meta">Todo el día · Disciplina mental</div>
+      </div>
+      <div class="task-xp">+50 XP</div>
+    </div>
+
+    <div class="task-card ingles" id="task-ingles" onclick="toggleTask('ingles')">
+      <div class="task-check" id="check-ingles">🌐</div>
+      <div class="task-info">
+        <div class="task-name">Inglés</div>
+        <div class="task-meta">14:30 – 16:00 · Clase / Duolingo</div>
+      </div>
+      <div class="task-xp">+25 XP</div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value" id="statStreak" style="color: var(--gold);">0</div>
+      <div class="stat-label">🔥 Racha de días</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statXP" style="color: var(--accent2);">0</div>
+      <div class="stat-label">⚡ XP Total</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statDays" style="color: var(--green);">0</div>
+      <div class="stat-label">✅ Días completos</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statLeft" style="color: var(--blue);">21</div>
+      <div class="stat-label">📅 Días restantes</div>
+    </div>
+  </div>
+
+  <!-- XP por categoría -->
+  <div class="tasks-section">
+    <div class="section-title">Progreso por área</div>
+    <div class="xp-bar-wrap">
+      <div class="xp-label">Gym</div>
+      <div class="xp-track"><div class="xp-fill gym" id="bar-gym" style="width:0%"></div></div>
+      <div class="xp-count" id="xp-gym">0/630</div>
+    </div>
+    <div class="xp-bar-wrap">
+      <div class="xp-label">Cisco</div>
+      <div class="xp-track"><div class="xp-fill cisco" id="bar-cisco" style="width:0%"></div></div>
+      <div class="xp-count" id="xp-cisco">0/840</div>
+    </div>
+    <div class="xp-bar-wrap">
+      <div class="xp-label">Algoritmos</div>
+      <div class="xp-track"><div class="xp-fill algo" id="bar-algo" style="width:0%"></div></div>
+      <div class="xp-count" id="xp-algo">0/735</div>
+    </div>
+    <div class="xp-bar-wrap">
+      <div class="xp-label">No Fap</div>
+      <div class="xp-track"><div class="xp-fill nofap" id="bar-nofap" style="width:0%"></div></div>
+      <div class="xp-count" id="xp-nofap">0/1050</div>
+    </div>
+    <div class="xp-bar-wrap">
+      <div class="xp-label">Inglés</div>
+      <div class="xp-track"><div class="xp-fill ingles" id="bar-ingles" style="width:0%"></div></div>
+      <div class="xp-count" id="xp-ingles">0/525</div>
+    </div>
+  </div>
+
+  <!-- Calendario 21 días -->
+  <div class="calendar-section">
+    <div class="section-title">Los 21 días</div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+  </div>
+
+  <!-- Reglas -->
+  <div class="rules-section">
+    <div class="section-title">Reglas del modo monje</div>
+    <div class="rule-item"><span class="rule-num">01</span><span>Gym inamovible todos los días a las 7am</span></div>
+    <div class="rule-item"><span class="rule-num">02</span><span>Sin redes sociales antes de las 4pm</span></div>
+    <div class="rule-item"><span class="rule-num">03</span><span>7 horas de sueño mínimo, siempre</span></div>
+    <div class="rule-item"><span class="rule-num">04</span><span>Si hay mariachi, repones las horas de estudio</span></div>
+    <div class="rule-item"><span class="rule-num">05</span><span>Inglés todos los días sin excepción</span></div>
+    <div class="rule-item"><span class="rule-num">06</span><span>Marcar las tareas solo cuando estén completadas</span></div>
+    <div class="rule-item"><span class="rule-num">07</span><span>Assassin's Creed solo después de completar todo</span></div>
+  </div>
+
+  <button class="reset-btn" onclick="resetDay()">↺ Reiniciar día actual</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const TASKS = {
+  gym:    { xp: 30, max: 630 },
+  cisco:  { xp: 40, max: 840 },
+  algo:   { xp: 35, max: 735 },
+  nofap:  { xp: 50, max: 1050 },
+  ingles: { xp: 25, max: 525 }
+};
+
+const TOTAL_DAYS = 21;
+const START_DATE = new Date('2026-09-21');
+
+function getKey(k) { try { return JSON.parse(localStorage.getItem('monje_' + k)) } catch(e) { return null; } }
+function setKey(k, v) { try { localStorage.setItem('monje_' + k, JSON.stringify(v)); } catch(e) {} }
+
+function getTodayStr() {
+  const d = new Date();
+  return d.toISOString().split('T')[0];
+}
+
+function getCurrentDay() {
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const start = new Date(START_DATE);
+  start.setHours(0,0,0,0);
+  const diff = Math.floor((today - start) / (1000*60*60*24));
+  return Math.max(1, Math.min(diff + 1, TOTAL_DAYS));
+}
+
+function getTodayTasks() {
+  const key = getTodayStr();
+  return getKey('day_' + key) || {};
+}
+
+function saveTodayTasks(tasks) {
+  const key = getTodayStr();
+  setKey('day_' + key, tasks);
+}
+
+function getCompletedDays() {
+  return getKey('completed_days') || [];
+}
+
+function toggleTask(id) {
+  const tasks = getTodayTasks();
+  tasks[id] = !tasks[id];
+  saveTodayTasks(tasks);
+
+  // Check if all done
+  const allDone = Object.keys(TASKS).every(k => tasks[k]);
+  if (allDone) {
+    const completed = getCompletedDays();
+    const today = getTodayStr();
+    if (!completed.includes(today)) {
+      completed.push(today);
+      setKey('completed_days', completed);
+      showToast('🎉 ¡Día completo! +130 XP bonus');
+    }
+  }
+
+  render();
+  showToast(tasks[id] ? '✅ ¡Misión completada!' : '↩ Desmarcado');
+}
+
+function resetDay() {
+  if (!confirm('¿Reiniciar las tareas de hoy?')) return;
+  const key = getTodayStr();
+  localStorage.removeItem('monje_day_' + key);
+
+  // Remove from completed if was there
+  const completed = getCompletedDays();
+  const idx = completed.indexOf(key);
+  if (idx > -1) { completed.splice(idx, 1); setKey('completed_days', completed); }
+
+  render();
+  showToast('↺ Día reiniciado');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function calcTotalXP() {
+  let total = { gym: 0, cisco: 0, algo: 0, ingles: 0 };
+  for (let i = 0; i < TOTAL_DAYS; i++) {
+    const d = new Date(START_DATE);
+    d.setDate(d.getDate() + i);
+    const key = d.toISOString().split('T')[0];
+    const tasks = getKey('day_' + key) || {};
+    Object.keys(TASKS).forEach(t => { if (tasks[t]) total[t] += TASKS[t].xp; });
+  }
+  return total;
+}
+
+function calcStreak() {
+  const completed = getCompletedDays();
+  let streak = 0;
+  const today = new Date();
+  for (let i = 0; i < TOTAL_DAYS; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().split('T')[0];
+    if (completed.includes(key)) streak++;
+    else break;
+  }
+  return streak;
+}
+
+function render() {
+  const currentDay = getCurrentDay();
+  const tasks = getTodayTasks();
+  const completed = getCompletedDays();
+  const xpByArea = calcTotalXP();
+  const totalXP = Object.values(xpByArea).reduce((a,b) => a+b, 0);
+  const streak = calcStreak();
+
+  // Header
+  document.getElementById('dayBadge').textContent = `Día ${currentDay} / ${TOTAL_DAYS}`;
+  const todayDone = Object.keys(TASKS).filter(k => tasks[k]).length;
+  const todayPct = Math.round((todayDone / 5) * 100);
+  document.getElementById('globalProgress').style.width = todayPct + '%';
+  document.getElementById('progressLabel').textContent = todayPct + '% completado hoy';
+
+  const todayXP = Object.keys(TASKS).filter(k => tasks[k]).reduce((s,k) => s + TASKS[k].xp, 0);
+  document.getElementById('xpTotal').textContent = todayXP + ' XP hoy';
+
+  // Date
+  const now = new Date();
+  document.getElementById('dateStrip').textContent =
+    now.toLocaleDateString('es-CO', { weekday:'long', year:'numeric', month:'long', day:'numeric' }).toUpperCase();
+
+  // Tasks
+  Object.keys(TASKS).forEach(id => {
+    const card = document.getElementById('task-' + id);
+    const check = document.getElementById('check-' + id);
+    if (tasks[id]) {
+      card.classList.add('done');
+      check.textContent = '✓';
+    } else {
+      card.classList.remove('done');
+      const emojis = { gym: '💪', cisco: '🛡️', algo: '🧮', nofap: '🔒', ingles: '🌐' };
+      check.textContent = emojis[id];
+    }
+  });
+
+  // Stats
+  document.getElementById('statStreak').textContent = streak;
+  document.getElementById('statXP').textContent = totalXP;
+  document.getElementById('statDays').textContent = completed.length;
+  document.getElementById('statLeft').textContent = Math.max(0, TOTAL_DAYS - currentDay + 1);
+
+  // XP bars
+  Object.keys(TASKS).forEach(id => {
+    const earned = xpByArea[id];
+    const max = TASKS[id].max;
+    const pct = Math.round((earned / max) * 100);
+    document.getElementById('bar-' + id).style.width = pct + '%';
+    document.getElementById('xp-' + id).textContent = earned + '/' + max;
+  });
+
+  // Calendar
+  const grid = document.getElementById('calendarGrid');
+  grid.innerHTML = '';
+  const todayStr = getTodayStr();
+  for (let i = 0; i < TOTAL_DAYS; i++) {
+    const d = new Date(START_DATE);
+    d.setDate(d.getDate() + i);
+    const key = d.toISOString().split('T')[0];
+    const dayNum = i + 1;
+    const isToday = key === todayStr;
+    const isDone = completed.includes(key);
+    const isFuture = d > now;
+
+    const el = document.createElement('div');
+    el.className = 'cal-day' + (isDone ? ' completed' : '') + (isToday ? ' today' : '') + (isFuture && !isToday ? ' future' : '');
+    el.textContent = isDone ? '✓' : dayNum;
+    grid.appendChild(el);
+  }
+}
+
+render();
+</script>
+</body>
+</html>

@@ -5,3 +5,8 @@ Seguridad Fisica -> entre la seguridad fisica se encuentra las cercas y las barr
 Tambien en la seguridad fisica se puede observar la vigilancia mediante personal de seguridad, bandas magneticas o camaras de seguridad
 
 Seguridad de las Aplicaciones -> 
+
+Desarrollo y prueba
+El software se desarrolla y actualiza en un entorno de desarrollo, donde se puede desarrollar, probar y depurar antes de implementarlo. Un entorno de desarrollo es menos restrictivo que el entorno real y tiene un nivel de seguridad más bajo. Los desarrolladores también pueden trabajar en un entorno aislado (sandbox) para que el código no se sobrescriba mientras lo desarrollan. 
+
+
