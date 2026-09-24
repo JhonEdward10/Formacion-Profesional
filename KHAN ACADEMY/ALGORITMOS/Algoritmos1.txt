@@ -1,0 +1,5 @@
+Algoritmos
+
+Los algoritmos son los pasos para hacer algo, entre ellos tenemos:
+
+Algoritmo BInario: 
