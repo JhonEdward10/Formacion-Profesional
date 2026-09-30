@@ -2,4 +2,45 @@ Algoritmos
 
 Los algoritmos son los pasos para hacer algo, entre ellos tenemos:
 
-Algoritmo BInario: 
+🧑🏻‍🚀Haiku 4.5: preguntas rápidas, dudas de sintaxis, comandos de Linux, repasar un concepto. Es lo más barato.
+
+🕵🏻‍♂️Sonnet 5: trabajo real, como migrar módulos de SIGA, depurar, revisar arquitectura, estudiar ciberseguridad y practicar ejercicios.
+
+🤵Opus 5.5: solo para problemas difíciles, como decisiones de arquitectura grandes o bugs que Sonnet no logra resolver. Consume bastante más cuota, así que déjalo como último recurso.
+
+Algoritmo Binario: es donde un algoritmo encuentra un elemento en una lista ordenada de elementos; dividiendo repetidamente a la mitad la porcio de la lista para contener, hasta reducir la posibilidades a una sola. Es una forma mucho mas rapida que el metodo lineal, pues este busca uno por uno, hasta llegar a encontrar el resultado.
+
+Notacion asintotica: aqui es donde siempre buscamos que el sistema tarde menos independitemente de cual sea la entrada, lo que importa es que el algoritmo funcione.
+
+Se utilizan tres notaciones asintoticas: Notacion Θ grande, Notacion Ο grande, Notacion Ω grande
+
+Notacion Θ grande (Lineal): Es una notacion que mide lo que realmente importa, como crece el tiempo cuando crece el tamaño de los datos. Quiere decir que todo depende del algoritmo como este diseñado, porque no depende de las constantes, sino de como escala, dependiendo si hay un arreglo grande o pequeño. 
+Θ grande describe cómo crece el tiempo de ejecución cuando n crece, ignorando constantes y detalles de la computadora.
+
+La tabla mental que debes memorizar:
+
+Notación		Nombre			Ejemplo
+Θ(1)			Constante		Acceder a un elemento por índice
+Θ(log n)		Logarítmica		Búsqueda binaria
+Θ(n)			Lineal			Búsqueda lineal
+Θ(n log n)		Casi lineal		Ordenamiento eficiente (mergesort)
+Θ(n²)			Cuadrática		Ordenamiento burbuja (el que hiciste)
+
+Notacion Ο grande: es una acotacion grande no de tiempo sino de lo que podria pasar en el peor de los casos, siendo una garantía de lo peor que puede pasar.
+
+Para búsqueda binaria
+Peor caso: Θ(log₂ n) — encontrar el número al final o que no exista.
+Mejor caso: Θ(1) — encontrar el número al primer intento.
+Todos los casos: O(log₂ n) — "te garantizo que no es peor que log₂ n".
+
+Ejemplo del dinero (del texto)
+
+Tienes 10 pesos en el bolsillo y le dices a tu amigo:
+
+"Tengo menos de 1 millón de pesos" ← Cierto, pero impreciso. (O grande)
+"Tengo entre 5 y 15 pesos" ← Cierto y preciso. (Theta)
+
+Notación Omega grande (Big-Ω): 
+
+
+
