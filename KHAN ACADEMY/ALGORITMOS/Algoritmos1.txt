@@ -40,7 +40,9 @@ Tienes 10 pesos en el bolsillo y le dices a tu amigo:
 "Tengo menos de 1 millón de pesos" ← Cierto, pero impreciso. (O grande)
 "Tengo entre 5 y 15 pesos" ← Cierto y preciso. (Theta)
 
-Notación Omega grande (Big-Ω): 
+Notación Omega grande (Big-Ω): es una acotacion grande no de tiempo sino de lo que podria pasar en el menor de los casos.
+
+
 
 
 
