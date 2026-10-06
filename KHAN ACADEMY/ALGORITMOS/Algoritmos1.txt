@@ -42,7 +42,8 @@ Tienes 10 pesos en el bolsillo y le dices a tu amigo:
 
 Notación Omega grande (Big-Ω): es una acotacion grande no de tiempo sino de lo que podria pasar en el menor de los casos.
 
+Ordenamiento por seleccion 
 
-
+El ordenamiento por selección itera sobre los índices en el arreglo; para cada índice, el ordenamiento por selección llama indexOfMinimum y swap. Si la longitud del arreglo es n, hay n índices en el arreglo.
 
 
