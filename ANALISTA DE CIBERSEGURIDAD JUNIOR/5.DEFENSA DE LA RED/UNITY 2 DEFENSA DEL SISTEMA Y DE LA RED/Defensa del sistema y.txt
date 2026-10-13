@@ -9,4 +9,48 @@ Seguridad de las Aplicaciones ->
 Desarrollo y prueba
 El software se desarrolla y actualiza en un entorno de desarrollo, donde se puede desarrollar, probar y depurar antes de implementarlo. Un entorno de desarrollo es menos restrictivo que el entorno real y tiene un nivel de seguridad más bajo. Los desarrolladores también pueden trabajar en un entorno aislado (sandbox) para que el código no se sobrescriba mientras lo desarrollan. 
 
+Ensayo y produccion: es donde se prueban todos los entornos de produccion de la organizacion.Luego de que el desarrollador ejecuta y prueba la seguridad, el programa puede implementarse en produccion.
+
+Aprovisonamiento y desaprovisionamiento: es donde la creacion y actualizacion del software se da y el desaprovisionamiento es su eliminacion.
+
+En la seguridad de las empresas estas tienen unos estatus para poder funcionar correctamente, mediante su desarrollo, como lo es la:
+
+Normalizacion: Es la base de datos para organizar los datos y mantener la integridad de los mismos
+Stored procedure: son las instrucciones que se le da al SQL.
+Ofuscacion y camuflaje: Ocultar datos originales.
+Reutilizacion de codigo: Tecnica que significa usar codigo existente para contruir un nuevo software.
+SDK: software develomenpt kits. Es una biblioteca de terceros, proporcionando una repositorio de codigo util.
+
+En el control de acceso en produccion se deben manejar la validacion de entrada, ya que muchos ataques se realizan en bases de datos. Estos ataques pueden hacer que las bases de datos divulguen informacion. 
+
+En donde los clientes siempre rellenan formulacios para ingresar a la base de datos y reciben un correo de respuesta por parte de la base de datos, pero es ahi donde los atacantes cambian la informacion.
+
+Con esta informacion los atacantes pueden modificar tod. De este modo cuando el correo es respondido, recibe la informacion falsa en donde el cliente no es directamente consciente sino comprueba la informacion de la suscripcion.
+
+✅Hay ciertas reglas de validacion, entre las que destacan el tamaño de los datos, el formato, la coherencia, el rango y el digito de control. Para ello como son cadenas de 10 digitos, entonces: 
+1. Multiplique el primer dígito del ISBN por 10, el segundo dígito por 9… el noveno dígito por 2. 
+2. Sume todos los números = 10 + 45 + 64 + 49 + 6 + 20 + 12 + 21 + 6 = 233.
+3. El dígito de control es el número necesario para que el total se sume a un múltiplo de 11.
+Sume 9 a 233 para ser igual a 242, un múltiplo de 11
+
+Controles de integridad: Es donde se realiza una verificacion mediante la funcion de un hash, que toma una instantanea de los datos, y luego se garantiza que los datos esten sin cambios.
+
+Firma de codigo: Las firmas ayudan a un codigo a demostrar que el software es autentico.
+
+Cookies seguras: La cookie es una busqueda que almacena datos para futuras solicitudes, mientras navega por el sitio web. Siempre se recomienda usar https.
+
+Las organizaciones deben garantizar e implementar diversas medidas para manejar amenazas al dominio.
+
+Acceso no autorizado a los centros de datos, las salas de computadoras y los armarios de cableado -> Entrada y salida.
+Tiempo de inactividad del servidor del sistema-> Recuperacion tras un desastre
+Desarrollar Politicas para abordar vulnerabilidades del software del sistema operativo de red -> Actualizaciones
+Acceso no autorizado a los sistemas -> Autenticacion de varios factores.
+Perdida de datos-> Respaldo.
+Vulnerabilidades de desarrollo de software -> Pruebas.
+
+
+
+
+
+
 
