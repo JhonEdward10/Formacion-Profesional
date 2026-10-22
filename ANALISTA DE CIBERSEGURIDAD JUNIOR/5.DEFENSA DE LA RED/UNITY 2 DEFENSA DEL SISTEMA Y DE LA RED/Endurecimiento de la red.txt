@@ -1,1 +1,15 @@
 Endurecimiento de la red 
+
+Los ciberdelincuentes atacan servicios de red o los usan como parte del ataque, entre ellos se encuentran:
+
+✅Protocolo de configuracion dinamica de host(DHCP): Realiza el direccionamiento IP dinamico, pero los atacantes hacen que se desvie la informacion de requerimiento, en donde puede apuntar pero al servidor DHCP de ellos, porque niegan en el original.
+
+✅Sistema de nombres de dominio (DNS): es el sistema que traduce las direcciones IP y las convierte a URL, pero los atacantes apuntan a esos servidores para que se pueda redirigir el trafico a sitios web falsos.
+
+✅Protocolo de mensajes de control de internet (ICMP): es un protocolo de error, pero el ciberdelincuente puede alterar el uso de ICMP paraa ejecutar un ataque de reconocimiento, denegacion de servicios (DoS) y de canal encuebierto
+
+✅Protocolo de informacion de enrutamiento (RIP): es donde la informacion del router se redirige y minimiza el numero de saltos, pero el numero mayor de saltos es de 15. Sin embargo los cibedelincuentes pueden redirigir y modicar el rendimiento y la disponibilidad. Siempre utilice todos los sistemas autenticos y parcheados.
+
+✅Protocolo de tiempo de red (NTP): es donde los relojes de los sistemas se sincronizan con la hora de un servidor NTP. Los ciberdelincuentes atacan servidores para interrumpir la comunicacion segura y depende de los certificados digitales, ademas de ocultar informacion de ataque.
+
+Telnet, SSH y SCP
