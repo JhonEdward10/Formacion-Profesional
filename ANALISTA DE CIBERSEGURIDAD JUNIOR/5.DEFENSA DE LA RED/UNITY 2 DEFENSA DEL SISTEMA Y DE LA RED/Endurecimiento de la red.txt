@@ -12,4 +12,21 @@ Los ciberdelincuentes atacan servicios de red o los usan como parte del ataque, 
 
 ✅Protocolo de tiempo de red (NTP): es donde los relojes de los sistemas se sincronizan con la hora de un servidor NTP. Los ciberdelincuentes atacan servidores para interrumpir la comunicacion segura y depende de los certificados digitales, ademas de ocultar informacion de ataque.
 
-Telnet, SSH y SCP
+Telnet, SSH y SCP.
+
+Protocolos seguros.
+Protocolo simple de administracion de redes(SNMP), POP, IMAP, HTTPS y FTP.
+
+En la seguridad de las redes tambien se habla de las VLAN, y se dice que cuando los puertos de los withces se interconectan fisicamente y permite el trafico de varias VLAN se llaman troncales.
+
+Las VLAN se encargan de dividir la red y que cada grupo en el trabajo tenga su area y no se toquen a menos que el administrador lo requiera.
+
+Las vlan pueden ser atacadas en su rendimiento.
+
+Zona desmilitarizada (DMZ)
+
+Es una red pequeña entre una red privada confiable e internet.
+
+Tambien se habla del modelo zero trust -> asi alguien sea confiable en la red se debe estar verificando, porque este tiene el acceso.
+
+
