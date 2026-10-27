@@ -29,4 +29,9 @@ Es una red pequeña entre una red privada confiable e internet.
 
 Tambien se habla del modelo zero trust -> asi alguien sea confiable en la red se debe estar verificando, porque este tiene el acceso.
 
+👉🏻 En los dispositivos inalambricos se debe usar protecciones en la red WIFI, porque sin estos la red esta vulnerable, entre los que se caraterizan:
+
+Configuracion WPE, que ya no se utiliza; WPA utiliza cifrado TKIP, pero debio se cambiada porque el cifrado podria ser intervenido por ataque de fuerza bruta; WPA2 Utiliza algoritmo AES cambiando TKIP que es un contracifrado; WPA3 tiene las misma configuraciones de WPA2, pero mejora el intercambio de claves.
+
+Tambien esta WPS que es un pin que se utiliza para acceder a la red, pero no se recomienda.
 
