@@ -35,3 +35,12 @@ Configuracion WPE, que ya no se utiliza; WPA utiliza cifrado TKIP, pero debio se
 
 Tambien esta WPS que es un pin que se utiliza para acceder a la red, pero no se recomienda.
 
+Tambien para ello existen protocolos de autenticacion
+
+EAP = Extensible Authentication Protocol
+
+Entre los que destacan: 
+
+EAP-TLS: requiere certificado del servidor y del cliente, es dificil de implementar y su seguridad es alta
+
+

@@ -1,0 +1,48 @@
+Gestion de operaciones de ciberseguridad
+
+administracion de la configuracion: la gestion de la configuracion se refiere a identificar, controlar y auditar la implementacion y cualquier cambio realizado en la linea de base establecida de un sistema.
+
+Lo que se quiere decir es que un sistema siempre tiene una plantilla o un sistema base sobre el cual se pueda basar para garantizar la implementacion y desarrollo del sistema.
+
+Entre los recursos de configuracion suelen estar los documentos como: 
+
+🗺️Mapas de res, diagramas de cableado y especificaciones de configuracion de aplicaciones
+
+🏪Convenciones de nomenclaturas para las computadoras.
+
+🧭esquemas de ip para rastrear la direcciones Ip
+
+Tambien reforzar el sistema operativo es importante para garantizar la seguridad. 
+
+🚧Entre ellos se necesita un registro del sistema, junto con su respectiva auditoria, nombres de usuarios, contraseñas, implementacion de politicas de cuentas, control y acceso. Esto crea un sistema operativo seguro.
+
+®️Archivo de registro.
+Contiene toda la informacion de eventos a medida que ocurren, por lo tanto en caso de un ataque se registra quien hizo el ataque o intento de autenticacion y a que servicio intento acceder, ademas de observar que metodos de proteccion funcionaron y cuales no!
+
+La administración de datos de registro de seguridad informática debe determinar los procedimientos para lo siguiente:
+
+🏞️Generación de archivos de registro
+🚓Transmisión de archivos de registro
+🏬Almacenamiento de archivos de registro
+📈Análisis de los datos de registro
+🔥Eliminación de los datos de registro
+
+En una empresa deben estar los registros tanto para el sistema operativo como para la aplicacion de software.
+
+En las redes se utilizan analizadores de protocolos.
+
+Los analizadores de paquetes, también conocidos como packet sniffers, interceptan y registran el tráfico de la red.
+
+Entre estas aplicaciones se llaman wireshark, TCPdump, Ettercap, Kismet, Ngrep, Ntop, EtherApe.
+
+Los analizadores de paquetes realizan las siguientes funciones:
+
+🚦Registro del tráfico.
+📈Análisis de problemas de red.
+🕵🏻‍♂️Detección de usos indebidos de la red.
+🥱Detección de intentos de intrusión en la red.
+🧑🏻‍🚀Aislamiento de los sistemas vulnerados
+
+
+
+

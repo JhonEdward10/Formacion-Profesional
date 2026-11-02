@@ -1,0 +1,24 @@
+Politicas, regulaciones y estandares de seguridad
+
+Las empresas tienen politicas de seguridad para regir sus acciones y las de sus empleados.
+En el ambito de las redes las politicas definen las actividades autorizadas en la red, en donde se infringe una politica de red, se dice que se ha infringido la seguridad.
+
+Una empresa puede tener varias politicas orientadoras.
+
+Entre ellas:
+
+Politica de la empresa: aquí es donde la empresa protege tanto los derechos y conductas de los empleados; como las responsabilidades de los empresarios y sus intereses comerciales.
+
+Politica para los empleados: Estas son politicas entregadas por el personal de recursos humanos, entre lo que destaca el salario, calendario de pagos, beneficios de los empleados, horario etc
+
+Politica de seguridad: aquí es donde se identifica los conjuntos de seguridad de una empresa, definiendo la seguridad , de los administradores y los usuarios, para que la red este segura, ademas esta en constante cambio, pues todo depende del analisis de las amenazas, vulnerabilidades y los requisitos de la empresas y empleados.
+
+Politica de uso aceptable: es donde se acepta que es bueno o no para la red de la organizacion; ademas identifica ramificaciones si se viola esa politica.
+
+
+Politica de seguridad BYOD
+Es la tecnologia que se esta implementando ahora en donde cada persona o bueno ciertas personas pueden llevar sus propios dispositivos al trabajo, pero asi como proporciona mejoras a nivel de trabajo, tambien genera una brecha de seguridad porque con los mismo dispositivos personales, se puede filtrar la informacion, entonces las empresas han mostrado interes en hacer una politicas de seguridad para esta tarea.
+
+Entre distintas categorias de seguridad se implementan contraseñas seguras para cada dispositivo, desactivar el wifi cuando no se utilice ademas de conectarse a redes seguras, mantener el dispositivo siempre actualizado, habilitar copias de seguridad en caso de perdida o robo, suscribirse al servicio de localizacion de dispositivos,
+
+
