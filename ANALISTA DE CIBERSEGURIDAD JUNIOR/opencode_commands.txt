@@ -1,0 +1,50 @@
+Aquí tienes una lista de los comandos disponibles en opencode y sus descripciones:
+
+**Herramientas Principales:**
+
+*   **bash(command: str, timeout: int | None = None, workdir: str | None = None)**:
+    - Descripción: Ejecuta comandos bash en el entorno. Útil para operaciones de terminal como git, npm, docker, etc.
+    - Uso: Evitar para operaciones de archivo (leer, escribir, buscar). Usar `workdir` en lugar de `cd`.
+
+*   **edit(filePath: str, oldString: str, newString: str, replaceAll: bool | None = None)**:
+    - Descripción: Realiza reemplazos de texto exactos en archivos.
+    - Uso: Requiere haber leído el archivo primero con `read`. Útil para refactorizar y renombrar.
+
+*   **glob(pattern: str, path: str | None = None)**:
+    - Descripción: Busca archivos que coincidan con un patrón glob (ej. "**/*.js").
+    - Uso: Útil para encontrar archivos por nombre o patrón.
+
+*   **grep(pattern: str, include: str | None = None, path: str | None = None)**:
+    - Descripción: Busca contenido específico dentro de archivos usando expresiones regulares.
+    - Uso: Filtra por patrones de contenido. No usar para buscar archivos, usar `glob`.
+
+*   **question(questions: list[QuestionQuestions])**:
+    - Descripción: Permite hacer preguntas al usuario para obtener preferencias, clarificaciones o decisiones.
+    - Uso: Interactivo, recopila información del usuario.
+
+*   **read(filePath: str, limit: int | None = None, offset: int | None = None)**:
+    - Descripción: Lee el contenido de un archivo o directorio.
+    - Uso: Obtiene el contenido de archivos para su análisis o edición. Devuelve líneas con prefijo de número de línea.
+
+*   **skill(name: str)**:
+    - Descripción: Carga una habilidad especializada para tareas específicas.
+    - Uso: Útil cuando la tarea se alinea con una habilidad predefinida.
+
+*   **task(description: str, prompt: str, subagent_type: str, command: str | None = None, task_id: str | None = None)**:
+    - Descripción: Lanza un agente (explore, general) para manejar tareas complejas y multi-paso de forma autónoma.
+    - Uso: Para delegar trabajo a subagentes especializados.
+    - Tipos de subagentes:
+        - `explore`: Explora código base rápidamente (archivos, búsqueda de keywords).
+        - `general`: Para investigación y tareas multi-paso.
+
+*   **todowrite(todos: list[TodowriteTodos])**:
+    - Descripción: Crea y mantiene una lista de tareas estructurada para la sesión de codificación.
+    - Uso: Organiza el trabajo multi-paso, rastrea el progreso (`pending`, `in_progress`, `completed`, `cancelled`).
+
+*   **webfetch(url: str, format: Literal['text', 'markdown', 'html'] | None = None, timeout: float | None = None)**:
+    - Descripción: Recupera contenido de una URL.
+    - Uso: Útil para obtener y analizar contenido web. Formatos: 'text', 'markdown' (default), 'html'.
+
+*   **write(content: str, filePath: str)**:
+    - Descripción: Escribe contenido en un archivo. Sobrescribe si el archivo existe.
+    - Uso: Requiere haber leído el archivo primero con `read`. Usar para crear o modificar archivos.

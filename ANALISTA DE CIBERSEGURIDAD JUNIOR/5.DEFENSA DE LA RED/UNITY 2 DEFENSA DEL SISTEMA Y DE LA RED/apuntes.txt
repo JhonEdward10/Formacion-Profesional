@@ -1,0 +1,58 @@
+# Apuntes de Defensa del Sistema y de la Red
+
+## 1. Seguridad Física
+
+*   **Componentes:** Cercas, barreras físicas, biometría (rostro, huellas, retinas).
+*   **Errores Biométricos:**
+    *   Falsos Positivos (advertencia): Rechaza a personas autorizadas.
+    *   Falsos Negativos: Permite el acceso a personas no autorizadas (ciberdelincuentes).
+*   **Otros Elementos:** Vigilancia (personal, bandas magnéticas), cámaras de seguridad.
+
+## 2. Endurecimiento de la Red y Protocolos
+
+Los ciberdelincuentes atacan servicios de red o los usan como parte de sus ataques.
+
+*   **DHCP (Protocolo de configuración dinámica de host):**
+    *   Función: Direccionamiento IP dinámico.
+    *   Ataque: Desvío de requerimientos a servidores DHCP maliciosos.
+*   **DNS (Sistema de nombres de dominio):**
+    *   Función: Traduce IPs a URLs.
+    *   Ataque: Redirigir tráfico a sitios web falsos.
+*   **ICMP (Protocolo de mensajes de control de internet):**
+    *   Función: Protocolo de error.
+    *   Ataque: Usado para reconocimiento, DoS (Denegación de Servicios), canal encubierto.
+*   **RIP (Protocolo de información de enrutamiento):**
+    *   Función: Redirige información para minimizar saltos (máx. 15).
+    *   Ataque: Modificación del enrutamiento para afectar rendimiento y disponibilidad.
+    *   Recomendación: Usar sistemas auténticos y parcheados.
+*   **NTP (Protocolo de tiempo de red):**
+    *   Función: Sincroniza relojes de sistemas con servidores NTP.
+    *   Ataque: Afecta la comunicación segura, depende de certificados digitales, oculta información de ataque.
+*   **Servicios y Protocolos (consideraciones de seguridad):**
+    *   Vulnerables/Requieren protocolos seguros: Telnet, SSH, SCP.
+    *   Protocolos seguros mencionados: SNMP, POP, IMAP, HTTPS, FTP.
+*   **VLANs (Redes de área local virtuales):**
+    *   Función: Dividen la red en grupos segmentados para mejorar seguridad y organización.
+    *   Troncales: Interconexiones físicas entre switches que permiten tráfico de múltiples VLANs.
+    *   Ataque: Pueden ser atacadas en su rendimiento.
+*   **DMZ (Zona Desmilitarizada):**
+    *   Definición: Red pequeña entre una red privada confiable e Internet.
+*   **Modelo Zero Trust:**
+    *   Concepto: Verificación continua de acceso, incluso para usuarios internos.
+
+## 3. Seguridad Inalámbrica (WIFI)
+
+*   **Vulnerabilidad:** Las redes WIFI sin protección son vulnerables.
+*   **Estándares de Seguridad:**
+    *   WEP: Obsoleto.
+    *   WPA: Utiliza cifrado TKIP (vulnerable a fuerza bruta).
+    *   WPA2: Utiliza algoritmo AES (más seguro que TKIP).
+    *   WPA3: Mejora el intercambio de claves de WPA2.
+*   **WPS (Wi-Fi Protected Setup):**
+    *   Función: PIN para acceso rápido a la red.
+    *   Recomendación: No recomendado por seguridad.
+*   **Protocolos de Autenticación (EAP - Extensible Authentication Protocol):**
+    *   **EAP-TLS:**
+        *   Requisitos: Certificado de servidor y de cliente.
+        *   Seguridad: Alta.
+        *   Implementación: Difícil.

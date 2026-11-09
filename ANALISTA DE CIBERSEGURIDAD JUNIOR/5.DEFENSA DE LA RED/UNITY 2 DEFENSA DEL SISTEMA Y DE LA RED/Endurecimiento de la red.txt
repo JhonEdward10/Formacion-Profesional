@@ -43,4 +43,10 @@ Entre los que destacan:
 
 EAP-TLS: requiere certificado del servidor y del cliente, es dificil de implementar y su seguridad es alta
 
+PEAP: no requiere certificado del cliente, pero si del servidor, la implementacion para instalar es moderada y la seguridad es media
 
+EAP-TTLS: no requiere certificado del cliente, pero si del servidor, la implementacion para instalar es moderada y la seguridad es media
+
+EAP-FAST: no requiere ningun certificado, facil de implementar y la seguridad es media.
+
+En el mundo de la ciberseguridad, la autenticacion mutua es bidireccional, que puede evitar puntos de acceso no autorizados, en el que ambas partes tanto cliente como servidor se comunican entre si antes de concetarse
