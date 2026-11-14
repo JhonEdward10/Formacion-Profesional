@@ -49,4 +49,35 @@ EAP-TTLS: no requiere certificado del cliente, pero si del servidor, la implemen
 
 EAP-FAST: no requiere ningun certificado, facil de implementar y la seguridad es media.
 
-En el mundo de la ciberseguridad, la autenticacion mutua es bidireccional, que puede evitar puntos de acceso no autorizados, en el que ambas partes tanto cliente como servidor se comunican entre si antes de concetarse
+En el mundo de la ciberseguridad, la autenticacion mutua es bidireccional, que puede evitar puntos de acceso no autorizados, en el que ambas partes tanto cliente como servidor se comunican entre si antes de concetarse.
+
+Entre los metodos de conexion se encuentran bluetooth, wifi, NFC (Comunicacion de campo cercano), Inflarrojo, o comunicacion USB, ya que los dispositivos inalambricos cada dia ganan mas fuerza.
+
+🌳Para la respectiva administracion de los dispositivos que se llevan al trabajo en las aplicaciones se utiliza segmetacion y contenedorizacion: es para separar lo del trabajo de lo personal.
+
+📱ademas se debe administrar el contenido: se necesita controlar quien ingresa a los datos de las aplicaciones de la empresa.
+
+📲Tambien se debe firmar digitalmente las apps para que lo que instalen en el celular provenga de un sitios confiables, con autenticacion de contraseñas.
+
+En una empresa salvo el dispositivo sea de la empresa como de la persona se debe cuidar por robo, perdida, acceso no autorizado, red, aplicacion etc.
+
+Los tres son formas de saltarse las restricciones de un dispositivo móvil.
+
+-💥 Jailbreak (Apple): quita la limitación de que solo se instalen apps autorizadas por Apple.
+-🫜 Rooting (Android): salta la seguridad de Android para tener control total de administrador.
+-🙃 Sideloading: instalar apps no aprobadas, por ejemplo de tiendas de terceros que no las revisan bien. Es menos invasivo, pero también es un riesgo.
+
+Para una organización
+Los tres exponen los datos y la red. Por eso hay soluciones que detectan los dispositivos liberados o rooteados, los marcan como no compatibles y les niegan el acceso a la red y a las apps de la empresa.
+
+Son cinco medidas, de menos a más avanzada:
+
+🛑1. Bloqueo de pantalla: pide contraseña, PIN o patrón para entrar. Es la barrera básica.
+☣️2. Autenticación biométrica: usa algo físico tuyo, como huella, cara, iris o voz.
+🧑🏻‍🚀3. Autenticación sensible al contexto: con aprendizaje automático, compara tu comportamiento normal y decide si te deja acceder.
+🤳4. Borrado remoto: elimina los datos del dispositivo si lo pierdes o te lo roban.
+🔒5. Cifrado completo: codifica todos los datos, para que sean ilegibles sin la clave.
+
+Las dos primeras protegen el acceso. La tercera lo vigila de forma continua. Las dos últimas protegen los datos si el dispositivo cae en malas manos.	
+
+

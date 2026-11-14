@@ -1,0 +1,4 @@
+Resilencia de la seguridad 
+
+En el mundo siempre necesitamos disponibilidad de todo lo que hacemos y las redes de datos no es la excepcion, para ello la resiliencia se basa entres principios
+

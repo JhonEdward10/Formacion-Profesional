@@ -1,15 +1,15 @@
 Modulos a realizar en tiempos
 
 🔒 4. Seguridad en Endpoints
-- [ ]  Módulo 6 - Infraestructura de seguridad de redes
-- [ ]  Módulo 7 - Sistema operativo Windows
-- [ ]  Módulo 8 - Descripción general de Linux
-- [ ]  Módulo 9 - Protección de terminales
-- [ ]  Módulo 10 - Principios, prácticas y procesos de ciberseguridad
+- [X]  Módulo 6 - Infraestructura de seguridad de redes
+- [X]  Módulo 7 - Sistema operativo Windows
+- [X]  Módulo 8 - Descripción general de Linux
+- [X]  Módulo 9 - Protección de terminales
+- [X]  Módulo 10 - Principios, prácticas y procesos de ciberseguridad
 
 ### 📊 **5. Defensa de la Red**
 
-- [ ]  Módulo 1 - Entendiendo la defensa
+- [X]  Módulo 1 - Entendiendo la defensa
 - [ ]  Módulo 2 - Defensa de sistemas y redes
 - [ ]  Módulo 3 -  Control de acceso
 - [ ]  Módulo 4 - Lista de control de acceso

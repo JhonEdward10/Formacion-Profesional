@@ -1,10 +1,26 @@
 English For IT A2
 
-Countable nouns: Use numbers or words like "many" or "Few"; for example three books or few opportunities
+1.Countable nouns: Use numbers or words like "many" or "Few"; for example three books or few opportunities
 Uncountable nouns: Use words like "much" or "little"; for example much respect or little time.
 
 Possessive determiners (my, your, his, her, its, our, their) work for both types
 
+Articles like "a," "an," and "the" are also determiners, showing if something is specific or not.
 
+Understanding these words makes communication clearer and more accurate.
+
+
+2. Expresiones y Phrasal Verbs Estudiados
+
+Two peas in a pod (Idiom) -> Van de la mano	
+Uso: Se utiliza para describir a dos cosas, personas o grupos que son muy similares entre sí o que van muy bien juntos.   
+Ejemplo técnico: El diseño de juegos y el desarrollo de software son como two peas in a pod porque se complementan y trabajan en equipo
+
+Figure out (Phrasal Verb) -> Averiguar
+Uso: Significa intentar comprender algo, usando el conocimiento o la información disponible para resolver un problema.   Ejemplo técnico: Si una página web falla, revisas el código, encuentras un pequeño error y, usando lo que sabes, figure out cómo solucionarlo para que vuelva a funcionar correctamente
+
+Come to life -> Esta vivo o funciona
+Uso: Se emplea cuando algo comienza a moverse, muestra energía o una idea abstracta se materializa.   
+Ejemplo técnico: Gracias al trabajo conjunto entre diseñadores y desarrolladores, las ideas come to life y se convierten en algo que podemos ver, observar o ejecutar (¡como el clásico "It's alive!" de Frankenstein!).
 
 
