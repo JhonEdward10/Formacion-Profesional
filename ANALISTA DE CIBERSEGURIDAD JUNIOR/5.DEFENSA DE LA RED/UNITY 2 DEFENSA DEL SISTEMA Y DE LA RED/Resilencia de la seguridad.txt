@@ -2,3 +2,82 @@ Resilencia de la seguridad
 
 En el mundo siempre necesitamos disponibilidad de todo lo que hacemos y las redes de datos no es la excepcion, para ello la resiliencia se basa entres principios
 
+💥Aqui lo que importa es eliminar los unicos puntos de falla. En donde el metodo incluye eliminar dispositivos inutilizados, los componentes redundantes y multiples conexiones o rutas.
+
+🤨El segundo piso consiste en una fuente de alimentacion redundante y sistemas de respaldos.
+
+🕵🏻El tercer piso es donde hay que monitorear constantemente la red, eventos, fallas del sistema y los dispositivos.
+
+Practica de los cinco nueves. 🕔🕘
+
+Es una practica que consiste en que el sistema funcione 99.99999%, osea que en el año lo maximo que puede llegar a fallar debe ser inferior a 5,26 minutos al año.
+
+Para ello hay que tener un sistema estandarizado (seguridad personal), Agrupaciones (servicios agrupados), Sistemas de componentes compartidos (si falla uno se sustituye).
+
+Para que un sistema este activo, se debe tener redundancia N+1, garantizando asi la disponibilidad del sistema. Ejemplo, automovil con 4 llantas en el camino y una de repuesto.
+
+Raid -> Es un conjunto redundante de discos, por si se daña uno, existen mas, entre ellos se encuentra:
+🕵🏻 RAID 0 (velocidad, sin seguridad)
+- Las hojas se reparten entre dos discos, la mitad en cada uno.
+- Lee y escribe más rápido, porque trabajan los dos a la vez.
+- Si un disco falla, pierdes todo.
+
+💥RAID 1 (seguridad)
+- Cada hoja se copia idéntica en los dos discos, como un espejo.
+- Si uno falla, el otro tiene todo.
+- Necesitas el doble de discos y solo aprovechas la mitad del espacio.
+
+⚠️RAID 5 (equilibrio)
+- Necesita al menos 3 discos. Reparte los datos y guarda información de control (paridad) para reconstruirlos.
+- Si un disco falla, puedes recuperar los datos. Si fallan dos, se pierde todo.
+- Aprovechas más espacio que con RAID 1.
+
+⛔RAID 10 (velocidad y seguridad)
+- Necesita al menos 4 discos. Combina espejo (1) y reparto (0).
+- Es rápido y resistente, pero cuesta más.
+
+RAID, no es una copia de seguridad (Backup). protege contra el fallo de un disco, pero no contra borrados por error, virus o ransoware.
+
+Mirroring: Amacena datos, los duplica y los mueve a una segunda unidad.
+
+Striping: escribe los datos en varias unidades, para que los segmentos consecutivos se almacenen en diferentes unidades.
+
+Paridad: mas precisamente striping con paridad, son sumas de verificacion para revisar que no se tengan errores y los checksums se almacenan en una tercera unidad.
+
+🖥️STP -> Spanning tree protocol, es una forma de dar redundancia en switches, en donde estos buscan las mejor ruta y cuando la encuentra bloquean en resto, para que pase la informacion, pero las bloqueadas aun siguen escuchando.
+
+🌎Redundancia del router: cuando un router falla, se puede colocar otro que comunique la informacion hacia internet.
+
+La capacidad de una red recuperarse dinamicamente al fallo de un dispositivo se conoce como first-hop redundancy.
+
+🌏Redundancia por ubicacion: existen manera de que exista la redundancia por ubicacion. 
+Sincronica, Asincronica y Replicacion puntual.
+
+
+┌─────────────┬──────────────────────────────┬───────────────────────────────┬───────────────────────┐
+│    Tipo     │         Cuándo copia         │    Riesgo de perder datos     │       Velocidad       │
+├─────────────┼──────────────────────────────┼───────────────────────────────┼───────────────────────┤
+│ Sincrónica  │ Al instante, en ambos sitios │ Ninguno                       │ Más lenta             │
+├─────────────┼──────────────────────────────┼───────────────────────────────┼───────────────────────┤
+│ Asincrónica │ Con un pequeño retraso       │ Los últimos datos             │ Más rápida            │
+├─────────────┼──────────────────────────────┼───────────────────────────────┼───────────────────────┤
+│ Puntual     │ A intervalos, como una foto  │ Lo posterior a la última foto │ Depende del intervalo │
+└─────────────┴──────────────────────────────┴───────────────────────────────┴───────────────────────┘
+
+
+EL diseño de resiliente de una red es mas que solo redundancia. 
+
+Porque tambien es muy importante realizar las copias de seguridad en una empresa o en los sitios que creamos importantes.
+
+Entonces las copias de seguridad dependen de la frecuencia (semanal, mensualmente etc.), el almacenamiento (deben estarse cambiando segun lo exija la politica de seguridad), seguridad (proteger con contraseñas) y validacion (garantizar la integridad de los datos).
+
+El sistema de diseño de una red debe tener tres principios fundamentales para lograr el respectivo objetivo, estos son:
+
+⛔Eliminacion o reduccion de los puntos unicos de falla (clusteres de computadoras).
+🎮Tolerancia a fallas.
+🎡Recuperabilidad del sistema.
+
+
+
+
+
