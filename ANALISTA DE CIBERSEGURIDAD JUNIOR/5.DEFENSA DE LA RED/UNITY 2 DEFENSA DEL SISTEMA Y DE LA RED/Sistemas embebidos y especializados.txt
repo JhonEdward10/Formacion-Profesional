@@ -1,0 +1,46 @@
+Sistemas embebidos y especializados
+
+🖥️ Stuxnet fue un gusano informático descubierto en 2010 y considerado el primer arma cibernética conocida. Atacó el programa nuclear de Irán, en concreto las centrifugadoras de enriquecimiento de uranio de la planta de Natanz.
+
+💻 En IOT los sistemas enbebidos pueden ser televisores inteligentes, sistemas de HVAC (ventilacion, aire acondicionado, calefactores etc.), dispositivos medicos e incluso automoviles.
+
+En los sistemas IOT se recomienda utilizar System on chip (SOC), porque se puede proteger los sistemas, ademas de ser programables modificandose sobre el terreno. Significando que el usuario puede hacer cambios al implementar el dispositivo.
+
+🎮Algunos sensores IOT, se utilizan para informar que los  componentes estan fallando o que los suministros se estan agotando.
+
+Las aplicaciones de IdC utilizan un sistema operativo en tiempo real, pequeño y rapido que permite el cambio rapido de tareas. Esta tecnologia se llama RTOS. 🚩 Entre las vulnerabilidades asociadas se encuentran inyeccion de codigo, los ataques de denegacion de servicio y la inversion de prioridad (donde una tarea de mayor prioirdad se adelanta por una tarea de menor prioridad.)
+
+ Los dispositivos de IoT se comunican mediante métodos de corto alcance, mediano o largo alcance e incluyen celular (4G, 5G), radio y Zigbee
+ 
+📟VoIP: se utiliza internet para realizar y recibir llamadas.
+
+Hay que cifrar los paquetes de mensajes en VOZ para proteger infiltraciones, utilizar SSH para proteger los gateways y los switches., cambiar contraseñas, utilice el IDS sistema de detension de intrusiones para detectar ataques como el evenenamiento ARP. Utilizar autenticacion, porque el sistema debe verificar quien recibe porque asi se puede hacer call hijacking
+
+SIP: 
+Session Initiation Protocol, el protocolo que se encarga de iniciar, mantener y terminar las llamadas en VoIP.
+
+✈️Los sistemas embebidos se pueden encontrar en dispositivos medicos, automotrices e incluso en la aviacion.
+
+⛑️ Entre los dispositivos medicos se pueden tener marcapasos, bombas de insulina, implantes medicos y desfibriladores que tienen capacidad de conectividad inalambrica, monitoreo remoto y comunicacion de campo cercado.
+
+🚗 En los vehiculos se producen y almacenan datos. Por lo general marcan velocidad, ubicacion y maniobras de frenado, luego pueden enviar datos recopilados a las compañias de seguros del conductor.
+
+	🫥Proteja las prácticas de diseño de software del sistema
+	🎡Cifrado básico para toda la comunicación entre controladores
+	🎆Implementación de firewall
+
+🛬 En la aeronautica los problemas pueden ser inicio de sesion codificadas, protocolos inseguros y puertas traseras.
+Los drones por ejemplo pueden ser secuestrados, sufrir ataques de WI-FI, ataques de suplantacion de GPS, interferencias y ataques de desautenticacion que pueden permitir que un atacante intecepte o inutilice un dron y acceda a los datos.
+
+En los embebidos tambien existe una manera de engañar a los atacantes y sobre todo alertar un posible ataque.
+
+🍯 Mieleros o honeypot: es un servidor que se deja expuesto en la red, para que los atacantes puedan ser detectados para un posterior revision.
+Incluso se puede hacer una honeyred, para simular la red y que sea mas creible y tambien incrustar en esta red honeyfiles para que hayan archivos fitcios pero no se encuentre nada ahi.
+
+🧑🏻‍🎤DNS sinkhole: es la forma en que el servidor redirige a los usuarios de los recursos maliciosos, porque ya conoce ciertos dominios maliciosos, entonces avisa que sitio esta y quien es el que intento ingresar al sitio (persona de tu red), para que no se ingrese.
+
+
+
+
+
+
