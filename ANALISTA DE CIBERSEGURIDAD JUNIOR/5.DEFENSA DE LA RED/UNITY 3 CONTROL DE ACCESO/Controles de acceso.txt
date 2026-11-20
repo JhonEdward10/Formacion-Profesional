@@ -1,0 +1,48 @@
+Controles de acceso
+
+🤜🏻Controles de acceso fisico -> con lo que se puede encontrar antes de ingresar al sistema. Se basa en lo fisico.
+
+🧑🏻‍💻Controles de acceso logicos -> es con lo que se encuentra el hardware y software para administrar el sistema. Se basa en los sistemas informaticos.
+
+🎟️Controles de acceso administrativo -> son politicas y procedimientos que definen organizaciones para implementar y hacer cumplir los aspectos del control no autorizado. Los controles administrativos son:
+
+.Politicas
+.Procedimientos
+.Practicas de contratacion
+.Verificaciones de antecedentes
+.Clasificacion de datos
+.Capacitacion en seguridad
+.Reseñas
+
+😯Control de acceso administrativo en detalle
+
+Es un concepto en el que se aplica control implica los tres servicios de seguridad: autenticacion, autorizacion y accounting (Auditoria) pero no en el campo de la contabilidad sino en el campo informatico, que supervisa lo que el usuario hace, asi pues eso es lo que evita el acceso no autorizado a una computadora, red, base de datos y otros recursos.
+
+.Autenticacion: Es la verificacion de identidad de cada usuario autorizado, en donde verifica su identidad mediante algunos de los siguientes datos:
+	Algo que sabe
+	Algo que tiene
+	Algo que son
+	
+.Autorizacion: la autorizacion es aquella que determina a que puede ingresar cada usuario.
+
+.Accounting (Auditoria): es lo que hace el seguimientos sobre lo que hacen los usuarios, la cantidad de tiempo que acceden a los recursos y cualquier cambio que haga.
+
+🪗Gestion de identidad federada.
+Es aquella que comparte inicios de sesion con diferentes empresas, organizaciones o aplicaciones, asi que con un solo usuario y contraseña puedes ingresar a muchos sitios, que puede ser sencillo, pero puede generar una cascada de seguridad, porque si se obtiene la sesion de alguna; por ende se obtiene del resto.
+
+Federado significa que varios servicios confían en un mismo "portero" que verifica quién eres.
+
+🚇Metodos de autenticacion; entre ellos esta
+Lo que el usuario conoce: como contraseñas, pin o frases de acceso.
+
+Lo que el usuario tiene: tarjetas de acceso inteligentes, llaveros de seguridad, tokens ... entre otros. Puede ser multifactor. 
+
+Lo que es: datos biometricos con caracteristicas unicas, huella dactilar, retina, voz. Hay dos tipos de identificadores biometricos: caracteristicas fisiologicas con huellas dactilares, adn, rostro, manos, retina, oido. Tambien existen caracteristicas de comportamiento como gestos, voz, forma de andar o ritmo del tecleo.
+
+🧑🏻‍🚀La autenticacion multifactor: Tenga en cuenta que la autenticación de dos factores (2FA) es un método de autenticación multifactor que implica dos factores en particular, pero los dos términos se usan indistintamente.
+
+🚗Metodos de autorizacion: es lo que se utiliza para describir el acceso del usuario a la red y preguntarse ¿que tipo de privilegios puede hacer una persona en la lectura, copia, edicion, creacion y elimininacion?
+
+Aqui es donde se puede controlar hasta donde va el acceso, ejemplo, todos los empleados pueden tener tarjetas magneticas, pero no todos pueden acceder a los servidores, porque solo los altos administrativos y el equipo de TI puede hacer esto.
+
+🦝La accountability: es la auditoria donde se revisa que hace el sistema, los procesos, quien interviene en el y sobre todo cuando y desde donde. tambien se utilizan los archivos de registro, inicios de sesion, para verificar quien intento ingresar al sistema y si lo hizo poder verificar si tuvo o no acceso. Mediante a esto existen las politicas que regulan las consecuencias que se tiene si se ingresa, administra, almacena y desecha informacion.

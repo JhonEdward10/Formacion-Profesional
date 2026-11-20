@@ -1,0 +1,28 @@
+Practica de autenticacion, autorizacion y auditoria
+
+HQ-INT -> SSID
+user1		PASSuser1! -> Servidor Radius autenticacion
+user2		PASSuser2! -> Servidor Radius autenticacion
+
+
+Mail
+Dominio: mail.cyberhq.com
+
+oHQuser1		Cisco123!  -> Suk-Yi		HQuser1@mail.cyberhq.com  -> 1-1
+
+oHQuser2		Cisco123~  -> Cisco		HQuser2@mail.cyberhq.com  -> NetAdmin
+
+oBRuser1		Cisco123-  -> Ajulo 		BRuser1@mail.cyberhq.com  -> 2-3
+
+oBRuser2		Cisco123+  -> Malia 		BRuser2@mail.cyberhq.com  -> HQ-Laptop-1
+
+
+FTP
+
+Usuario				contraseña			User Privilege
+
+sukyi				cisco123			RWDNL (Write, Read, Delete, Rename, List)
+
+ajulo				cisco321			RWDNL (Write, Read, Delete, Rename, List)
+
+malia				cisco123			RWNL (Write, Read, Rename, List)
