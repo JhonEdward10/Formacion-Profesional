@@ -1,2 +1,27 @@
 🔒Seguridad de confianza Cero 
 
+La seguridad confianza cero es donde se hace una verificacion en la red en todo momento, porque antes se confiaba en el perimetro de la red entre lo interno y lo externo, pero ahora se debe verificar en cualquier momento que alguien desee hacer un cambio. Entre la confianza cero se tienen tres pilares, sobre los que se basa.
+
+.Los grupos de trabajo que intervienen en la red, las personas, contratistas, compañeros, proveedores.
+.Las cargas de trabajo, que son las aplicaciones sobre las que desempeñan el trabajo, bases de datos etc.
+.Lugar de trabajo, son los dispositivos mediante los que se conectan a la red.
+
+Entre los controles de acceso existen modelos, como:
+
+💠Control de acceso Discrecional: menos resctrictivo porque los usuarios controlan sus accesos.
+
+💠Control de acceso Obligatorio: el mas estricto porque suele utilizarse en aplicacione militares o fundamentales.
+
+💠Control de acceso Basado en roles: la decision se basa en los roles y responsabilidades de los individuos dentro de la organizacion. Se asignan privilegios segun el rol y el reglamento para el rol.
+
+💠Control de acceso Basado en atributos: Depende en como tendran acceso a los recursos, a que horas del dia y como.
+
+💠Control de acceso Reglamentado: aqui el personal especifica como son las reglas o condiciones a el acceso de datos o sistemas, especificando direcciones IP permitidas o denegadas, protocolos u otras.
+
+💠Control de acceso Basado en tiempo: permite el acceso a los recursos de red en funcion de la hora y dia.
+
+Otro modelo es el acceso al principio de privilegios minimos.
+
+🧑🏻‍🚀Sistemas de control de acceso a la red (NAC: Network Access Control): aqui se controla mediante las politicas de la organizacion con respecto a las personas, dispositivos que intentan acceder a la red. Los profesionales en ciberseguridad tienen la tarea de monitorear y supervisar a los usuarios y dispositivos conectados a la red.
+
+
