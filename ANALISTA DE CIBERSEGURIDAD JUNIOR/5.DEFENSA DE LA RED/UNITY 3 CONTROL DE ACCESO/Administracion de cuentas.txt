@@ -71,10 +71,10 @@ Los hash garantizan integridad y autenticidad (HMAC, desafío-respuesta, firmas 
 
 🥋Ya que como se puede observar el hash puede garantizar la integridad en los extremos no garantiza de que alguien pueda intervenir contra los ataques de hombre del medio o MIMT, para ello los controles de accesos deben tener estrategias, de control entre las que destacan.
 
-Control de acceso obligatorio: aqui todo se restringe en funcion de la seguridad del objeto y la etiqueta que lleve el usuario.
+Control de acceso obligatorio: aqui todo se restringe en funcion de la seguridad del objeto y la etiqueta que lleve el usuario. (El informe financiero de @Apollo Company está clasificado como altamente confidencial y solo pueden acceder a él los gerentes senior que tienen una autorización de acceso a datos extremadamente confidenciales)
 
-Control de aceeso dicrecional: aqui el propietario del objeto determina que tipo de permisos tiene y que no, pero es personal.
+Control de aceeso dicrecional: aqui el propietario del objeto determina que tipo de permisos tiene y que no, pero es personal. (El gerente de finanzas establece permisos para que el líder del equipo pueda acceder a su informe para agregar datos)
+	
+Control de acceso basado en roles: aqui los permisos dependen del rol o funcion laboral que tenga el usuario, para realizar ciertas operaciones los usuarios tienen permisos atraves de su rol. (Solo los gerentes de recursos humanos pueden acceder a los archivos relacionados con los contratos de los empleados de @Apollo.)
 
-Control de acceso basado en roles: aqui los permisos dependen del rol o funcion laboral que tenga el usuario, para realizar ciertas operaciones los usuarios tienen permisos atraves de su rol.
-
-Control basado en reglas: aqui se determina mediante reglas y listas de control para determinar el acceso. ejemplo ningun empleado puede tener acceso a los archivos de nomina fuera del horario laboral. 
+Control basado en reglas: aqui se determina mediante reglas y listas de control para determinar el acceso. ejemplo ningun empleado puede tener acceso a los archivos de nomina fuera del horario laboral. (Ningún empleado puede acceder al archivo de nómina de @Apollo después de hora o los fines de semana)
