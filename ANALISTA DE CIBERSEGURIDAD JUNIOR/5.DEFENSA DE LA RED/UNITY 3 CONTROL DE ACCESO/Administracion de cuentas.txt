@@ -1,0 +1,80 @@
+🔒En una empresa se debe tener cuidado como se comparte la informacion.
+
+Las empresas deben ser muy sensibles con la informacion que comparten entre si y en ellas mismas, porque la brecha de seguridad es muy grande y cada vez con dispositivos que llevan los mismos empleados es una gran desventaja para la seguridad.
+
+🚇Ejemplo las cuentas privilegiadas deben ser solo de los administradores o altos directivos, el resto debe limitarse a su zona de trabajo o con derechos limitados.
+
+💧Entre los permisos que pueden ayudar a proteger los datos estan:
+
+.El control total: Los usuarios pueden, Ver el contenido de un archivo o de una carpeta. Modificar y eliminar archivos y carpetas existentes. Crear nuevos archivos y carpetas. Ejecutar programas de una carpeta.
+
+.La modificacion: Los usuarios pueden modificar y eliminar archivos y carpetas existentes pero no pueden crear nuevos.
+
+.Lectura y ejecucion: Los usuarios pueden ver el contenido de los archivos y carpetas existentes y pueden ejecutar programas en una carpeta.
+
+.Escritura: Los usuarios pueden crear nuevos archivos y carpetas y realizar cambios en los archivos y carpetas existentes.
+
+.Lea: Los usuarios pueden ver el contenido de una carpeta y abrir archivos y carpetas.
+
+👮🏻Entre las politicas de windows, se encuentran las politicas de contraseñas, bloqueo de cuentas y politicas de auditoria para revisar lo que hacen los empleados.
+
+🧑🏻‍🚀Gestion de la autenticacion: entre los problemas que se presentan de autenticacion y autorizacion incluye credenciales sin cifrar, permisos incorrectos y violaciones de acceso.
+Sin embargo esto se puede quitar con una solucion de inicio de sesion unico (SSO), que permite al usuario con una sola cuenta ingresar a varios sistemas, de manera que el usuario solo necesita recordar una contraseña. En donde se puede utilizar una OAuth estandar de aplicaciones de terceros, y muchas aplicaciones gestionan la autenticacion basada den el conocimiento para que proporciona restablecimiento de contraseñas en caso de que el usuario la olvide.
+
+😯Codigo de autenticacion de mensajes basado en hash (HMAC, Hash-Based message authentication code)
+
+Es la forma para comprobar un mensaje en donde: nadie lo cambio y quien lo envio tiene clave secreta.
+
+Es como un sello en un anillo que solo tu y tu amigo conocen. Si la carta llega con el sello intacto, sabes que no la abrieron y quien la mando tiene el anillo.
+
+Cómo funciona paso a paso
+1. Emisor y receptor comparten una clave secreta.
+2. El emisor manda el mensaje junto con su HMAC.
+3. El receptor calcula el HMAC del mensaje recibido con la misma clave.
+4. Si coincide, el mensaje es íntegro y auténtico. Si no coincide, algo cambió o lo envió alguien sin la clave.
+
+Pero el no cifra el mensaje, el mensaje sigue viendose. Lo que garantiza es que no fue alterado y que el origen es correcto.
+
+HMAC garantiza que un mensaje no fue alterado y que viene de quien tiene la clave secreta, porque un atacante puede cambiar el mensaje pero no puede recalcular un HMAC válido sin esa clave.
+
+HMAC = hash + clave secreta: sin la clave nadie puede falsificar la firma del mensaje.
+
+Los productos de cisco utilizan el hashing con fines de autenticacion de entidades, integridad de datos y autenticidad de datos.
+
+👓Protocolos y tecnologias de autenticacion.
+
+Un protocolo de aunteticacion verifica datos entre los entidades, para evitar acceso no autorizado. 
+
+. Protocolo de autenticacion Extensible (EAP): La contraseña se envia al servidor mediante un hash para se autenticado, pero el cliente no necesita un certificado.
+
+.Protocolo de autenticacion de contraseña (PAP, Password Authentication Protocol): el nombre de usuario y contraseña se envian al servidor de acceso remoto en texto plano. 
+
+. Protocolo de la confirmacion de aceptacion de la autenticacion (CHAP): el servicio verifica el hash unidireccional enviado por el cliente, el servicio calcula el valor esperado, el autenticador compara los dos valores. Si coinciden los dos la transmision continua.
+
+.802.1x: Una organizacion autentica la identidad y autoriza el acceso a la red, mediante las credenciales o certificado de un servidor RADIUS.
+
+.Servidor RADIUS: servidor central que autentica, autoriza y registra (accounting) a quien se conecta a la red. En redes de empresa se usa con 802.1X y EAP. En hoteles se parece al portal cautivo, que también puede apoyarse en RADIUS.
+
+.TACACS+: cifra todos los datos (nombre de usuario, contraseña, registros de uso y servicios autorizados) entre el cliente y el servidor. Dado a que los administradores puede controlar ACL, filtros y privilegios; TACACS puede ser la mejor opcion para redes corporativas de autenticacion mas sofisticadas y control sobre las actividades de autorizacion.
+
+.Kerberos: protocolo de autenticación con tickets, usado en Active Directory. Un tercero de confianza (KDC) entrega un TGT tras verificar al usuario; con ese TGT se piden tickets para cada servicio. La contraseña nunca viaja por la red, los tickets están cifrados y caducan, y los relojes deben estar sincronizados.
+
+🏀Como tal los hash se utilizan para garantizar la integridad de los datos y verificar la autenticidad:
+
+1. Autenticidad con clave secreta (HMAC): combinado con una clave simétrica, prueba que el mensaje viene de quien tiene esa clave. Ejemplos: IPsec y la autenticación en protocolos de enrutamiento.
+
+2. Autenticación por desafío-respuesta: el sistema envía un desafío y el usuario responde con un hash de un solo uso. La contraseña no viaja por la red.
+
+3. Integridad de mensajes y certificados: sirve en contratos con firma digital y en los certificados PKI, como los de los sitios web seguros (HTTPS).
+
+Los hash garantizan integridad y autenticidad (HMAC, desafío-respuesta, firmas y certificados). Usa SHA-256 o superior y evita MD5 y SHA-1.
+
+🥋Ya que como se puede observar el hash puede garantizar la integridad en los extremos no garantiza de que alguien pueda intervenir contra los ataques de hombre del medio o MIMT, para ello los controles de accesos deben tener estrategias, de control entre las que destacan.
+
+Control de acceso obligatorio: aqui todo se restringe en funcion de la seguridad del objeto y la etiqueta que lleve el usuario.
+
+Control de aceeso dicrecional: aqui el propietario del objeto determina que tipo de permisos tiene y que no, pero es personal.
+
+Control de acceso basado en roles: aqui los permisos dependen del rol o funcion laboral que tenga el usuario, para realizar ciertas operaciones los usuarios tienen permisos atraves de su rol.
+
+Control basado en reglas: aqui se determina mediante reglas y listas de control para determinar el acceso. ejemplo ningun empleado puede tener acceso a los archivos de nomina fuera del horario laboral. 
