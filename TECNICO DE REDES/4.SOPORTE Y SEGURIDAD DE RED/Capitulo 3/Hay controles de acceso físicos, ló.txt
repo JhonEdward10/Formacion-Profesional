@@ -1,6 +1,12 @@
 Hay controles de acceso físicos, lógicos y controles de acceso administrativo.
 
-Ademas existe la autenticación, la autorización y contabilidad (AAA)
+Los controles de accesos fisico son barrereas, cercas, camaras etc.
+
+Los controles de acceso logico son soluciones de hardware y software.
+
+Los controles de acceso administrativo son los siguientes tres:
+
+-> Ademas existe la autenticación, la autorización y contabilidad (AAA)
 
 Gestion de identidad Federada (FIM): permite a un usuario con un ID o contraseña ingresar a varias partes del sistema de una empresa, lo cual significa un riesgo potencial para cualquier organización.
 

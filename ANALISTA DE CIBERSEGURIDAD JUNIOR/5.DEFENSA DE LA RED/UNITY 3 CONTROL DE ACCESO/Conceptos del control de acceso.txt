@@ -2,7 +2,7 @@
 
 La seguridad confianza cero es donde se hace una verificacion en la red en todo momento, porque antes se confiaba en el perimetro de la red entre lo interno y lo externo, pero ahora se debe verificar en cualquier momento que alguien desee hacer un cambio. Entre la confianza cero se tienen tres pilares, sobre los que se basa.
 
-.Los grupos de trabajo que intervienen en la red, las personas, contratistas, compañeros, proveedores.
+.Los grupos o fuerza de trabajo que intervienen en la red, las personas, contratistas, compañeros, proveedores.
 .Las cargas de trabajo, que son las aplicaciones sobre las que desempeñan el trabajo, bases de datos etc.
 .Lugar de trabajo, son los dispositivos mediante los que se conectan a la red.
 

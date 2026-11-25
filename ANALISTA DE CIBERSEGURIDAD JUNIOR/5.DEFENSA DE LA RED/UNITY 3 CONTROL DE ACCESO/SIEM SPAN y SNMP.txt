@@ -1,0 +1,18 @@
+SIEM, SPAN y SNMP son tres tecnologías distintas usadas en redes y ciberseguridad para recopilar registros de eventos, duplicar tráfico de red y monitorear dispositivos, respectivamente.
+
+1. SIEM (Security Information and Event Management)
+
+Es una plataforma o sistema de ciberseguridad que centraliza, analiza y correlaciona registros (logs) y eventos de toda la infraestructura tecnológica (servidores, firewalls, antivirus, aplicaciones).
+• Para qué sirve: Detectar amenazas en tiempo real, generar alertas ante comportamientos sospechosos, investigar incidentes y cumplir con auditorías de seguridad.
+• Ejemplo: Splunk, Microsoft Sentinel, Wazuh o IBM QRadar.
+
+2. SPAN (Switched Port Analyzer)
+
+También conocido como port mirroring (espejo de puertos), es una función de los switches de red que copia el tráfico que pasa por uno o varios puertos y lo envía a otro puerto específico.
+• Para qué sirve: Permitir que herramientas como Wireshark o un sistema de detección de intrusos (IDS) analicen todo el tráfico de otros equipos sin interrumpir la comunicación normal de la red.
+
+3. SNMP (Simple Network Management Protocol)
+
+Es un protocolo estándar de red utilizado para monitorear, consultar y administrar dispositivos conectados (routers, switches, impresoras, servidores o cámaras IP).
+• Para qué sirve: Conocer el estado y rendimiento de los equipos en tiempo real (uso de CPU, memoria, temperatura, ancho de banda o si un puerto se cayó) y enviar alertas automáticas (traps) cuando ocurre un fallo.
+

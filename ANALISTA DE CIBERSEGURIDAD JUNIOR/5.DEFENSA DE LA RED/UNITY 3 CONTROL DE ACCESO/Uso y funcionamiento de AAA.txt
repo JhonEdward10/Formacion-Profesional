@@ -1,0 +1,47 @@
+💰Uso y funcionamiento de AAA
+
+Una red debe diseñarse para controlar quién puede conectarse a ella y qué puede hacer cuando está conectado. Estos requisitos de diseño se identifican en la política de seguridad de la red
+
+En el marco escalable el protocolo de autenticacion, autorizacion y auditoria (AAA) presenta esta arquitectura.
+
+.Autenticacion: proporciona una forma centralizada para controlar el acceso a la red, mediante tokens, autenticaciones, tarjetas etc.
+
+.Autorizacion: Una vez autenticado el usuario, aqui se determina a que recursos puede acceder el usuario y que operaciones puede realizar.
+
+.Auditoria: es el control que se lleva y el registro que dejan los usuarios en el sistema en el que se interactua, hay que tener cuidado con los permisos, porque aqui es donde los atacantes siempre aprovechan el escalamiento de privilegios para robar datos, informacion o informacion sensible de la empresa o corporacion.
+
+🎺Autenticacion: Los usuarios en la autenticacion AAA pueden autenticarse con los usuarios para el acceso administrativo o pueden usarse para los usuarios del acceso remoto a la red.
+
+En redes pequeñas se puede utilizar el cliente remoto que se autentica con el usuario y contraseña, mediante el router AAA.
+
+Tambien existen autenticaciones basadas en el servidor en donde la autenticacion ocurre en el servidor donde se tienen todos los usuarios con sus respectivas contraseñas. -> utilizada para redes de tamaño medio a grande.
+
+Como se puede imaginar siempre es preferido el servidor centralizado, porque permite tener mas control aprovechando el active directory. Los dispositivos se comunican con el servidor remote RADIUS O el TACACS+ -> Terminal access controller control system.
+
+- TACACS+ se usa para administrar dispositivos de red. Es propio de Cisco, usa TCP, cifra todo y permite controlar qué comandos ejecuta cada administrador.
+- RADIUS se usa para el acceso de usuarios a la red, por ejemplo con 802.1X y Wi-Fi Enterprise. Es abierto, usa UDP y solo cifra la contraseña.
+
+La celda de CHAP para TACACS+ tiene un texto que parece mezclado. Habla del NAC y de la «confianza cero» y no de CHAP. Probablemente es un error de la traducción del curso. Lo que sí cuenta de CHAP es que en TACACS+ el desafío es bidireccional y en RADIUS unidireccional.
+
+📸 Registro de contabilidad AAA
+La auditoriaa de AAA recopila datos de uso de registro AAA y los informa, siendo utiles para la seguridad. Los datos recopilados puede incluir hora de inicio y finalizacion de la conexion, los comando ejecutados y la cantidad de paquetes y el numero de bytes.
+
+Cuando se autentica a un usuario, el proceso de auditoría AAA genera un mensaje de inicio que comienza el proceso de auditoría.
+Cuando el usuario termina, se registra un mensaje de finalización y se da por terminado el proceso de auditoría.
+
+Lo que el accounting puede recopilar:
+
+🏴‍☠️Contabilidad de redes: captura informacion de las sesiones punto a punto.
+
+🏴Contabilidad de conexiones: es la captura de informacion acerca de las conexiones saliestes del cliente AAA, como SSH.
+
+🏁Contabilidad de EXEC: captura informacion sobre sesiones del terminal del usuario EXEC (shells de usuarios), como el servidor de acceso a la red, nombre, usuario, fecha de finalizacion etc.
+
+🚩Contabilidad de sistemas: captura informacion sobre todos los eventos del nivel (cuando se reinicia el sistema o cuando se activa o desactiva)
+
+🏳️Contabilidad de comandos: captura informacion de comandos exex de shell para privilegiados, que comando uso y que usuario lo ejecuto.
+
+🎌Contabilidad de recursos: captura las conexiones de soporte de registro de inicio y detencion que han pasado autenticacion de usuario. Tambien admite detenciones de personas que no se autentican como usuario ya que pueden ser registros de auditoria para administrar y monitorear la red.
+
+
+
