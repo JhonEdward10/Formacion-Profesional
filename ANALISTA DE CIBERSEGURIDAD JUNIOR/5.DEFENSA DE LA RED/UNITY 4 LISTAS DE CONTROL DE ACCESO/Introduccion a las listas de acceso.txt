@@ -1,0 +1,39 @@
+Los enrutadores toman decisiones dependiente del encabezado del paquete. 
+
+☣️Una ACL es una serie de comandos del IOS que controlan si un router reenvía o descarta paquetes según la información que se encuentra en el encabezado del paquete.
+
+PC  ──envía──>  Router 1  ──reenvía──>  Router 2  ──reenvía──>  Servidor
+
+Un ACL utiliza una lista secuencial de declaraciones de permisos o denegacion conocidas como entradas de control de acceso (ACE).
+
+Nota: Las ACE también suelen llamarse instrucciones ACL.
+
+Varias tareas realizadas por los enrutadores requieren el uso de ACL para identificar el trafico, entre ellas;
+
+🔰Limitar el trafico de red para aumentar el rendimiento: bloq trafico de video para reducir la carga de red.
+
+❇️Proporcionan control de flujo de trabajo: solo proporcionar enregas de enrutamiento a fuentes conocidas.
+
+✴️Proporcionan un nivel basico de seguridad para el acceso a la red: Limitar el acceso a redes especificas.
+
+⬜Filtran el trafico segun el tipo de trafico: permite filtrar el trafico por tipo, eje correo y bloq telnet.
+
+〽️Filtran a los host para permitirles o denegarles el acceso a los servicios de red: http se limite a ciertos usuarios.
+
+🎒Proporcionar prioridad a determinadas clases de trafico de red: permite el reenvio mas rapido posible de datos para evitar interrupcion.
+
+
+🏅Filtrado de paquetes -> se puede realizar el descarte o paso en la capa 3 o 4
+
+🥇ACL numeradas y nombradas -> Las ACL número 1 a 99, o 1300 a 1999 son ACL estándar, mientras que las ACL número 100 a 199, o 2000 a 2699 son ACL extendidas
+
+R1(config)# access-list ?
+  <1-99>       IP standard access list
+  <100-199>    IP extended access list
+  <1100-1199>  Extended 48-bit MAC address access list
+  <1300-1999>  IP standard access list (expanded range)
+  <200-299>    Protocol type-code access list
+  <2000-2699>  IP extended access list (expanded range)
+  <700-799>    48-bit MAC address access list
+  rate-limit   Simple rate-limit specific access list
+  template     Enable IP template acls
