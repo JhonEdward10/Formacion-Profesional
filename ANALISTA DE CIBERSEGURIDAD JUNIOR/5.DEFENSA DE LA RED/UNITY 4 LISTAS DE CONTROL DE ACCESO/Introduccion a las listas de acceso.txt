@@ -27,13 +27,10 @@ Varias tareas realizadas por los enrutadores requieren el uso de ACL para identi
 
 🥇ACL numeradas y nombradas -> Las ACL número 1 a 99, o 1300 a 1999 son ACL estándar, mientras que las ACL número 100 a 199, o 2000 a 2699 son ACL extendidas
 
-R1(config)# access-list ?
-  <1-99>       IP standard access list
-  <100-199>    IP extended access list
-  <1100-1199>  Extended 48-bit MAC address access list
-  <1300-1999>  IP standard access list (expanded range)
-  <200-299>    Protocol type-code access list
-  <2000-2699>  IP extended access list (expanded range)
-  <700-799>    48-bit MAC address access list
-  rate-limit   Simple rate-limit specific access list
-  template     Enable IP template acls
+Para hacer un ACL o un ACE se necesitan las mascaras wildcard.
+
+
+  
+  
+  
+  

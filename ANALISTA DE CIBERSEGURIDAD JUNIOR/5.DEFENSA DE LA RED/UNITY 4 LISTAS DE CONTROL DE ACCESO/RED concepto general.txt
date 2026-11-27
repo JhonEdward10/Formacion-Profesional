@@ -1,0 +1,71 @@
+🔧RED (concepto general)
+Conjunto de dispositivos conectados para comunicarse y compartir recursos.
+
+SUBRED
+Parte que resulta de dividir una red IP en redes más pequeñas. Ayuda a
+organizar, ajustar la cantidad de direcciones, reducir el alcance del
+broadcast y facilitar el control del tráfico entre áreas.
+
+DIRECCIÓN DE RED
+Primera dirección de una subred. La identifica y no se asigna a equipos.
+
+BROADCAST
+Última dirección de una subred IPv4. Se usa para enviar un mensaje a todos
+los equipos de esa subred. No se asigna a equipos.
+
+RANGO DE EQUIPOS
+Direcciones entre la dirección de red y la de broadcast. Se asignan a PC,
+servidores, impresoras, interfaces de router (gateway) y otros equipos.
+Excepción: las /31 en enlaces punto a punto usan sus 2 direcciones y las
+/32 identifican una sola dirección.
+
+MÁSCARA DE SUBRED
+Indica qué bits de una IP identifican la red y cuáles el equipo.
+
+CIDR (/número)
+Cantidad de bits de red. Número más bajo = red más grande.
+Número más alto = red más pequeña.
+
+TAMAÑO DEL BLOQUE
+256 - el octeto de la máscara donde se divide la red.
+Ejemplo: 256 - 240 = 16.
+
+MÁSCARA WILDCARD (COMODÍN)
+Indica qué bits de una IP deben coincidir (0) y cuáles no importan (1).
+Selecciona direcciones; por sí sola no permite ni bloquea.
+Para abarcar una subred: 255.255.255.255 - máscara de subred.
+
+ACL (LISTA DE CONTROL DE ACCESO)
+Lista de reglas permit o deny para filtrar tráfico. Para filtrar el tráfico
+que cruza una interfaz, se aplica en ella, de entrada (in) o de salida (out).
+Se revisa en orden y al final bloquea todo lo que no se haya permitido.
+
+OSPF
+Protocolo de enrutamiento dinámico con el que los routers comparten
+información y calculan rutas. Si existe un camino alterno, puede usarlo
+cuando falla el principal.
+
+EJEMPLO: 192.168.1.200 con máscara 255.255.255.240 (/28)
+Bloque:     16
+Red:        192.168.1.192
+Rango:      192.168.1.193 a 192.168.1.206 (14 direcciones utilizables)
+Broadcast:  192.168.1.207
+Wildcard:   0.0.0.15
+
+R1(config)# access-list ?
+  <1-99>       IP standard access list
+  <100-199>    IP extended access list
+  <1100-1199>  Extended 48-bit MAC address access list
+  <1300-1999>  IP standard access list (expanded range)
+  <200-299>    Protocol type-code access list
+  <2000-2699>  IP extended access list (expanded range)
+  <700-799>    48-bit MAC address access list
+  rate-limit   Simple rate-limit specific access list
+  template     Enable IP template acls
+  
+En las mascaras wildcard se utilizan dos connotaciones; las palabras claves son:
+
+Las dos palabras clave son:
+
+host - Esta palabra clave sustituye a la máscara 0.0.0.0. Esta máscara indica que todos los bits de direcciones IPv4 deben coincidir para filtrar solo una dirección de host.
+any - Esta palabra clave sustituye a la máscara 255.255.255.255. Esta máscara establece que se omita la dirección IPv4 completa o que se acepte cualquier dirección.
